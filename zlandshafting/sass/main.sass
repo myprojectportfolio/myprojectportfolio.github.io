@@ -62,21 +62,22 @@ b, strong
 			margin-right: 5px
 			color: #fff
 			opacity: .6
-	.social
-		margin: 0
-		text-align: right
-		li
-			display: inline-block
-			margin-left: 15px
-		.fab, .fa
-			color: #fff
-			opacity: .6
-			&:hover
-				opacity: .9
+.social
+	margin: 0
+	text-align: right
+	li
+		display: inline-block
+		margin-left: 55px
+	.fab, .fa
+		color: #fff
+		opacity: .6
+		font-size: 24px
+		&:hover
+			opacity: .9
 .mnu-line
 	overflow: hidden
 	background-color: #fff
-	padding: 10px 0
+	padding: 25px 0
 	transition: all 0.2s ease
 	&.sticky
 		top: 0
@@ -86,7 +87,9 @@ b, strong
 		padding: 5px 0
 		z-index: 2
 		box-shadow: 0 0 2px rgba(0, 0, 0, .8)
-
+	h3
+		text-align: center
+		opacity: .8
 .logo
 	display: block
 	opacity: 1
@@ -164,6 +167,7 @@ nav, .header-content
 					text-decoration: none
 
 .main-menu
+	text-align: right
 	> ul
 		> li
 			padding: 8px 18px
@@ -229,7 +233,7 @@ nav, .header-content
 		height: 100%
 		background-color: #000
 		position: absolute
-		opacity: .3
+		opacity: .6
 		z-index: -1
 .s-adv
 	h4
@@ -274,6 +278,8 @@ nav, .header-content
 		.card-0
 			overflow: hidden
 			display: block
+			width: 100%
+			height: 150px
 		&:hover
 			opacity: 1
 			img
@@ -334,40 +340,49 @@ nav, .header-content
 	100%
 		@include opacity(100)
 		transform: scale(1)	
-.s-works
-	background-coalor: #F0F0F0
+
+.s-work
 	.h2
 		text-transform: uppercase
 		letter-spacing: 0.2em
-	.popup-gallery
-		.card
+	.h5
+		text-transform: uppercase
+		font-size: 18px
+		padding-top: 15px
+	.fa
+		font-size: 48px
+		color: $green
+	.card
+		position: relative
+		.port_item_cont
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 200px
+			text-transform: uppercase
+			letter-spacing: 1px
+			background-color: rgba(52,58,64,.8)
 			text-align: center
-			position: relative
-			background-size: cover
+			padding-top: 15%
+			opacity: 0
+			+mt(.4s)
+			&:hover
+				opacity: 1
+				padding-top: 20%
+		.card-title
+			text-transform: uppercase
+			color: $green
+			font-weight: 500
+		.card-0
 			overflow: hidden
 			display: block
-			
-			&:hover
-				img
-					transform: scale3d(20px)
-					animation: roll 3s infinite
-					+mt(.5s)
-			
-			.card-img-overlay
-				padding-top: 25%
-				background-color: rgba(40, 167, 69, .5)
-				text-align: center
-				opacity: 0
-				+mt(.5s)
+			width: 100%
+			height: 200px
+			&:hover img
 				transform: scale(1.2)
-				.fa
-					color: #fff
-					font-size: 30px
-				h5
-					color: #fff	
-				&:hover
-					opacity: 1
-					transform: scale(.95)
+				+mt(.4s)
+
 .s-about
 	.about-item
 		
@@ -431,7 +446,9 @@ nav, .header-content
 .main-foot
 	background-color: darken($blue, 10%)
 	p
-		text-align: center
+		text-align: left
+		font-size: 21px
+		letter-spacing: 2px
 		color: #fff	
 		margin-bottom: 0
 		opacity: .6
