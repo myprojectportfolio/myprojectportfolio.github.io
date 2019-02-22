@@ -77,19 +77,26 @@ b, strong
 .mnu-line
 	overflow: hidden
 	background-color: #fff
-	padding: 25px 0
+	padding: 35px 0
 	transition: all 0.2s ease
 	&.sticky
 		top: 0
 		position: fixed
 		width: 100%
-		height: 50px
-		padding: 5px 0
+		height: 60px
+		padding: 10px 0
 		z-index: 2
+		border-bottom: 0px
 		box-shadow: 0 0 2px rgba(0, 0, 0, .8)
 	h3
 		text-align: center
 		opacity: .8
+		text-transform: uppercase
+		border-bottom: 3px solid #28a745
+		width: 247px
+		letter-spacing: 2px
+		display: inline
+
 .logo
 	display: block
 	opacity: 1
@@ -176,7 +183,7 @@ nav, .header-content
 			> a
 				display: block
 				color: $accent
-				font-size: 15px
+				font-size: 16px
 				text-transform: uppercase
 				+mt(.4s)
 				&:hover
@@ -372,7 +379,6 @@ nav, .header-content
 				padding-top: 20%
 		.card-title
 			text-transform: uppercase
-			color: $green
 			font-weight: 500
 		.card-0
 			overflow: hidden
