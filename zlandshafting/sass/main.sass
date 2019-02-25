@@ -77,7 +77,7 @@ b, strong
 .mnu-line
 	overflow: hidden
 	background-color: #fff
-	padding: 35px 0
+	padding: 30px 0
 	transition: all 0.2s ease
 	&.sticky
 		top: 0
@@ -389,6 +389,38 @@ nav, .header-content
 				transform: scale(1.2)
 				+mt(.4s)
 
+.s-work-item
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+	.h5
+		text-transform: uppercase
+		font-size: 18px
+		padding-top: 15px
+	.card
+		height: 250px
+		position: relative
+		overflow: hidden
+		.port_item_cont
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 250px
+			text-transform: uppercase
+			letter-spacing: 1px
+			background-color: rgba(52,58,64,.8)
+			text-align: center
+			padding-top: 15%
+			opacity: 0
+			+mt(.4s)
+			&:hover
+				opacity: 1
+				padding-top: 20%
+		.card-title
+			text-transform: uppercase
+			font-weight: 500
+
 .s-about
 	.about-item
 		
@@ -397,11 +429,14 @@ nav, .header-content
 			font-size: 14px
 			line-height: 1.3
 	.figure
+		overflow: hidden
+		background-size: cover
+		width: 100%
+		height: 400px
 		img
-			background-size: cover			
-			overflow: hidden
-			height: 400px
+			width: 100%
 			display: block
+			height: 400px
 .s-realiz
 	h4
 		color: #fff
@@ -424,12 +459,12 @@ nav, .header-content
 			margin-bottom: 0
 			
 .s-contact
-
+	min-height: 100vh
 	h2
 		color: #fff
 
 	.contacts-text
-		color: #fff
+		color: #000
 		line-height: 15px
 		.fa
 			margin-right: 10px
@@ -467,6 +502,18 @@ nav, .header-content
 			width: 100%
 			height: 250px
 			background-size: cover
+.breadcrumb
+	margin-bottom: 0px
+	li a 
+		color: #28a745
 
-
+.nav .current-active a
+	background-color: #28a745
+	color: #fff
+.nav a
+	border: 1px solid #28a745 			
+	text-align: center
+	border-radius: 2px
+	color: #343a40
+	background-color: #f9f9f9
 @import "media" // Always at the end
