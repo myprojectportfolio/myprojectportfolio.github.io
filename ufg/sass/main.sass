@@ -82,28 +82,39 @@ b, strong
 	overflow: hidden
 	background-color: #fff
 	opacity: .8
-	padding: 20px 0
+	padding: 10px 0
 	transition: all 0.2s ease
 	img
-		width: 60px
+		width: 80px
 		height: auto
 	&.sticky
 		top: 0
 		position: fixed
 		width: 100%
 		height: 80px
-		padding: 8px 0
+		padding: 4px 0
 		z-index: 2
 		border-bottom: 0px
 		background-color: #fff
 		opacity: 1
 		box-shadow: 0 0 2px rgba(0, 0, 0, .8)
 		img
-			width: 60px
+			width: 70px
 			height: auto
+		.main-menu
+				padding-top: -15px
+
 .logo
 	display: block
 	opacity: 1
+	font-size: 20px
+	letter-spacing: 2px
+	color: $warning
+	font-weight: 600
+	text-transform: uppercase
+	&:hover
+		text-decoration: none
+		color: $warning
 
 nav, .header-content
 	ul
@@ -181,9 +192,9 @@ nav, .header-content
 	text-align: right
 	> ul
 		> li
-			padding: 8px 18px
+			padding: 22px 13px
 			&:hover
-				padding: 4px 18px
+				padding: 22px 13px
 			> a
 				display: block
 				color: $accent
@@ -407,7 +418,76 @@ nav, .header-content
 				transform: scale(1.2)
 				+mt(.4s)
 
+.s-works
+	position: relative
+	display: block
+	background-size: cover
+	.card-item-h
+		position: relative
+		overflow: hidden
+		display: block
+		width: 100%
+		height: 380px
+		
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+	.h5
+		text-transform: uppercase
+		font-size: 21px
+		padding-top: 15px
+	.fa
+		font-size: 48px
+		color: $warning
+	.card
+		position: relative
+		.port_item_cont
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 250px
+			text-transform: uppercase
+			letter-spacing: 1px
+			background-color: rgba(224, 168, 0, .6)
+			text-align: center
+			padding-top: 15%
+			opacity: 0
+			+mt(.4s)
+			&:hover
+				opacity: 1
+				padding-top: 22%
+		.card-title
+			text-transform: uppercase
+			font-weight: 500
+		.card-0
+			overflow: hidden
+			display: block
+			width: 100%
+			height: 250px
+			&:hover img
+				transform: scale(1.2)
+				+mt(.4s)
+
 .s-blog
+	.intro
+		padding: 0 20px 20px 20px
+		a
+			text-decoration: none
+			.title
+				font-size: 21px
+				font-weight: 600
+				line-height: 1.3
+				color: $dark
+				margin: 10px 0
+				&:hover
+					color: $warning
+		.date
+			font-size: 14px
+    	line-height: 1.14
+    	color: #000
+			opacity: .5
+    	margin: 20px 0 12px 0
 	.h2
 		text-transform: uppercase
 		letter-spacing: 0.2em
@@ -435,17 +515,28 @@ nav, .header-content
 		.card-body
 			a
 				text-transform: uppercase
-				color: $warning
+				color: #000
 				font-weight: 600
 				text-decoration: none
 				line-height: 1.2
 				display: block
 				&:hover
-					color: #000
+					color: $warning
 			p
 				color: #000
 				opacity: .5
+.s-contact-item
+	.contact-item
+		font-size: 18px
+		padding-top: 10px
+		.h4
+			font-weight: 600
+		.contacts-text p span
+			color: $warning
 
+	.btn-warning
+		color: #fff!important
+		text-transform: uppercase
 .s-work-item
 	.h2
 		text-transform: uppercase
@@ -498,10 +589,12 @@ nav, .header-content
 		background-size: cover
 		width: 100%
 		height: 400px
+		
 		img
 			width: 100%
 			display: block
 			height: 400px
+
 .s-realiz
 	h4
 		color: #fff
@@ -509,7 +602,13 @@ nav, .header-content
 		letter-spacing: 0.2em
 	.fa-angle-right
 		font-size: 52px
-		color: $warning
+		color: $warning&:before
+			content: ''
+			width: 100%
+			height: 100%
+			background-color: #e2e6ea
+			position: absolute
+			opacity: .4
 		opacity: .5
 		position: relative
 		top: 10px
@@ -580,10 +679,10 @@ nav, .header-content
 		color: #28a745
 
 .nav .current-active a
-	background-color: #28a745
+	background-color: $warning
 	color: #fff
 .nav a
-	border: 1px solid #28a745 			
+	border: 1px solid $warning 			
 	text-align: center
 	border-radius: 2px
 	color: #343a40
