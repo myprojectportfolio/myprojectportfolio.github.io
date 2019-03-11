@@ -37,6 +37,23 @@ body
 
 b, strong
 	font-weight: bold
+
+
+.trans
+	position: relative
+	background-color: #686868
+	width: 300px
+	height: 50px
+	&:after
+		content: ''
+		position: absolute
+		right: -12px
+		top: 0
+		bottom: 0
+		width: 23px
+		background: #686868
+		transform: skewX(-30deg)
+
 .header_topline
 	padding: 8px 0
 	
@@ -77,20 +94,33 @@ b, strong
 .mnu-line
 	overflow: hidden
 	background-color: #fff
-	padding: 20px 0
 	transition: all 0.2s ease
 	&.sticky
 		top: 0
 		position: fixed
 		width: 100%
-		height: 50px
-		padding: 5px 0
+		height: 70px
 		z-index: 2
 		box-shadow: 0 0 2px rgba(0, 0, 0, .8)
 
+.transd
+	clip-path: polygon(0 0, 100% 0, 84% 100%, 0% 100%)
+
+.transb
+	clip-path: polygon(45% 0, 59% 0, 14% 100%, 0% 100%)
+	display: block
+	margin-left: -20px
+.transp
+	display: block
+	margin-left: 20px
 .logo
 	display: block
 	opacity: 1
+	img
+		width: 120px
+		height: 70px
+		padding-top: 15px
+		padding-bottom: 15px
 	
 nav, .header-content
 	ul
@@ -176,6 +206,7 @@ nav, .header-content
 				font-size: 15px
 				font-weight: 600
 				text-transform: uppercase
+				opacity: .9
 				+mt(.4s)
 				&:hover
 					color: #fff
@@ -215,37 +246,42 @@ nav, .header-content
 	position: relative
 	display: block
 	background-size: cover
-	&:before
-		content: ''
+	height: 560px
+	width: 100%
+	background-image: url(../img/сh.jpg)
+	background-position: center
+	.transh
+		clip-path: polygon(20% 0, 100% 0, 100% 100%, 4% 100%)
+	.header_left
+		height: 560px
 		width: 100%
-		height: 100%
-		background-color: #000
-		position: absolute
-		opacity: .6
-		z-index: 1
+		display: block
+		text-align: left
+
+		&:before
+			content: ''
+			width: 100%
+			height: 100%
+			background-color: #000
+			position: absolute
+			opacity: .5
 	h1
-		letter-spacing: 0.2em
 		line-height: 1.4em
 		color: #fff
-		font-weight: 600
-		text-transform: uppercase
-	.card
-		position: relative
-		height: 500px
-		.card-title
-			text-transform: uppercase
-			color: #fff
-			font-weight: 600
-
-		.card-0
-			overflow: hidden
-			background-size: cover
-			display: block
-			width: 100%
-		.card-img-overlay
-			padding-top: 8%
-			z-index: 2
-
+		font-weight: 700
+		width: 90%
+		z-index: 1
+		display: block
+		padding-left: 180px
+	p
+		width: 90%
+		display: block
+		padding-left: 180px
+		line-height: 1.2
+		font-weight: 300
+		font-size: 19px
+		color: rgba(255, 255, 255, .8)
+		z-index: 1
 .main-head
 	position: relative
 	background-size: cover
@@ -255,6 +291,11 @@ nav, .header-content
 
 .succes-color
 	background-color: #00c851		
+
+.btn-success-color
+	color: #fff
+	background-color: #00c851
+	border-color: #28a745
 
 .s-adv
 	h4
@@ -278,7 +319,7 @@ nav, .header-content
 			margin-top: 8px
 			margin-bottom: 0
 			color: #fff
-.s-profile
+.s-profiles
 	.h2
 		text-transform: uppercase
 		letter-spacing: 0.2em
@@ -292,7 +333,7 @@ nav, .header-content
 		.card-title
 			text-transform: uppercase
 			color: #000
-			opacity: .6
+			opacity: .8
 			font-weight: 600
 			
 		.card-0
@@ -363,8 +404,30 @@ nav, .header-content
 		@include opacity(100)
 		transform: scale(1)	
 .s-work
+	.line-cat
+		font-size: 18px
+		margin-bottom: 18px
+		position: relative
+		span
+			color: $green
+			background-color: #fff
+			padding-right: 10px
+			padding-left: 10px
+			position: relative
+			font-weight: 600
+			z-index: 1
+		&:after
+			content: ""
+			display: block
+			width: 100%
+			right: 0
+			top: 50%
+			height: 5px
+			background: #007e33
+			position: absolute
 	.h2
-		text-transform: uppercase
+		color: $green
+		font-weight: 600
 		
 	.h5
 		text-transform: uppercase
@@ -393,9 +456,8 @@ nav, .header-content
 				opacity: 1
 				padding-top: 20%
 		.card-title
-			text-transform: uppercase
 			font-weight: 600
-			opacity: .8
+			opacity: .9
 		.card-0
 			overflow: hidden
 			display: block
@@ -404,7 +466,59 @@ nav, .header-content
 			&:hover img
 				transform: scale(1.2)
 				+mt(.4s)
-.s-about
+.s-category
+	.line-cat
+		font-size: 18px
+		margin-bottom: 18px
+		position: relative
+		span
+			color: $green
+			background-color: #fff
+			padding-right: 10px
+			padding-left: 10px
+			position: relative
+			font-weight: 600
+			z-index: 1
+		&:after
+			content: ""
+			display: block
+			width: 100%
+			right: 0
+			top: 50%
+			height: 5px
+			background: #007e33
+			position: absolute
+	.h2
+		color: $green
+		font-weight: 600
+	.h5
+		font-size: 18px
+		
+	.fa
+		font-size: 48px
+		color: $green
+	.card
+		position: relative
+		display: block
+		background-size: cover
+		height: 280px!important
+		width: 100%
+		background-position: center
+		
+		.card-body
+			background-color: rgba(52,58,64,.8)
+			position: absolute
+			bottom: 0
+			right: 0
+			left: 0
+			+mt(.6s)
+			color: #fff
+			opacity: .8
+			font-size: 16px
+		.card-body:not(:hover) .card-hover
+			display: none
+			
+.s-aboutd
 	.about-item
 		
 		text-align: justify
@@ -446,6 +560,30 @@ nav, .header-content
 
 			
 .s-contact
+	background-color: $dark
+	.text-support
+		a
+			font-size: 20px
+			text-decoration: none
+			color: #fff
+			font-weight: 600
+			opacity: .8
+			border-bottom: 2px solid #fff
+	.widget_rubrik
+		ul
+			list-style-type: none
+			padding: 0
+			margin: 0
+		li
+			line-height: 1.8
+			a
+				color: #979797
+				font-size: 18px
+				text-decoration: none
+				&:hover
+					color: #fff
+					opacity: .9
+
 	.social
 		text-align: center
 		ul
@@ -463,16 +601,16 @@ nav, .header-content
 			border-radius: 20px
 			&:hover
 				opacity: .9	
-	h2
-		color: #fff
+	
 	.btn
 		leter-spacing: 2px
 		font-size: 18px
 	.contacts-text
-		color: #fff
+		color: #979797
 		line-height: 15px
-		.fa
-			margin-right: 10px
+		p
+			
+			line-height: 1.2
 	.contact-form-head
 		color: #fff
 		h5
@@ -491,13 +629,13 @@ nav, .header-content
 				font-size: 14px
 
 .main-foot
-	background-color: darken($blue, 10%)
+	background-color: #101010
 	p
 		text-align: center
 		color: #fff	
 		margin-bottom: 0
 		opacity: .6
-		font-weight: 600
+		font-weight: 500
 		text-transform: uppercase
 		letter-spacing: 2px
 
