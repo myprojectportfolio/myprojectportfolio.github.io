@@ -6,7 +6,7 @@ $(function() {
     return false;
   });
 
-	$('.main-head').parallax({imageSrc: 'img/agro2.jpg'});
+	$('.main-head').parallax({imageSrc: 'img/12.jpg'});
   $('.s-work').parallax({imageSrc: 'img/agro.jpg'});
 
 	$(".s-adv").waypoint(function() {
