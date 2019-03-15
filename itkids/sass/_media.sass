@@ -4,6 +4,9 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
+	.header-content
+		h1
+			font-size: 35px
 	.mnu-line
 		position: relative
 		&.sticky
@@ -15,27 +18,53 @@
 			top: 0
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	.transb
-		display: none
+	.header-content
+		h1, h2, p
+			padding-left: 150px
+			width: 80%
+		h1
+			font-size: 30px
+		h2
+			font-size: 26px
+			padding-top: 30px
+	
 	.mnu-line
 		position: relative
+
 		.phone
 			text-align: left
 			padding: 0
 		.toggle-mnu
-			top: 0	
+			top: 10px
+			right: 0
+
 	.s-contact	
 		.contact-form
 			margin-top: 30px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	.transb
-		display: none
+	.header-content
+		.carousel-control-next, .carousel-control-prev
+			width: 10%
+		.transh
+			clip-path: polygon(0 1%, 100% 0, 100% 100%, 0% 100%)
+
+		h1, h2, p
+			padding-left: 60px
+			width: 90%
+		p
+			font-size: 16px	
+		h1
+			font-size: 35px
+			top: 30%
+
 	.mnu-line
-		text-align: center
+		
 		position: relative
 		.logo
 			display: inline-block
+			text-align: center
+			width: 100%
 		.phone
 			text-align: left
 			padding: 0
@@ -43,23 +72,31 @@
 		text-align: center
 	.social
 		display: none
-	.s-realiz
-		.realiz-item
-			.fas, .far
-				font-size: 82px
-			p
-				font-size: 22px
-				padding-bottom: 30px
-				margin-bottom: 0
-			
-				
+	.s-contact
+		.widget_rubrik
+			text-align: center
+							
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 576px)
+	.header-content
+		
+		h1, h2, p
+			padding-left: 60px
+			width: 90%	
+		p
+			font-size: 16px	
+		h1
+			font-size: 28px
+			top: 30%
+		
+			
 	.mnu-line
 		text-align: center
 		position: relative
 		.logo
 			display: inline-block
+			text-align: center
+			width: 100%
 		.phone
 			text-align: center
 			padding: 0
@@ -70,12 +107,23 @@
 		text-align: center
 	.s-about
 		padding: 0 20px
-		text-align: center	
-
+		text-align: center
+		
+@media only screen and (max-width : 480px)
+	.header-content
+		
+		h1, h2, p
+			padding-left: 60px
+			width: 90%	
+		p
+			font-size: 16px	
+		h1
+			font-size: 28px
+			top: 25%
 /*==========  Mobile First  ==========*/
 
 /* Custom, iPhone Retina */
-@media only screen and (min-width : 576px)
+@media only screen and (min-width : 480px)
 	/**/
 
 
