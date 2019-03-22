@@ -6,7 +6,7 @@ $(function() {
     return false;
   });
 
-	
+	$(":file").filestyle({text: "Вибрати файл"});
 
 	$(".s-adv").waypoint(function() {
 
