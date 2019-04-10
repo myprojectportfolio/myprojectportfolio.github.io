@@ -1,0 +1,539 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $dark
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+		
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.h1
+	text-transform: uppercase
+.h2
+	font-family: 'Merienda', cursive	
+
+.header_topline
+	padding: 8px 0
+	
+	.top_adress
+		padding-left: 10px
+		margin: 0
+		color: #fff
+		font-size: 14px
+		li
+			display: inline-block
+			margin-right: 20px
+			a
+				color: #fff
+				font-size: 14px
+				opacity: .8
+				&:hover
+					text-decoration: none
+					opacity: 1
+
+		.phone
+			color: #fff
+		.fa
+			margin-right: 5px
+			color: #fff
+			opacity: .6
+.social
+	padding: 0
+	
+	li
+		display: inline-block
+		padding-top: 30px
+		padding-right: 30px
+	.fab, .fa
+		color: #fff
+		opacity: .6
+		font-size: 34px
+		&:hover
+			opacity: .9
+.mnu-line
+	overflow: hidden
+	///background-color: #fff
+	///opacity: .8
+	padding: 20px 0
+	transition: all 0.2s ease
+	img
+		width: 60px
+		height: auto
+	&.stickyh
+		top: 0
+		position: fixed
+		width: 100%
+		height: 80px
+		padding: 8px 0
+		z-index: 2
+		border-bottom: 0px
+		background-color: #fff
+		opacity: 1
+		box-shadow: 0 0 2px rgba(0, 0, 0, .8)
+		img
+			width: 60px
+			height: auto
+.logo
+	display: block
+	opacity: 1
+
+nav, .header-content
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+	li
+		display: inline-block
+.hidden
+	display: none
+
+
+// toggle menu
+
+.toggle-mnu 
+	display: block
+	width: 28px
+	height: 28px
+	margin-top: 14px
+
+	span:after, span:before 
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+
+	span:after
+		top: 18px
+
+	span 
+		position: relative
+		display: block
+
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: $accent
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+
+	&.on span 
+		background-color: transparent
+
+	&.on span:before 
+		transform: rotate(45deg) translate(-1px, 0px)
+
+	&.on span:after 
+		transform: rotate(-45deg) translate(6px, -7px) 
+.toggle-mnu
+	position: absolute
+	top: 0
+	right: 15px
+.hidden-mnu
+	background-color: $warning
+	display: none
+	position: relative
+	top: 20px
+	li
+		display: block
+	> ul
+		> li
+			&.active
+				a
+					text-decoration: underline
+					color: #fff
+			> a
+				color: #fff !important
+				&:hover
+					color: #fff
+					background-color: $warning
+					text-decoration: none
+
+.main-menu
+	text-align: right
+	> ul
+		> li
+			padding: 8px 18px
+			&:hover
+				padding: 4px 18px
+			> a
+				display: block
+				color: #fff
+				font-size: 18px
+				text-transform: uppercase
+				+mt(.4s)
+				&:hover
+					color: $warning
+					border-bottom: 3px solid $warning
+					text-decoration: none
+					
+				
+.main-mnu
+	text-align: center
+	> ul
+		> li
+			> a
+				display: block
+				padding: 8px 18px
+				color: $accent
+				font-size: 15px
+				text-transform: uppercase
+				+mt(.4s)
+				&:hover
+					color: $warning
+					text-decoration: none
+														
+.phone
+	text-align: right
+	.phone-wrap
+		padding-top: 5px
+		font-family: "RalewayExtraBold", sans-serif
+		font-size: 18px
+		.fa
+			font-size: 20px
+			position: relative
+			top: 2px
+			margin-right: 8px
+
+.header-content
+	display: block
+	padding-top: 11%
+	
+	h1
+		font-family: 'Merienda', cursive
+		letter-spacing: 0.2em
+		line-height: 1.4em
+		color: $warning
+		font-weight: 600
+		font-size: 60px
+		text-transform: uppercase
+	h2
+		text-transform: uppercase
+		color: #fff
+		font-family: 'Merienda', cursive
+.main-head
+	position: relative
+	display: block
+	background-size: cover
+	min-height: 100vh
+	&:before
+		content: ''
+		width: 100%
+		height: 100%
+		background-color: #000
+		position: absolute
+		opacity: .6
+
+	.logo_name
+		font-size: 25px
+		color: $warning
+		font-family: 'Merienda', cursive
+		margin-top: 5px
+.s-adv
+	h4
+		color: #fff
+		text-transform: uppercase
+		letter-spacing: 0.2em
+	.s-adv-item
+		font-size: 15px
+		line-height: 21px
+		h3
+			margin: 0
+			font-size: em(20px)
+			span
+				font-size: 20px
+				color: $warning
+			.fas
+				color: $warning
+				opacity: .8
+				margin-left: 10px	
+		p
+			margin-top: 8px
+			margin-bottom: 0
+			color: #fff
+.s-profile
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+	.h5
+		text-transform: uppercase
+		font-size: 18px
+		padding-top: 15px
+	.fa
+		font-size: 48px
+		color: $warning
+	.card
+		position: relative
+
+		.card-title
+			text-transform: uppercase
+			color: $warning
+			font-weight: 500
+		.card-0
+			overflow: hidden
+			display: block
+			width: 100%
+			height: 150px
+		&:hover
+			opacity: 1
+			img
+				transform: scale(1.2)
+				+mt(.4s)
+
+					
+.bar-main
+	.bar
+		background: $warning
+		height: 1px
+		margin: 0 auto 5px
+		width: 250px
+	.bar-big
+		width: 300px
+
+@mixin opacity ($opacity)
+	opacity: $opacity / 100
+	filter: alpha(opacity=$opacity)				
+.preloader
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 100
+	background-color: $warning
+
+	.pulse
+		position: relative
+		left: 50%
+		top: 50vh
+		margin: 
+			left: -40px
+			top: -40px
+		&::before, &::after
+			content: ''
+			border: 5px solid $accent
+			width: 80px
+			height: 80px
+			border-radius: 500px
+			position: absolute
+		&::before
+			animation: pulse-outer .9s ease-in infinite
+		&::after
+			animation: pulse-inner .9s linear infinite	
+@keyframes pulse-outer
+	0%
+		@include opacity(100)
+	50%
+		@include opacity(50)
+	100%
+		@include opacity(0)
+@keyframes pulse-inner
+	0%
+		@include opacity(0)
+		transform: scale(0)
+	100%
+		@include opacity(100)
+		transform: scale(1)	
+
+.s-work
+	position: relative
+	display: block
+	background-size: cover
+	&:before
+		content: ''
+		width: 100%
+		height: 100%
+		background-color: #000
+		position: absolute
+		opacity: .6
+		
+	.h2
+		color: #fff
+		font-family: 'Merienda', cursive
+		text-transform: uppercase
+		letter-spacing: 0.2em
+	.h5
+		text-transform: uppercase
+		font-size: 18px
+		padding-top: 15px
+	.about-item
+		color: #fff
+	.btn-warning
+		letter-spacing: 2px
+		font-weight: 600
+
+
+.s-work-item
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+	h5
+		text-transform: uppercase
+		font-size: 24px
+		padding-top: 15px
+		color: #fff
+	.card
+		position: relative
+		.card-0
+			overflow: hidden
+			display: block
+			width: 100%
+			height: 200px
+			&:hover img
+				transform: scale(1.2)
+				+mt(.4s)
+		.port_item_cont
+			position: absolute
+			overflow: hidden
+			background-size: cover
+			top: 0
+			left: 0
+			width: 100%
+			height: 200px
+			text-transform: uppercase
+			letter-spacing: 1px
+			background-color: rgba(224, 168, 0, .6)
+			text-align: center
+			padding-top: 15%
+			opacity: 0
+			+mt(.4s)
+			&:hover
+				opacity: 1
+				padding-top: 20%
+		.card-title
+			text-transform: uppercase
+			font-weight: 600
+
+.s-about
+	h2
+		font-family: 'Merienda', cursive
+	.about-item
+		text-align: justify
+		p
+			font-size: 16px
+			line-height: 1.5
+	.figure
+		overflow: hidden
+		background-size: cover
+		width: 100%
+		height: 400px
+		img
+			width: 100%
+			display: block
+			height: 400px
+
+			
+.s-contact
+	background-color: #1d1d1d
+	h2
+		color: #fff
+		opacity: .8
+		font-family: 'Merienda', cursive
+		text-transform: uppercase
+	.fa, .fab
+		color: #fff
+		opacity: .5
+		
+	.contacts-text
+		line-height: 25px
+		opacity: .5
+		p
+			color: #fff
+			font-size: 18px
+		.fa, .fab
+			margin-right: 10px
+			
+		a
+			color: #fff
+			display: block
+			font-size: 18px
+	.bar-contact
+		.bar
+			background: $warning
+			height: 2px
+			width: 50px
+		
+	.contact-form-head
+		color: #fff
+		h5
+			text-transform: uppercase
+		p
+			opacity: .6
+			font-size: 18px
+			line-height: 18px
+	.contact-form
+		padding: 30px 20px
+		background-color: darken($blue, 5%)
+		.form-group
+			label
+				color: #fff
+				opacity: .5
+				font-size: 14px
+.main-foot
+	background-color: darken($blue, 10%)
+	p
+		text-align: left
+		font-size: 21px
+		letter-spacing: 2px
+		color: #fff	
+		margin-bottom: 0
+		opacity: .6
+		font-weight: 400
+.s-galery
+	.owl-theme, .owl-dot, .owl-dots
+		outline: none
+	.partners
+		img
+			width: 100%
+			height: 250px
+			background-size: cover
+.breadcrumb
+	margin-bottom: 0px
+	li a 
+		color: #28a745
+
+.nav .current-active a
+	background-color: #28a745
+	color: #fff
+.nav a
+	border: 1px solid #28a745 			
+	text-align: center
+	border-radius: 2px
+	color: #343a40
+	background-color: #f9f9f9
+
+
+
+
+@import "media" // Always at the end
