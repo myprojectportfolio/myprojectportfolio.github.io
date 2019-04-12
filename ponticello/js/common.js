@@ -1,13 +1,16 @@
 $(function() {
 
+  $("#portfolio_grid").mixItUp();
+
 	$(".toggle-mnu").click(function() {
     $(this).toggleClass("on");
     $(this).parent().next().next().find(".main-mnu").slideToggle();
     return false;
   });
 
-	$('.main-head').parallax({imageSrc: 'img/banners.png'});
-  $('.s-work').parallax({imageSrc: 'img/picca.jpg'});
+	$('.main-head').parallax({imageSrc: 'img/banners1.png'});
+  $('.s-work').parallax({imageSrc: 'img/intro.jpg'});
+  
 
 	$(".s-adv").waypoint(function() {
 
@@ -83,7 +86,7 @@ $(document).ready(function() {
 $(window).on('load', function() {
   $('.preloader').delay(300).fadeOut('slow');
 
-  $(".animation_4 h1").animated("lightSpeedIn", "fadeOutUp");
+  $(".animation_4").animated("lightSpeedIn", "fadeOutUp");
   $(".animation_4 h2").animated("fadeInUp", "fadeOutDown");
   $(".animation_1").animated("bounceInLeft", "fadeOutDown");
   $(".animation_2").animated("bounceInRight", "fadeOutDown");

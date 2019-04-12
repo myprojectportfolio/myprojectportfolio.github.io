@@ -143,7 +143,7 @@ nav, .header-content
 	span, span:after, span:before
 		width: 100%
 		height: 2px
-		background-color: $accent
+		background-color: $warning
 		transition: all 0.3s
 		backface-visibility: hidden
 		border-radius: 2px
@@ -228,36 +228,29 @@ nav, .header-content
 
 .header-content
 	display: block
-	padding-top: 11%
+	padding-top: 1%
 	
 	h1
 		font-family: 'Merienda', cursive
 		letter-spacing: 0.2em
 		line-height: 1.4em
-		color: $warning
+		color: #fff
 		font-weight: 600
-		font-size: 60px
+		font-size: 30px
 		text-transform: uppercase
-	h2
+	p
 		text-transform: uppercase
 		color: #fff
-		font-family: 'Merienda', cursive
+		
 .main-head
 	position: relative
 	display: block
 	background-size: cover
 	min-height: 100vh
-	&:before
-		content: ''
-		width: 100%
-		height: 100%
-		background-color: #000
-		position: absolute
-		opacity: .6
-
+			
 	.logo_name
 		font-size: 25px
-		color: $warning
+		color: #fff
 		font-family: 'Merienda', cursive
 		margin-top: 5px
 .s-adv
@@ -331,7 +324,7 @@ nav, .header-content
 	right: 0
 	bottom: 0
 	z-index: 100
-	background-color: $warning
+	background-color: #000
 
 	.pulse
 		position: relative
@@ -342,7 +335,7 @@ nav, .header-content
 			top: -40px
 		&::before, &::after
 			content: ''
-			border: 5px solid $accent
+			border: 5px solid $warning
 			width: 80px
 			height: 80px
 			border-radius: 500px
@@ -366,17 +359,78 @@ nav, .header-content
 		@include opacity(100)
 		transform: scale(1)	
 
+.s_portfolio
+	ul
+		list-style-type: none
+		text-align: center
+		margin-top: 0
+		padding: 0
+		margin-bottom: 50px
+	li
+		display: inline-block
+		margin: 0 10px
+		text-transform: uppercase
+		font-size: 18px
+		cursor: pointer
+		line-height: 2
+	
+	.portfolio_item
+		display: none
+		padding-left: 10 px
+		text-align: center
+		p
+			width: 100%
+		.text-spacing-120
+			letter-spacing: .12em	
+		.box-pricing-title
+			display: flex
+			flex: 0 1 100%
+			flex-direction: row
+			flex-wrap: nowrap
+		.box-pricing-title .box-pricing-dots
+			position: relative
+			flex-grow: 1
+			top: -6px
+			left: -2px
+			border-bottom: 2px dotted #333
+
+.s_portfolio li.active
+	color: #000
+	opacity: .8
+	border-bottom: 1px solid $warning
+
+.s-real
+	background-image: url('../img/aboutg.png')
+	background-position: center
+	width: 100%
+	height: 200px
+	display: block
+	background-size: cover
+	
+	.h2
+		color: #fff
+		font-family: 'Merienda', cursive
+		text-transform: uppercase
+		letter-spacing: 0.2em
+	.h5
+		text-transform: uppercase
+		font-size: 21px
+		padding-top: 10px
+		color: #fff
+		font-family: 'Merienda', cursive
+	.about-item
+		color: #fff
+	.btn-warning
+		letter-spacing: 2px
+		font-weight: 600
+
+
 .s-work
+	
 	position: relative
 	display: block
 	background-size: cover
-	&:before
-		content: ''
-		width: 100%
-		height: 100%
-		background-color: #000
-		position: absolute
-		opacity: .6
+	
 		
 	.h2
 		color: #fff
@@ -385,8 +439,10 @@ nav, .header-content
 		letter-spacing: 0.2em
 	.h5
 		text-transform: uppercase
-		font-size: 18px
-		padding-top: 15px
+		font-size: 21px
+		padding-top: 10px
+		color: #fff
+		font-family: 'Merienda', cursive
 	.about-item
 		color: #fff
 	.btn-warning
