@@ -1,7 +1,13 @@
 $(function() {
 
-  $("#portfolio_grid").mixItUp();
+  $("#portfolio_grid").mixItUp({
+      load: {
+      filter:'.category-1'
+ 
+      }
+    });
 
+  
 	$(".toggle-mnu").click(function() {
     $(this).toggleClass("on");
     $(this).parent().next().next().find(".main-mnu").slideToggle();
