@@ -2,7 +2,7 @@ $(function() {
 
   $("#portfolio_grid").mixItUp({
       load: {
-      filter:'.category-1'
+      filter:'.category-4'
  
       }
     });
