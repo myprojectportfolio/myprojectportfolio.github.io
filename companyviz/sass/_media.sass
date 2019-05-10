@@ -1,0 +1,103 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.mnu-line
+		position: relative
+		&.sticky
+			display: none
+		.phone
+			text-align: left
+			padding: 0
+		.toggle-mnu
+			top: -4px
+	.header_topline
+		.top_adress
+			.clock
+				display: none
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.mnu-line
+		position: relative
+		.phone
+			text-align: left
+			padding: 0
+		.toggle-mnu
+			top: 0	
+	.s-contact	
+		.contact-form
+			margin-top: 30px
+	.header_topline
+		.top_adress
+			.clock, .adress
+				display: none		
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.mnu-line
+		position: relative
+		.logo
+			display: inline-block
+		.phone
+			text-align: left
+			padding: 0
+		.toggle-mnu
+			top: -4px	
+			
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 576px)
+	.s-realiz
+		padding-top: 25px
+	.s-contact
+		text-align: center
+	.mnu-line
+		
+		position: relative
+		.logo
+			display: inline-block
+		
+		.toggle-mnu
+			top: -40px
+	.header_topline
+		text-align: center
+		.social
+			display: none
+		.top_adress
+			.clock, .adress,
+				display: none
+	.s-about
+		padding: 0 20px
+		text-align: center	
+	.s-slider
+		.carousel-caption
+			top: 20% !important
+			h2
+				font-size: 30px
+				color: #fff							
+				font-weight: 600
+
+			p
+				font-size: 16px	
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 576px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	.s_portfolio
+		.col-lg-4
+			max-width: 33%!important
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
