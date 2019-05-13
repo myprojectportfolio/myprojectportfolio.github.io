@@ -97,7 +97,7 @@ b, strong
 	overflow: hidden
 	padding: 20px 0
 	transition: all 0.2s ease
-	&.sticky
+	&.stickys
 		top: 0
 		position: fixed
 		width: 100%
@@ -204,7 +204,26 @@ nav, .header-content
 				&:hover
 					color: $warning
 					text-decoration: none
-					
+.main-menus
+	text-align: right
+	margin-right: 0px
+	> ul
+		> li
+			padding: 8px 18px
+			&:last-child
+				padding: 0px 0px 0px 8px
+				
+			> a
+				display: block
+				color: $accent
+				font-size: 16px
+				font-weight: 600
+				text-transform: uppercase
+				letter-spacing: 1px
+				+mt(.4s)
+				&:hover
+					color: $warning
+					text-decoration: none					
 				
 .main-mnu
 	text-align: center
@@ -820,5 +839,36 @@ nav, .header-content
 			height: 250px
 			background-size: cover
 
+.s-realiz
+	background-position: center
+	padding-top: 90px
+	width: 100%
+	height: 250px
+	display: block
+	background-size: cover
+	background-image: url('../img/bg-image-1.jpg')
+	h4
+		color: #fff
+		font-weight: 600
+		font-size: 32px
+.breadcrumbs
+	padding: 100px 0 115px
+	h2
+		font-size: 	32px
+		color: #fff
+		text-transform: uppercase
+		font-weight: 600
+	nav
+		font-size: 	16px
+		li
+			color: #fff
+			a
+				color: $warning
+				letter-spacing: 2px
+	.breadcrumb-item.active
+		color: #fff
+		letter-spacing: 2px
+	.breadcrumb-item + .breadcrumb-item::before
+		color: #fff	
 
 @import "media" // Always at the end
