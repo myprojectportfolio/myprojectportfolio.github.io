@@ -32,7 +32,15 @@
 	.header_topline
 		.top_adress
 			.clock, .adress
-				display: none		
+				display: none
+	.s-usluga-item
+		.construction-block
+			padding-left: 0px
+			.heading-divider
+				position: relative
+				padding-left: 0px
+				&:before
+					display: none						
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	.mnu-line
@@ -44,7 +52,7 @@
 			padding: 0
 		.toggle-mnu
 			top: -4px	
-			
+		
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 576px)
 	.s-realiz
@@ -74,11 +82,22 @@
 			top: 20% !important
 			h2
 				font-size: 30px
-				color: #fff							
+				color: #fff			
 				font-weight: 600
 
 			p
 				font-size: 16px	
+	.s-proekt
+		padding: 40px 15px 12px
+		h2
+			font-size: 28px
+	.s-usluga-item
+		padding: 40px 15px 12px
+	.breadcrumbs
+		h2
+			font-size: 28px	
+				
+			
 /*==========  Mobile First  ==========*/
 
 /* Custom, iPhone Retina */
@@ -99,5 +118,6 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
-	/**/
+	.modal-xl
+		max-width: 1140px
 
