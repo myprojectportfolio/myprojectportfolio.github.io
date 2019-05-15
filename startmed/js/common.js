@@ -76,9 +76,12 @@ $(document).ready(function() {
 
 $('.partners').owlCarousel({
   loop: true,
-  smartSpeed: 700,
+  smartSpeed: 100,
   dots: true,
   nav: true,
+  autoplay: true,
+  autoplayTimeout: 5000,
+  autoplayHoverPause: true,
   navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
   responsiveClass: true,
   responsive: {
