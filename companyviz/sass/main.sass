@@ -985,7 +985,7 @@ nav, .header-content
 				margin-right: 0px
 			> ul.list-link
 				display: inline-grid
-				line-height: 1.4
+				line-height: 1.8
 				> li
 					> a
 						color: #fff
@@ -1021,5 +1021,86 @@ nav, .header-content
 			margin-bottom: 0
 			opacity: .8
 			font-weight: 400					
-						
+
+.main-foot
+	background-color: #292929
+	p
+		text-align: center
+		color: #fff	
+		margin-bottom: 0
+		opacity: .8
+		font-weight: 400
+
+.s-usluga-item
+	padding: 90px 15px 82px
+	.construction-block
+		padding-left: 30px
+		.heading-divider
+			position: relative
+			padding-left: 65px
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				top: 13px
+				width: 40px
+				border-top: 3px solid #fc6c1e
+		h4
+			font-size: 28px
+			padding-bottom: 20px
+		p
+			font-size: 14px
+			opacity: .8	
+
+.s-proekt
+	padding: 90px 15px 82px
+	h2
+		font-size: 48px
+		font-weight: 600
+		text-transform: uppercase
+		line-height: 1.2
+		
+	.portfolio_item
+		display: block
+		padding-bottom: 10px
+		padding-top: 10px
+		padding-left: 0
+		padding-right: 0
+		
+		img
+			width: 100%
+		.port_item_cont
+			position: absolute
+			top: 30px
+			left: 30px
+			right: 30px
+			bottom: 30px
+			background-color: rgba(17,17,17,.33)
+			text-align: center
+			padding: 30px
+			opacity: 0
+			transition: all .5s
+			border: 2px solid #fff
+		&:hover .port_item_cont
+			opacity: 1
+			padding-top: 20%
+		h3
+			color: #fff
+			margin-bottom: 0
+			font-size: 18px
+			text-transform: uppercase
+			font-weight: 600
+			padding-bottom: 15px
+		p
+			font-size: 14px
+			color: #fff	
+		a	
+			background-color: transparent
+			border: #fff 1px solid
+			padding: 2px 10px
+			display: inline-block
+			&:hover
+				text-decoration: none
+
+					
 @import "media" // Always at the end
