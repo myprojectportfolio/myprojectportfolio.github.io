@@ -1052,14 +1052,9 @@ nav, .header-content
 			font-size: 14px
 			opacity: .8	
 
-.s-proekt
+.s-proekts
 	padding: 90px 15px 82px
-	h2
-		font-size: 48px
-		font-weight: 600
-		text-transform: uppercase
-		line-height: 1.2
-		
+	
 	.portfolio_item
 		display: block
 		padding-bottom: 10px
@@ -1102,5 +1097,87 @@ nav, .header-content
 			&:hover
 				text-decoration: none
 
-					
+.s-proekt
+	padding: 90px 15px 82px
+	.far
+		font-size: 16px
+		color: $warning
+	.card
+		position: relative
+		
+		.card-title
+			text-transform: uppercase
+			font-weight: 500
+		.card-0
+			overflow: hidden
+			display: block
+			width: 100%
+			height: 200px
+			.port_item_cont
+				cursor: pointer
+				.port-cont
+					position: relative
+					overflow: hidden
+					display: block
+					height: 100%
+					&::before
+						content: ''
+						position: absolute
+						top: 0
+						bottom: 0
+						left: 0
+						right: 0
+						pointer-events: none
+						background-image: linear-gradient(to right top,#fb8957,#ff9e54,#ffb354,#ffc958,#ffdf61)
+						opacity: 0
+						transition: .3s ease-out opacity
+					&:hover:before
+						opacity: .6
+
+					&::after
+						content: ''
+						background-image: url('../img/link-solid.svg')
+						width: 35px
+						height: 35px
+						position: absolute
+						top: 50%
+						left: 55%
+						transform: translate(-100%,-50%)
+						font-size: 40px
+						color: #fff
+						opacity: 0
+						transition: .4s ease-out all
+					&:hover:after
+						opacity: .9	
+
+		.card-body
+			p
+				color: $dark
+				opacity: .8
+			.p
+				text-transform: uppercase
+				cursor: pointer
+				color: $accent
+				font-weight: 600
+				text-decoration: none
+				line-height: 1.2
+				display: block
+				font-size: 18px
+				padding-bottom: 10px
+				&:hover
+					color: $warning
+		.rf-project-cover__stat
+			padding-right: 20px
+
+			.far
+				font-size: 16px
+				color: $accent
+				opacity: .6		
+		.qa-appreciate
+			font-size: 18px
+			.far
+				font-size: 24px
+				color: $warning
+				opacity: 1
+
 @import "media" // Always at the end
