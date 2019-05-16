@@ -277,11 +277,11 @@ b, strong
 	width: 100%
 	color: #fff
 .animenu__nav__child li:hover
-	background-color: #eeeeee
+	background-color: lighten($red, 40%)
 	
 .animenu__nav a:hover 
 	//background-color: $main-color
-	color: #eeeeee
+	color: $accent
 
 .animenu__nav ,
 .animenu__nav__child a:hover
@@ -610,7 +610,11 @@ b, strong
 				img
 					background-size: cover
 					background-position: 100px 200px		
-
+	.btn
+		font-size: 14px
+		background-color: $red!important
+		&:hover
+			opacity: .8	
 			
 	.line-cat
 		font-size: 16px
@@ -772,5 +776,113 @@ b, strong
 			color: $red
 			font-size: 36px	
 			padding-bottom: 15px	
+.s-blog
+
+	.card
+		&:hover
+			opacity: 1
+			img
+				transform: scale(1.2)
+				+mt(.4s)
+		figure.effect-chico .fa
+			opacity: 0
+			font-size: 48px
+			color: #fff
+			padding-top: 65px
+		figure.effect-chico:hover .fa
+				opacity: 1		
+		figure
+			position: relative
+			text-align: center
+			overflow: hidden
+			cursor: pointer
+			opacity: .98
+		img
+			width: 100%
+			height: 180px
+			position: relative
+			display: block
+			max-width: 100%
+		figcaption
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			display: block
+			&:hover
+				background-color: $red
+				opacity: .6
+	
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.1em
+		font-weight: 600
+		font-size: 28px
+	.h5
+		text-transform: uppercase
+		font-size: 16px
+		padding-top: 15px
+	.btn
+		font-size: 14px
+		background-color: $red!important
+		&:hover
+			opacity: .8	
+	p
+		font-size: 14px
+		opacity: .9
+	.card
+		position: relative
+		.card-body
+			.date
+				font-size: 14px
+				opacity: .8
+				padding-bottom: 10px
+			.card-title
+				text-transform: uppercase
+				a
+					color: $red
+					text-decoration: none
+					font-weight: 600
+					font-size: 16px
+					display: block
+					&:hover
+						color: $red!important
+		.card-0
+			overflow: hidden
+			display: block
+		&:hover
+			opacity: 1
+			img
+				transform: scale(1.2)
+				+mt(.4s)
+.s-blog-art
+	.widget_body_page 
+		div
+			font-size: 16px
+		.widget_body_menu 
+			list-style: none
+			font-size: 16px
+			padding: 0
+			margin: 0
+
+			li
+				padding: 15px 0 0 0
+				position: relative
+			li a
+				text-decoration: none
+				color: $dark
+				opacity: .9
+				text-transform: uppercase
+				display: block
+				padding-left: 30px
+				line-height: 1.4
+				.fas
+					color: $red
+					padding-right: 15px
+				&:hover
+					text-decoration: none
+					color: $red
+
 
 @import "media" // Always at the end
