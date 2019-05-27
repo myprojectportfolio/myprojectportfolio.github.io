@@ -11,12 +11,59 @@
 		.phone
 			text-align: left
 			padding: 0
-		.toggle-mnu
-			top: -4px
-	.header_topline
-		.top_adress
-			.clock
-				display: none
+	.animenu
+		margin-top: 2px
+
+	.animenu__toggle
+    display: inline-block
+
+	.animenu ul  li
+		z-index: 2
+
+	.animenu__nav,
+	.animenu__nav__child 
+		display: none
+
+	.animenu__nav
+		margin: 10px 0
+		text-align: left
+	.animenu__nav > li 
+		width: 100%
+		display: inline-block
+		border-right: 0
+		border: 1px solid #e0e0e0
+		///background-color: #6d6e71
+   		
+	.animenu__nav > li > a 
+		width: 100%
+		padding: 30px 10px
+		border-color: #6d6e71
+		position: relative
+	.animenu__nav__child 
+		position: static
+		///background-color: #fff
+		margin: 0
+		transition: none
+		visibility: visible
+		opacity: 1
+		width: 100%
+	
+	.animenu__nav > li:hover > ul
+		
+	.animenu__nav__child > li:first-child > a:after
+		content: none
+  
+	.animenu__nav__child a 
+		padding-left: 20px
+		width: 100%
+
+	.animenu__nav--open 
+		display: block !important
+		margin: 0
+
+	.animenu__nav--open .animenu__nav__child
+		display: block
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	.mnu-line
@@ -29,106 +76,79 @@
 	.s-contact	
 		.contact-form
 			margin-top: 30px
-	.header_topline
-		.top_adress
-			.clock, .adress
-				display: none
-	.s-usluga-item
-		.construction-block
-			padding-left: 0px
-			.heading-divider
-				position: relative
-				padding-left: 0px
-				&:before
-					display: none						
+	.top_adress
+		text-align: center
+		display: none
+	.header-second
+		.contacts-text
+			font-size: 14px
+		.btn
+			display: none
+			
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.s-partners .partners .owl-nav>div
+		display: none
+	.header_topline .main-header_top_nav
+		display: none
 	.mnu-line
+		text-align: center
 		position: relative
-		.logo
-			display: inline-block
+	.logo
+		
+		text-align: center
 		.phone
 			text-align: left
 			padding: 0
-		.toggle-mnu
-			top: -4px	
-		
+	
+	.social
+		display: none
+	.s-realiz
+		.realiz-item
+			.fas, .far
+				font-size: 82px
+			p
+				font-size: 22px
+				padding-bottom: 30px
+				margin-bottom: 0
+	.s-contact	
+		text-align: center
+		.line
+			display: none
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 576px)
-	.s-new-art
-		.post-single-sidebar-item
-			margin-top: 20px
-	.s-realiz
-		padding-top: 25px
-	.s-contact
-		text-align: center
+	.header-second
+		.contacts-text
+			text-align: center
+			font-size: 21px
+		form
+			width: 100%
+			height: 40px
+			i
+				padding-top: 10px
 	.mnu-line
-		
+		text-align: center
 		position: relative
-		.logo
-			display: inline-block
-		
+	.logo
+		display: block
+		opacity: 1
+		img
+			width: 220px
+			padding-top: 15px
+		.phone
+			text-align: center
+			padding: 0
+			margin-top: 8px
 		.toggle-mnu
-			top: -40px
-	.header_topline
+			top: -15px
+	.top_adress
 		text-align: center
-		.social
-			display: none
-		.top_adress
-			.clock, .adress,
-				display: none
-	.header-content
-		h1
-			font-size: 22px
-			line-height: 1.2em
-			
 	.s-about
-		padding: 15px 0
-		text-align: center
-		.about-item
-			h2
-				font-size: 28px
-	.s_portfolio
-		padding: 15px 0
-		h2
-			font-size: 28px
-	.s-blog
-		padding: 15px 0
-		h2
-			font-size: 28px		
-	.s-slider
-		.carousel-caption
-			top: 20% !important
-			h2
-				font-size: 30px
-				color: #fff			
-				font-weight: 600
-
-			p
-				font-size: 16px	
-	.s-proekt
-		padding: 40px 15px 12px
-		h2
-			font-size: 28px
-	.s-usluga-item
-		padding: 40px 15px 12px
-	.breadcrumbs
-		h2
-			font-size: 28px	
-	.s-wide
-		padding: 13% 0 0
-	
-		.s-adv-item
-			font-size: 15px
-			h3
-				font-size: 16px
-				span
-					font-size: 18px
-	.s-сontactus
-		padding: 30px 15px 12px
-		
-
-			
+		padding: 0 20px
+		text-align: center	
+	.s-slide
+		.carousel-inner
+			height: auto
 /*==========  Mobile First  ==========*/
 
 /* Custom, iPhone Retina */
@@ -143,13 +163,10 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
-	.s_portfolio
-		.col-lg-4
-			max-width: 33%!important
+	/**/
+
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
-	.modal-xl
-		max-width: 1140px
-		
+	/**/
 
