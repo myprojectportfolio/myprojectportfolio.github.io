@@ -136,6 +136,41 @@ nav, .header-content
 .hidden
 	display: none
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+.owl-carousel .owl-stage
+	width: 100% !important
+=======
+/**
+ * Simple fade transition,
+ */
+.mfp-fade.mfp-bg1
+	opacity: 0
+	-webkit-transition: all 0.15s ease-out
+	-moz-transition: all 0.15s ease-out
+	transition: all 0.15s ease-out
+
+.mfp-fade.mfp-bg.mfp-ready1
+	opacity: .8
+
+.mfp-fade.mfp-bg.mfp-removing1
+	opacity: 0
+
+
+.mfp-fade.mfp-wrap .mfp-content1
+	opacity: 0
+	-webkit-transition: all 0.15s ease-out
+	-moz-transition: all 0.15s ease-out
+	transition: all 0.15s ease-out
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content1
+	opacity: 1
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content1
+	opacity: 0
+>>>>>>> cd7a0ea478c503be878c478d8ee0c1be361d6fd1
+>>>>>>> 3d69f0b0919068ef7e9c6dff437c1e98eeec6bda
 
 // toggle menu
 
@@ -671,6 +706,8 @@ figure.effect-chico:hover
 .s-contact
 	background-color: $dark
 	.text-support
+		display: inline-flex
+		position: relative
 		a
 			font-size: 20px
 			text-decoration: none
@@ -678,6 +715,7 @@ figure.effect-chico:hover
 			font-weight: 500
 			opacity: .8
 			border-bottom: 2px solid #fff
+				
 		.tdn
 			border-bottom: none	
 	.widget_rubrik
@@ -921,6 +959,16 @@ figure.effect-chico:hover
 					color: $green
 			
 .s-rubrika
+	.port_item_cont
+		position: absolute
+		opacity: 1
+		width: 100%
+		height: 100%
+		padding: 0
+		margin: 0
+		top: 75%
+		left: 33%
+
 	.rubric-item
 		display: block
 		position: relative
@@ -931,6 +979,7 @@ figure.effect-chico:hover
 		&:hover
 			background-color: #007e33
 			+mt(.4s)
+			
 	a:hover
 		text-decoration: none
 	p
@@ -994,6 +1043,76 @@ figure.effect-chico:hover
 				&:hover
 					text-decoration: none
 					color: $green
+
+.s-proekt
+	padding: 90px 15px 82px
+	.far
+		font-size: 16px
+		color: $green
+	.card
+		position: relative
+		
+		.card-title
+			text-transform: uppercase
+			font-weight: 500
+		.card-0
+			overflow: hidden
+			display: block
+			width: 100%
+			height: 200px
+			.port_item_cont
+				cursor: pointer
+				.port-cont
+					position: relative
+					overflow: hidden
+					display: block
+					height: 100%
+					&::before
+						content: ''
+						position: absolute
+						top: 0
+						bottom: 0
+						left: 0
+						right: 0
+						pointer-events: none
+						opacity: 0
+						transition: .3s ease-out opacity
+					&:hover:before
+						opacity: .6
+
+					&::after
+						content: ''
+						background-image: url('../img/link-solid.svg')
+						width: 35px
+						height: 35px
+						position: absolute
+						top: 50%
+						left: 55%
+						transform: translate(-100%,-50%)
+						font-size: 40px
+						color: #fff
+						opacity: 0
+						transition: .4s ease-out all
+					&:hover:after
+						opacity: .9	
+
+		.card-body
+			p
+				color: $dark
+				opacity: .8
+			.p
+				text-transform: uppercase
+				cursor: pointer
+				color: $accent
+				font-weight: 600
+				text-decoration: none
+				line-height: 1.2
+				display: block
+				font-size: 18px
+				padding-bottom: 10px
+				&:hover
+					color: $green
+
 .pagination-circle
 	.page-link
 		position: relative
@@ -1018,6 +1137,88 @@ figure.effect-chico:hover
 		border-radius: 20px
 
 .s-uchasnyky
+	.video_vantage
+		overflow: hidden
+		position: relative
+		width: 100%
+		cursor: pointer
+		.wrap_play
+			margin-left: -50px
+			margin-top: -50px
+			left: 50%
+			height: 100px
+			top: 50%
+			position: absolute
+			width: 100px
+			.iq-waves
+				position: absolute
+				width: 384px
+				width: 24rem
+				height: 384px
+				height: 24rem
+				left: 50%
+				top: 50%
+				-webkit-transform: translate(-50%, -50%)
+				-ms-transform: translate(-50%, -50%)
+				transform: translate(-50%, -50%)
+				z-index: 2
+				.waves
+					position: absolute
+					width: 384px
+					width: 24rem
+					height: 384px
+					height: 24rem
+					background: rgba(255, 255, 255, .2)
+					opacity: 0
+					-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+					border-radius: 320px
+					background-clip: padding-box
+					-webkit-animation: waves 3s ease-in-out infinite
+					animation: waves 3s ease-in-out infinite
+					
+				.wave-1
+					-webkit-animation-delay: 0s
+					animation-delay: 0s
+				.wave-2
+					-webkit-animation-delay: 1s
+					animation-delay: 1s
+				.wave-3
+					-webkit-animation-delay: 2s
+					animation-delay: 2s
+@-webkit-keyframes waves
+	0%
+		-webkit-transform: scale(0.2, 0.2)
+		transform: scale(0.2, 0.2)
+		opacity: 0
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+
+	50%
+		opacity: 0.9 
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"
+	100%
+		-webkit-transform: scale(0.9, 0.9)
+		transform: scale(0.9, 0.9) 
+		opacity: 0
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+
+@keyframes waves
+	0% 
+		-webkit-transform: scale(0.2, 0.2)
+		transform: scale(0.2, 0.2)
+		opacity: 0
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+
+	50%
+		opacity: 0.9
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"
+
+	100%
+		-webkit-transform: scale(0.9, 0.9)
+		transform: scale(0.9, 0.9)
+		opacity: 0
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+
+
 	.line-cat
 		font-size: 18px
 		margin-bottom: 18px
@@ -1042,7 +1243,54 @@ figure.effect-chico:hover
 	.card-img-top
 		height: 200px
 	p.card-text
-		line-height: 1.1	
+		line-height: 1.1
+	.card
+		position: relative
+		
+		.card-title
+			text-transform: uppercase
+			font-weight: 500
+		.card-0
+			overflow: hidden
+			display: block
+			width: 100%
+			height: 200px
+			.port_item_cont
+				cursor: pointer
+				.port-cont
+					position: relative
+					overflow: hidden
+					display: block
+					height: 100%
+					&::before
+						content: ''
+						background-image: url('../img/play-button.png')
+						width: 160px
+						height: 160px
+						position: absolute
+						top: 50%
+						left: 55%
+						transform: translate(-100%,-50%)
+						font-size: 40px
+						color: #fff
+						opacity: 1
+						transition: .4s ease-out all
+					
+
+		.card-body
+			
+			.p
+				text-transform: uppercase
+				cursor: pointer
+				color: $accent
+				font-weight: 600
+				text-decoration: none
+				line-height: 1.2
+				display: block
+				font-size: 18px
+				padding-bottom: 10px
+				&:hover
+					color: $green		
 
 .s-proect
 	.line-cat
@@ -1066,5 +1314,26 @@ figure.effect-chico:hover
 			height: 5px
 			background: #ffbb33
 			position: absolute
-
+.top
+	position: fixed
+	bottom: 40px
+	right: -100px
+	background-color: $green
+	z-index: 12
+	border-radius: 2px
+	color: #fff
+	font-size: 26px
+	width: 40px
+	height: 40px
+	text-align: center
+	line-height: 40px
+	cursor: pointer
+	transition: all .3s ease
+	opacity: 1
+	&:hover
+		color: #fff
+		background-color: $green
+		opacity: .8
+	&.active
+		right: 40px
 @import "media" // Always at the end
