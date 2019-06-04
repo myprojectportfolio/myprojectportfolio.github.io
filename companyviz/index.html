@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
 
-	<title>Smartlab</title>
+	<title>Company</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +14,7 @@
 	
 	<!-- Template Basic Images Start -->
 	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="icon" href="img/favicon3.png">
+	<link rel="icon" href="img/favicon/faviconf.ico">
 	<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-touch-icon-80x93.png">
 	<!-- Template Basic Images End -->
 	
@@ -27,479 +27,840 @@
 </head>
 
 <body>
-
-<div class="preloader">
-	<div class="pulse"></div>
-</div>
-<header class="main-head">
-	<div class="header_topline bg-light py-2">
+	<div class="preloader">
+		<div class="pulse"></div>
+	</div>
+	<header class="main-head" style='background: url("img/bg-image-1.jpg"); background-size: cover; background-position: center;'>
+	<!--<div class="header_topline bg-dark-1 py-3">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12 col-md-5 col-lg-3 col-xl-3">
-						<a href="#" class="h5"><button type="button" class="btn btn-success w-100">СКАЧАТЬ КАТАЛОГ</button></a>
-				</div>
-				<div class="col-sm-6 col-md-7 col-lg-6 col-xl-6">
-						<nav class="main-header_top_nav">
-							<ul>
-								<li><a href="#">О нас</a></li>
-								<li><a href="#">Акции</a></li>
-								<li><a href="#">Дилерам</a></li>
-								<li><a href="#">Новости</a></li>
-								<li><a href="#">Контакты</a></li>
-							</ul>
-						</nav>
-   				</div>
-				<div class="col-md-3 col-lg-3 col-xl-3">
+				<div class="col-sm-6 col-md-8 col-lg-9 col-xl-10">
 					<ul class="top_adress">
-						
-						<!--<li class="phone"><a href="tel:0974860962"><i class="fa fa-phone"></i> +38 (097) 486-09-62</a></li>-->
-       			<li class="mail pt-1"><a href="mailto:zlandshafting@gmail.com"><i class="fa fa-envelope"></i> info@labsmart.com.ua</a></li>
+						<li class="adress"><i class="fas fa-map-marker-alt"></i> 6036 Richmond hwy, Alexandria, VA USA 22303</li>
+						<li class="clock"><i class="far fa-clock"></i> Mon – Sat: 9:00am–18:00pm. Sunday CLOSED</li>
+						<li class="phone"><a href="tel:0974860962"><i class="fa fa-phone"></i> +1 (409) 987–5874</a></li>
+       					
 					</ul>
 				</div>
-				<!--<div class="col-sm-12 col-md-4 ">
+				<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
 					<ul class="social">
 						<li class="facebook">
 							<a href="#"><i class="fab fa-facebook-f"></i></a>
 						</li>
-						<li class="instagram">
-							<a href="#"><i class="fab fa-instagram"></i></a>
+						<li class="twitter">
+							<a href="#"><i class="fab fa-twitter"></i></a>
 						</li>
 						<li class="custom">
 							<a href="#"><i class="fa fa-envelope"></i></a>
 						</li>
 					</ul>
-				</div>-->
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="header-second">
+	</div>-->
+	<div class="mnu-line" id="navbar">
 		<div class="container">
 			<div class="row">
-					<div class="col-xl-3 col-lg-4 col-sm-12 col-md-5 col-xs-12">
-						<a href="#" class="logo img-responsive"><img src="img/smartlab.png" alt="zlandshafting"></a>
-					</div>
+				<div class="col-xl-3 col-lg-6 col-sm-6 col-md-6 col-xs-12">
+					<a href="#" class="logo img-responsive"><img src="img/logo2.png" alt="zlandshafting"></a>
+				</div>
+				<div class="col-xl-1 col-lg-6 col-md-6 col-sm-6 col-xs-8">
 					
-					<div class="col-xl-4 col-lg-3 col-md-4 col-sm-7 col-xs-6">
-						<form class="search-form inline-block-top" action="/search/" method="GET">
-                <input placeholder="Поиск по сайту" name="q">
-                <i class="fas fa-search"></i>
-            </form>
-					</div>
-					<div class="col-lg-3 col-md-3 col-sm-5 col-xs-6">
-						<div class="contacts-text">
-							<a href="tel:0505600707"><i class="fa fa-phone"></i> +38(050) 560 0707</a>
-							<a href="tel:0975600707"><i class="fa fa-phone"></i> +38(097) 560 0707</a>
-							<a href="tel:0935600707"><i class="fa fa-phone"></i> +38(093) 560 0707</a>
-						</div>
-					</div>
-					<div class="col-md-2">
-						<button data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-success w-100 py-1 mt-3">ОБРАТНЫЙ<br> ЗВОНОК</button>
-					</div>
-			</div>
-		</div>
-	</div>
-	<div class="mt-3">
-		<div class="container">
-			
-				<nav id="menu" class="animenu"> 
-  					<button class="animenu__toggle focused">
-    					<span class="animenu__toggle__bar"></span>
-    					<span class="animenu__toggle__bar"></span>
-    					<span class="animenu__toggle__bar"></span>
-  					</button>
+					<a href="#" class="toggle-mnu d-xl-none"><span></span></a>
 
-  					<ul class="animenu__nav">
-							<li>
-								<a href="#">
-										<i class="header-sprite" style="background-image: url('img/meds.png');"></i>
-										<div class="text">Шкафы вытяжные</div>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="header-sprite" style="background-image: url('img/medkush.png');"></i>
-									<div class="text">Столы лабораторные</div>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-										<i class="header-sprite" style="background-image: url('img/medshkaf.png');"></i>
-									<div class="text">Мойки лабораторные</div>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-								<i class="header-sprite" style="background-image: url('img/medkrov.png');"></i>
-								<div class="text">Надстройки сервисные</div>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-								<i class="header-sprite" style="background-image: url('img/neonotologia.png');"></i>
-								<div class="text">Шкафы для хранения</div>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-								<i class="header-sprite" style="background-image: url('img/tumba.png');"></i>
-								<div class="text">Дополнительное оборудование</div>
-								</a>
-							</li>
+				</div>
+				
+				<div class="col-xl-8">
+					<nav class="main-menu d-none d-xl-block">
+						<ul>
+							<li><a href="#">Главная</a></li>
+							<li><a href="#">О нас</a></li>
+							<li><a href="#">Услуги</a></li>
+							<!--<li><a href="#">Проекты</a></li>-->
+							<li><a href="#">Блог</a></li>
+							<li><a href="#">контакты</a></li>
 						</ul>
-  
 					</nav>
-						
+				</div>
+				<div class="col-12">
+					<nav class="main-mnu hidden-mnu d-xl-none clearfix">
+						<ul>
+							<li><a href="#">Главная</a></li>
+							<li><a href="#">О нас</a></li>
+							<li><a href="#">Услуги</a></li>
+							<!--<li><a href="#">Проекты</a></li>-->
+							<li><a href="#">Блог</a></li>
+							<li><a href="#">контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
 		</div>
 	</div>
-
+	<div class="header-content" >
+		<div class="container">
+			<div class="text-center animation_4">
+				<h1>We Provide Proper Audit Solutions</h1>
+				<p>Optimize audit costs using our years of experience</p>
+				<div class="button-block"><a class="btn btn-primary-warn" href="#">make An Appointment</a></div>
+			</div>
+		</div>
+	</div>
+	<div class="s-wide bg-dark pt-3">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-6">
+					<div class="s-adv-item text-center">
+						<h3><span>6</span> лет на рынке</h3>
+						<p>6 лет успешной работы на рынке </p>
+					</div>	
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="s-adv-item text-center">
+						<h3><span>150</span> обьектов</h3>
+						<p>Более 150 выполненных работ</p>
+					</div>	
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="s-adv-item text-center">
+						<h3><span>120</span> партнеров</h3>
+						<p>Более 120 партнеров</p>
+					</div>	
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
 </header>
-<section class="s-slide">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="img/slide2.jpg" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="img/slide1.jpg" alt="Second slide">
-    </div>
-    
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-			</div>
-		</div>
-	</div>
-		
-</section>
 
+<section class="s-profile bg-light">
+	<div class="container-">
+		<div class="row row-list-bordered-3-elements">
+			
+			<div class="col-md-6 col-lg-3">
+				<div class="box-services-hexagon">
+					<div class="hexagon-wrapper">
+						<a href="#">
+							<div class="hexagon"></div><img src="img/1.svg" alt="" width="65" height="65">
+						</a>
 
-<section class="s-profile">
-	<div class="container">
-		<div class="row">
-			<div class="col text-center py-5">
-				<h2 class="h2">По лабораториям</h2>
-				<div class="bar-main pt-1">
-					<div class="bar"></div>
-					
-				</div>
-			</div>
-		</div>
-		<div class="row text-center justify-content-center">
-			<div class="col-md-6 col-lg-3 pb-5">
-				<div class="card h-100 shadow border-0">
-  					<figure class="effect-chico">
-    					<a href="#">
-    						<img src="img/pediatr.jpg" alt="#">
-    						<figcaption>
-    							<i class="fa fa-eye"></i>
-    						</figcaption>
-    					</a>    							
-    				</figure>
-					<div class="card-body">
-    					<h5 class="card-title">	<a href="#" class="text-body">Медицинская лаборатория</a></h5>
-    					
-   					</div>
-  				</div>
-			</div>
-			<div class="col-md-6 col-lg-3 pb-5">
-				<div class="card h-100 shadow border-0">
-  					<figure class="effect-chico">
-    					<a href="#">
-    						<img src="img/terapevt.jpg" alt="Web розробка">
-    						<figcaption>
-    							<i class="fa fa-eye"></i>
-    						</figcaption>
-    					</a>    							
-    				</figure>
-					<div class="card-body">
-    					<h5 class="card-title">	<a href="#" class="text-body">Лаборатория контроля качества</a></h5>
-    					
-   					</div>
-  				</div>
-			</div>
-			<div class="col-md-6 col-lg-3 pb-5">
-				<div class="card h-100 shadow border-0">
-  					<figure class="effect-chico">
-    					<a href="#">
-    						<img src="img/palatapacienta.jpg" alt="Web розробка">
-    						<figcaption>
-    							<i class="fa fa-eye"></i>
-    						</figcaption>
-    					</a>    							
-    				</figure>
-					<div class="card-body">
-    					<h5 class="card-title">	<a href="#" class="text-body">Научная лаборатория</a></h5>
-    					
-   					</div>
-  				</div>
-			</div>
-			<div class="col-md-6 col-lg-3 pb-5">
-				<div class="card h-100 shadow border-0">
-  					<figure class="effect-chico">
-    					<a href="#">
-    						<img src="img/sestrinskiypost.jpg" alt="Web розробка">
-    						<figcaption>
-    							<i class="fa fa-eye"></i>
-    						</figcaption>
-    					</a>    							
-    				</figure>
-					<div class="card-body">
-    					<h5 class="card-title">	<a href="#" class="text-body">Производственная лаборатория</a></h5>
-    					
-   					</div>
-  				</div>
-			</div>
-			<div class="col-md-6 col-lg-3 pb-5">
-				<div class="card h-100 shadow border-0">
-  					<figure class="effect-chico">
-    					<a href="#">
-    						<img src="img/procedurna.jpg" alt="Web розробка">
-    						<figcaption>
-    							<i class="fa fa-eye"></i>
-    						</figcaption>
-    					</a>    							
-    				</figure>
-					<div class="card-body">
-    					<h5 class="card-title">	<a href="#" class="text-body">Хроматографическая лаборатория</a></h5>
-    					
-   					</div>
-  				</div>
-			</div>
-			<div class="col-md-6 col-lg-3 pb-5">
-				<div class="card h-100 shadow border-0">
-  					<figure class="effect-chico">
-    					<a href="#">
-    						<img src="img/oftalmolog.jpg" alt="Web розробка">
-    						<figcaption>
-    							<i class="fa fa-eye"></i>
-    						</figcaption>
-    					</a>    							
-    				</figure>
-					<div class="card-body">
-    					<h5 class="card-title">	<a href="#" class="text-body">Фармацевтическая лаборатория</a></h5>
-    					
-   					</div>
-  				</div>
-			</div>
-			<div class="col-md-6 col-lg-3 pb-5">
-				<div class="card h-100 shadow border-0">
-  					<figure class="effect-chico">
-    					<a href="#">
-    						<img src="img/fizioterapevt.jpg" alt="Web розробка">
-    						<figcaption>
-    							<i class="fa fa-eye"></i>
-    						</figcaption>
-    					</a>    							
-    				</figure>
-					<div class="card-body">
-    					<h5 class="card-title">	<a href="#" class="text-body">Пищевая лаборатория</a></h5>
-    					
-   					</div>
-  				</div>
-			</div>
-			<div class="col-md-6 col-lg-3 pb-5">
-				<div class="card h-100 shadow border-0">
-  					<figure class="effect-chico">
-    					<a href="#">
-    						<img src="img/ginekolog.jpg" alt="Web розробка">
-    						<figcaption>
-    							<i class="fa fa-eye"></i>
-    						</figcaption>
-    					</a>    							
-    				</figure>
-					<div class="card-body">
-    					<h5 class="card-title">	<a href="#" class="text-body">Химическая лаборатория</a></h5>
-    					
-   					</div>
-  				</div>
-			</div>
-								
-		</div>
-
-	</div>
-</section>
-
-<section class="s-partners bg-light section-overley py-5">
-			<div class="container">
-				<div class="row">
-					<div class="col text-center ">
-						<h2 class="h2">Партнеры</h2>
-						<div class="bar-main pt-1">
-					<div class="bar"></div>
-					
 					</div>
+					<h4 class="box-services-hexagon-title"><a href="#">Дизайн выставочных стендов </a></h4>
+					<p class="box-services-hexagon-text">Our team of experts has years of experience in remodeling homes including kitchens, basements etc.</p>
+				</div>
+
+			</div>
+			<div class="col-md-6 col-lg-3 box-border">
+				<div class="box-services-hexagon">
+					<div class="hexagon-wrapper">
+						<a href="#">
+							<div class="hexagon"></div><img src="img/2.svg" alt="" width="65" height="65">
+						</a>
+					</div>
+					<h4 class="box-services-hexagon-title"><a href="#">2D/3D анимация </a></h4>
+					<p class="box-services-hexagon-text">Our team of experts has years of experience in remodeling homes including kitchens, basements etc.</p>
 				</div>
 			</div>
-				<div class="row">
-					<div class="col-sm-10 offset-sm-1">
-						<div class="owl-carousel partners">
-							<div class="partner">
-								<img src="img/partner1.jpg" alt="выкуп">
-								
+			
+			<div class="col-md-6 col-lg-3 box-border">
+				<div class="box-services-hexagon">
+					<div class="hexagon-wrapper">
+						<a href="#">
+							<div class="hexagon"></div><img src="img/3.svg" alt="#" width="65" height="65">
+						</a>
+					</div>
+					<h4 class="box-services-hexagon-title"><a href="#">Разработка логотипа и фирменного стиля </a></h4>
+					<p class="box-services-hexagon-text">Our team of experts has years of experience in remodeling homes including kitchens, basements etc.</p>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-3 box-border">
+				<div class="box-services-hexagon">
+					<div class="hexagon-wrapper">
+						<a href="#">
+							<div class="hexagon"></div><img src="img/4.svg" alt="#" width="65" height="65">
+						</a>
+					</div>
+					<h4 class="box-services-hexagon-title"><a href="#">Дизайн наружной рекламы и POS материалов </a></h4>
+					<p class="box-services-hexagon-text">Our team of experts has years of experience in remodeling homes including kitchens, basements etc.</p>
+				</div>
+			</div>
+	<div class="col-md-6 col-lg-3 mt-4">
+				<div class="box-services-hexagon">
+					<div class="hexagon-wrapper">
+						<a href="#">
+							<div class="hexagon"></div><img src="img/5.svg" alt="" width="65" height="65">
+						</a>
+					</div>
+					<h4 class="box-services-hexagon-title"><a href="#">Графический дизайн и иллюстрации</a></h4>
+					<p class="box-services-hexagon-text">Our team of experts has years of experience in remodeling homes including kitchens, basements etc.</p>
+				</div>
+
+			</div>
+			
+			
+			<div class="col-md-6 col-lg-3 box-border mt-4">
+				<div class="box-services-hexagon">
+					<div class="hexagon-wrapper">
+						<a href="#">
+							<div class="hexagon"></div><img src="img/6.svg" alt="" width="65" height="65">
+						</a>
+					</div>
+					<h4 class="box-services-hexagon-title"><a href="#">Дизайн упаковок и этикеток</a></h4>
+					<p class="box-services-hexagon-text">Our team of experts has years of experience in remodeling homes including kitchens, basements etc.</p>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-3 box-border mt-4">
+				<div class="box-services-hexagon">
+					<div class="hexagon-wrapper">
+						<a href="#">
+							<div class="hexagon"></div><img src="img/7.svg" alt="#" width="65" height="65">
+						</a>
+					</div>
+					<h4 class="box-services-hexagon-title"><a href="#">Видеосъёмка, монтаж</a></h4>
+					<p class="box-services-hexagon-text">Our team of experts has years of experience in remodeling homes including kitchens, basements etc.</p>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-3 box-border mt-4">
+				<div class="box-services-hexagon">
+					<div class="hexagon-wrapper">
+						<a href="#">
+							<div class="hexagon"></div><img src="img/8.svg" alt="#" width="65" height="65">
+						</a>
+					</div>
+					<h4 class="box-services-hexagon-title"><a href="#">Создание сайтов</a></h4>
+					<p class="box-services-hexagon-text">Our team of experts has years of experience in remodeling homes including kitchens, basements etc.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<section class="s-about">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-5">
+				<div class="about-item">
+					<h2 class="pb-3">О нас</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<div class="button-block pb-3"><a class="btn btn-primary-warn" href="#">подробнее</a></div>
+					
+				</div>
+				
+			</div>
+			<div class="col-md-12 col-lg-7">
+				<figure class="figure">
+					<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+				</figure>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="s-brand bg-light">
+	<div class="container">
+		<div class="row row-list-bordered align-items-center">
+			<div class="col-md-3 pb-5">
+				<a class="brands" href="#">
+					<img src="img/brands-01.png" alt="" width="156" height="45">
+				</a>
+			</div>
+			<div class="col-md-3 pb-5 box-border">
+				<a class="brands" href="#">
+					<img src="img/brands-02.png" alt="" width="156" height="45">
+				</a>
+			</div>
+			<div class="col-md-3 pb-5 box-border">
+				<a class="brands" href="#">
+					<img src="img/brands-03.png" alt="" width="156" height="45">
+				</a>
+			</div>
+			<div class="col-md-3 box-border">
+				<a class="brands" href="#">
+					<img src="img/brands-04.png" alt="" width="156" height="45">
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="portfolio" class="s_portfolio bg_dark">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 ">
+				<div class="section_header text-center">
+					<h2>Наши проекты</h2>
+				</div>	
+			</div>
+			
+			<div class="section_content">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center filter_div controls mt-3">
+							<ul>
+								<li class="filter active" data-filter="all">Все работы</li>
+								<li class="filter" data-filter=".category-1">Дизайн</li>
+								<li class="filter" data-filter=".category-2">2D/3D</li>
+								<li class="filter" data-filter=".category-3">Логотип</li>
+								<li class="filter" data-filter=".category-3">Видео</li>
+								<li class="filter" data-filter=".category-3">Сайты</li>
+							</ul>
+						</div>
+						<div class="col-md-12">
+							<div id="portfolio_grid">
+								<div class="mix col-lg-4 col-12 portfolio_item category-1">
+									<a href="#myModal" class="project-data" data-toggle="modal">
+										<img src="img/g1.jpg" alt="alt">
+
+										<div class="port_item_cont">
+											<h3>Ecobozor Sale</h3>
+										</div>
+									</a>
+									<div class="modal fade" id="myModal">
+										<div class="modal-dialog modal-xl" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalLongTitle">Ecobozor Sale</h5>
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+														<span aria-hidden="true">&times;</span>
+													</button>
+												</div>
+												<div class="modal-body p-0">
+													<div class="container-fluid">
+														<div class="row">
+															<div class="col-md-12">
+
+																<img src="img/Ecobozor2.png" class="figure-img img-fluid" alt="">
+																<video width="100%" height="500" poster="/images/w3html5.gif" controls>
+																	<source src="img/EcobozorTVtitle3D.MP4" type="video/mp4">
+																	</video>
+																	<img src="img/Ecobozor3.png" class="figure-img img-fluid" alt="">
+
+																</div>
+
+															</div>
+														</div>
+													</div>
+
+												</div>
+											</div>
+										</div>
+
+									</div>
+									<div class="mix col-lg-4 col-12 portfolio_item category-1 category-2">
+										<a href="#myModal2" class="project-data" data-toggle="modal">
+											<img src="img/g2.jpg" alt="alt">
+											<div class="port_item_cont">
+												<h3>Ecobozor Watermelon</h3>
+												
+											</div>
+										</a>
+										<div class="modal fade" id="myModal2">
+											<div class="modal-dialog modal-xl" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title">Ecobozor Watermelon</h5>
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															<span aria-hidden="true">&times;</span>
+														</button>
+													</div>
+													<div class="modal-body p-0">
+														<div class="container-fluid">
+															<div class="row">
+																<div class="col-md-12">
+
+																	<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+																	<video width="100%" height="500" poster="/images/w3html5.gif" controls>
+																		<source src="img/Onsense-Video2D,3D,4D,5D.mp4" type="video/mp4">
+																		</video>
+																		<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+
+																		<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+
+
+
+																	</div>
+
+																</div>
+															</div>
+														</div>
+
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mix col-lg-4 col-12 portfolio_item category-1">
+											<a href="#myModal2" class="project-data" data-toggle="modal">
+												<img src="img/g3.jpg" alt="alt">
+												<div class="port_item_cont">
+													<h3>EcoFoodExpo Russia</h3>
+													
+												</div>
+											</a>
+											<div class="modal fade" id="myModal2">
+												<div class="modal-dialog modal-xl" role="document">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h5 class="modal-title">EcoFoodExpo Russia</h5>
+															<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																<span aria-hidden="true">&times;</span>
+															</button>
+														</div>
+														<div class="modal-body p-0">
+															<div class="container-fluid">
+																<div class="row">
+																	<div class="col-md-12">
+
+																		<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+																		<video width="100%" height="500" poster="/images/w3html5.gif" controls>
+																			<source src="img/Onsense-Video2D,3D,4D,5D.mp4" type="video/mp4">
+																			</video>
+																			<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+
+																			<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+
+
+
+																		</div>
+
+																	</div>
+																</div>
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="mix col-lg-4 col-12 portfolio_item category-2">
+												<a href="#myModal2" class="project-data" data-toggle="modal">
+													<img src="img/g4.jpg" alt="alt">
+													<div class="port_item_cont">
+														<h3>UzTelecom (Huawey TV)</h3>
+														
+													</div>
+												</a>
+												<div class="modal fade" id="myModal2">
+													<div class="modal-dialog modal-xl" role="document">
+														<div class="modal-content">
+															<div class="modal-header">
+																<h5 class="modal-title">UzTelecom (Huawey TV)</h5>
+																<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																	<span aria-hidden="true">&times;</span>
+																</button>
+															</div>
+															<div class="modal-body p-0">
+																<div class="container-fluid">
+																	<div class="row">
+																		<div class="col-md-12">
+
+																			<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+																			<video width="100%" height="500" poster="/images/w3html5.gif" controls>
+																				<source src="img/Onsense-Video2D,3D,4D,5D.mp4" type="video/mp4">
+																				</video>
+																				<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+
+																				<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+
+
+
+																			</div>
+
+																		</div>
+																	</div>
+																</div>
+
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="mix col-lg-4 col-12 portfolio_item category-2">
+													<a href="#myModal2" class="project-data" data-toggle="modal">
+														<img src="img/g5.jpg" alt="alt">
+														<div class="port_item_cont">
+															<h3>Indenim Boutique</h3>
+															
+														</div>
+													</a>
+													<div class="modal fade" id="myModal2">
+														<div class="modal-dialog modal-xl" role="document">
+															<div class="modal-content">
+																<div class="modal-header">
+																	<h5 class="modal-title">Indenim Boutique</h5>
+																	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																		<span aria-hidden="true">&times;</span>
+																	</button>
+																</div>
+																<div class="modal-body p-0">
+																	<div class="container-fluid">
+																		<div class="row">
+																			<div class="col-md-12">
+
+																				<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+																				<video width="100%" height="500" poster="/images/w3html5.gif" controls>
+																					<source src="img/Onsense-Video2D,3D,4D,5D.mp4" type="video/mp4">
+																					</video>
+																					<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+
+																					<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+
+
+
+																				</div>
+
+																			</div>
+																		</div>
+																	</div>
+
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="mix col-lg-4 col-12 portfolio_item category-1 category-3">
+														<a href="#myModal2" class="project-data" data-toggle="modal">
+															<img src="img/g6.jpg" alt="alt">
+															<div class="port_item_cont">
+																<h3>Ingerm</h3>
+																
+															</div>
+														</a>
+														<div class="modal fade" id="myModal2">
+															<div class="modal-dialog modal-xl" role="document">
+																<div class="modal-content">
+																	<div class="modal-header">
+																		<h5 class="modal-title">Ingerm</h5>
+																		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																			<span aria-hidden="true">&times;</span>
+																		</button>
+																	</div>
+																	<div class="modal-body p-0">
+																		<div class="container-fluid">
+																			<div class="row">
+																				<div class="col-md-12">
+
+																					<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+																					<video width="100%" height="500" poster="/images/w3html5.gif" controls>
+																						<source src="img/Onsense-Video2D,3D,4D,5D.mp4" type="video/mp4">
+																						</video>
+																						<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+
+																						<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+
+
+
+																					</div>
+
+																				</div>
+																			</div>
+																		</div>
+
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="mix col-lg-4 col-12 portfolio_item category-1 category-3">
+														<a href="#myModal2" class="project-data" data-toggle="modal">
+															<img src="img/g7.jpg" alt="alt">
+															<div class="port_item_cont">
+																<h3>Kartina TV</h3>
+																
+															</div>
+														</a>
+														<div class="modal fade" id="myModal2">
+															<div class="modal-dialog modal-xl" role="document">
+																<div class="modal-content">
+																	<div class="modal-header">
+																		<h5 class="modal-title">Kartina TV</h5>
+																		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																			<span aria-hidden="true">&times;</span>
+																		</button>
+																	</div>
+																	<div class="modal-body p-0">
+																		<div class="container-fluid">
+																			<div class="row">
+																				<div class="col-md-12">
+
+																					<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+																					<video width="100%" height="500" poster="/images/w3html5.gif" controls>
+																						<source src="img/Onsense-Video2D,3D,4D,5D.mp4" type="video/mp4">
+																						</video>
+																						<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+
+																						<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+
+
+
+																					</div>
+
+																				</div>
+																			</div>
+																		</div>
+
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="mix col-lg-4 col-12 portfolio_item category-1 category-3">
+														<a href="#myModal2" class="project-data" data-toggle="modal">
+															<img src="img/g8.jpg" alt="alt">
+															<div class="port_item_cont">
+																<h3>Pizzabar</h3>
+																
+															</div>
+														</a>
+														<div class="modal fade" id="myModal2">
+															<div class="modal-dialog modal-xl" role="document">
+																<div class="modal-content">
+																	<div class="modal-header">
+																		<h5 class="modal-title">Pizzabar</h5>
+																		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																			<span aria-hidden="true">&times;</span>
+																		</button>
+																	</div>
+																	<div class="modal-body p-0">
+																		<div class="container-fluid">
+																			<div class="row">
+																				<div class="col-md-12">
+
+																					<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+																					<video width="100%" height="500" poster="/images/w3html5.gif" controls>
+																						<source src="img/Onsense-Video2D,3D,4D,5D.mp4" type="video/mp4">
+																						</video>
+																						<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+
+																						<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+
+
+
+																					</div>
+
+																				</div>
+																			</div>
+																		</div>
+
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="mix col-lg-4 col-12 portfolio_item category-1 category-3">
+														<a href="#myModal2" class="project-data" data-toggle="modal">
+															<img src="img/g9.jpg" alt="alt">
+															<div class="port_item_cont">
+																<h3>Tabletka - App</h3>
+																
+															</div>
+														</a>
+														<div class="modal fade" id="myModal2">
+															<div class="modal-dialog modal-xl" role="document">
+																<div class="modal-content">
+																	<div class="modal-header">
+																		<h5 class="modal-title">Tabletka - App</h5>
+																		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																			<span aria-hidden="true">&times;</span>
+																		</button>
+																	</div>
+																	<div class="modal-body p-0">
+																		<div class="container-fluid">
+																			<div class="row">
+																				<div class="col-md-12">
+
+																					<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+																					<video width="100%" height="500" poster="/images/w3html5.gif" controls>
+																						<source src="img/Onsense-Video2D,3D,4D,5D.mp4" type="video/mp4">
+																						</video>
+																						<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+
+																						<img src="img/bg-image-5.jpg" class="figure-img img-fluid" alt="">
+
+
+
+																					</div>
+
+																				</div>
+																			</div>
+																		</div>
+
+																	</div>
+																</div>
+															</div>
+														</div>
+
+													</div>
+												</div>
+
+
+											</div>
+										</div>
+									</div>
+
+								</div>
+
 							</div>
-							<div class="partner">
-								<img src="img/partner2.jpg" alt="выкуп">
-								
-							</div>
-							<div class="partner">
-								<img src="img/partner3.png" alt="выкуп">
-								
-							</div>
-							<div class="partner">
-								<img src="img/partner4.jpg" alt="выкуп">
-								
-							</div>
-							<div class="partner">
-								<img src="img/partner5.jpg" alt="выкуп">
-								
-							</div>
+
+
 						</div>
 					</div>
-				</div>
-			</div>
-			
+				</section>
 
-		</section>
-<section class="s-about py-5">
-			<div class="container">
-				<div class="row">
-					<div class="col text-center ">
-						<h2 class="h2">Лабораторная мебель "Smartlab"</h2>
-						
-				</div>
-			</div>
-				<div class="row">
-					<div class="col-md-12 pt-4">
-						<div class="text-center">
-							<p>На сегодняшний день рынок медицинских услуг в Украине активно развивается. Открывается большое количество частных клиник. В ходе медицинской реформы появились центры первичной медицинской помощи. Активно переоснащаются государственные лечебные учреждения. Медицинская мебель, как и медицинское оборудование является важной основой любого медицинского учреждения. Она должна быть качественной, долговечной, удобной, функциональной и самое главное безопасной, как для врача, так и для пациента. Именно такую медицинскую мебель производит компания "СмартМед". Оперативно и качественно мы поможем Вам подобрать медицинские кушетки и банкетки, медицинские кровати, инструментальные и манипуляционные столики, а также другую медицинскую мебель.
-							Специалисты нашей компании проведут замеры Вашего помещения, выполнят дизайн-проект. В стоимость мебели включена доставка и сборка. Мы готовы комплексно оснастить мебелью Ваше лечебное учреждение, начиная от палат, кабинетов врачей и манипуляционных, заканчивая пищеблоками, гардеробными и зонами ожидания. </p>
-							<p><strong>Просто позвоните нам, мы обязательно договоримся!!!</strong></p>
-						</div>
-					
-					</div>
-				</div>
-			</div>
-			
-
-		</section>
-
-<section class="s-contact pt-3 pb-5 bg-darks">
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 col-lg-3 pt-3">
-				 <h4>Главное меню</h4>
-				 <div class="line"></div>
-				 <nav class="main-header_top_nav">
-							<ul>
-								<li><a href="#">О нас</a></li>
-								<li><a href="#">Акции</a></li>
-								<li><a href="#">Дилерам</a></li>
-								<li><a href="#">Новости</a></li>
-								<li><a href="#">Контакты</a></li>
-							</ul>
-						</nav>
-					<a href="#" class="h5"><button type="button" class="btn btn-success w-75 mt-3">СКАЧАТЬ КАТАЛОГ</button></a>	
-			</div>
-			<div class="col-md-12 col-lg-4 pt-3">
-				 <h4>Каталог товаров</h4>
-				 <div class="line"></div>
-				 <nav class="main-header_top_nav">
-							<ul>
-
-								<li><a href="#">Столы лабораторные</a></li>
-								<li><a href="#">Столы лабораторные пристенные</a></li>
-								<li><a href="#">Столы для приборов</a></li>
-								<li><a href="#">Столы титровальные</a></li>
-								<li><a href="#">Надстройки лабораторные</a></li>
-								<li><a href="#">Мойки лабораторные</a></li>
-								<li><a href="#">Мобильные столы</a></li>
-								<li><a href="#">Вытяжные шкафы</a></li>
-								<li><a href="#">Шкафы для лабораторной посуды</a></li>
-								<li><a href="#">Шкафы для реактивов</a></li>
-								<li><a href="#">Стеллажи лабораторные</a></li>
-								<li><a href="#">Шкафы лабораторные</a></li>
-								<li><a href="#">Сушка для лабораторной посуды</a></li>
-								<li><a href="#">Тумбы лабораторные</a></li>
-								<li><a href="#">Кресла лабораторные</a></li>
-								<li><a href="#">Стулья лабораторные</a></li>
-								<li><a href="#">Табуреты лабораторные</a></li>
-								<li><a href="#">Дополнительное оборудование</a></li>
-			
-							</ul>
-						</nav>
-			</div>
-			<div class="col-md-12 col-lg-5 pt-3">
-				<h4>Контакты</h4>
-				<div class="line"></div>
-				<div class="contacts-text">
-					<p><i class="fa fa-map-marker"></i> Киев, Магнитогорская, 1</p>
-					<a href="tel:0505600707"><i class="fa fa-phone"></i> +38(050) 560 0707</a>
-					<a href="tel:0975600707"><i class="fa fa-phone"></i> +38(097) 560 0707</a>
-					<a href="tel:0935600707"><i class="fa fa-phone"></i> +38(093) 560 0707</a>
-					<a href="mailto:zlandshafting@gmail.com"><i class="fa fa-envelope"></i> info@labsmart.com.ua</a></li>
-				</div>
-
-				<div class="map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.253311517591!2d30.63812991561603!3d50.455007479476016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4daad3f925a63%3A0xb266860bc4633bcc!2z0LLRg9C70LjRhtGPINCc0LDQs9C90ZbRgtC-0LPQvtGA0YHRjNC60LAsIDEsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1557603264395!5m2!1suk!2sua" width="100%" height="280" frameborder="0" style="border:0" allowfullscreen></iframe>
-				</div>
-			</div>
-			
-		</div>
-	</div>
-</section>
-
-<footer class="main-foot py-3">
-	<div class="container">
-		<div class="row">
-			<div class="col text-center">
-				<p>© 2019 "Smartlab" – лабораторная мебель<p>
-			</div>
-		</div>
-	</div>
-</footer>
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-md modal-dialog-centered" role="document">
-    <div class="modal-content border border-secondary">
-      <div class="modal-header text-white bg-dark">
-        <h5 class="modal-title" id="exampleModalLabel">Заказать обратный звонок</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span class="text-white" aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      	<form>
-      	<div class="form-group">
-      		<input type="text" class="form-control" placeholder="Имя" required>
-      	</div>
-      	<div class="form-group">
-      		<input type="text" class="form-control" placeholder="Телефон" required>
-      	</div>	
-    	<div class="form-group">
-            <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="E-mail (не обязательно)">
-            
+<!--<section class="section bg-light bg-triangle">
+        <div class="bg-triangle-item"></div>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6 col-lg-5"><img src="img/download-02.png" alt=""/>
+            </div>
+            <div class="col-md-6">
+              <div class="section-lg">
+                <h3 class="text-uppercase">Download our brochure</h3>
+                <p class="py-3">If you are looking for a high-quality construction services provider, we’d be glad to help you. Download our Brochure to learn more about our prices and range of services.</p>
+                <div><a class="button btn btn-primary-warn" href="#">Download</a></div>
+                  	
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <button type="submit" class="btn btn-danger w-100">Отправить</button>
+    </section>-->
+    <section class="s-blog bg-light">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-12 ">
+    				<div class="section_header text-center">
+    					<h2 class="pb-3">Company News</h2>
+    				</div>	
+    			</div>
+    		</div>
+    		<div class="row">
+    			<div class="col-md-6 col-lg-4 pb-5">
+    				<div class="card h-100 shadow border-0">
+    					<div class="card-0">
+    						<div class="port_item_cont">
+    							<a href="#">
+    								<img class="card-img-top" src="img/post-1.jpg" alt="">
 
-        </form>  
-      </div>
-      
-    </div>
-  </div>
-</div>			
+    							</a>
 
-<script src="js/scripts.min.js"></script>
+    						</div>
+    					</div>
+    					<div class="card-body">
+    						<a href="#">Preparing a Room For Painting</a>
+    						<div class="date">
+    							<i class="far fa-clock"></i> August 9, 2018
 
-</body>
+    						</div>
+    						<p>Home renovations take know-how and inspiration. Here you'll find information on the best materials</p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-4 pb-5">
+    				<div class="card h-100 shadow border-0">
+    					<div class="card-0">
+    						<div class="port_item_cont">
+    							<a href="#">
+    								<img class="card-img-top" src="img/post-2.jpg" alt="Rafined sunflower oil">
+    							</a>
+    						</div>
+    					</div>
+    					<div class="card-body">
+    						<a href="#">Preparing a Room For Painting</a>
+    						<div class="date">
+    							<i class="far fa-clock"></i> August 9, 2018
+
+    						</div>
+    						<p>Home renovations take know-how and inspiration. Here you'll find information on the best materials.</p>
+    					</div>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6 col-lg-4 pb-5">
+    				<div class="card h-100 shadow border-0">
+    					<div class="card-0">
+    						<div class="port_item_cont">
+    							<a href="#">
+    								<img class="card-img-top" src="img/post-1.jpg" alt="Rafined sunflower oil">
+    							</a>
+    						</div>
+    					</div>
+    					<div class="card-body">
+    						<a href="#">Preparing a Room For Painting</a>
+    						<div class="date">
+    							<i class="far fa-clock"></i> August 9, 2018
+
+    						</div>
+    						<p>Home renovations take know-how and inspiration. Here you'll find information on the best materials</p>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+    <section class="s-realiz">
+    	<div class="container">
+    		<div class="row">
+
+    			<div class="col-md-9">
+    				<h4 class="s-realiz-item">Looking for a high quality constructor for your project?</h4>				
+    			</div>
+    			<div class="col-md-3">
+    				<div class="button-block"><a class="btn btn-primary-warn" href="#">Заказать</a></div>		
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+
+    <section class="s-contact bg py-5">
+    	<div class="container">
+
+    		<div class="row">
+    			<div class="col-md-2 col-lg-1 col-xl-1">
+    				<div class="block-brand-modern">
+    					<div class="block-brand-modern-item"><a href="#">
+    						<img src="img/logo-default-115x62.png" alt="" width="115" height="62"></a>
+    					</div>
+
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-3 col-xl-4">
+    				<div class="block-brand-modern-item-2">
+    					<p>Top Project provides first-class<br>construction solutions to clients worldwide.</p>
+    				</div>
+    			</div>
+    			<div class="col-md-4 col-lg-2 col-xl-2">
+    				<div class="email pt-2">
+    					<h4>E-mail</h4>
+    					<a href="mailto:#">info@demolink.org</a>
+    				</div>
+
+    			</div>
+    			<div class="col-md-6 col-lg-3 col-xl-2">
+    				<div class="phone pt-2">
+    					<h4>Телефон</h4>
+    					<a href="tel:#">+1 (409) 987–5874</a>
+    				</div>
+
+    			</div>
+    			<div class="col-md-6 col-lg-3 col-xl-3">
+    				<div class="adress pt-2">
+    					<h4>Адрес</h4>
+    					<p>Richmond hwy., Alexandria, VA, 2230</p>
+    				</div>
+    			</div>
+    		</div>		
+    	</div>
+    </section>
+
+    <footer class="main-foot py-3">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col text-center">
+    				<p>Top Project © 2019<p>
+    				</div>
+    			</div>
+    		</div>
+    	</footer>
+
+
+    	<script src="js/scripts.min.js"></script>
+
+    </body>
 </html>
