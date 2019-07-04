@@ -47,7 +47,7 @@ if ($(this).scrollTop() > 1){
 });
 
 $(document).ready(function() {
-  $('.popup-vimeo, .popup-gmaps').magnificPopup({
+  $('.popup-gmaps').magnificPopup({
     disableOn: 700,
     type: 'image',
     mainClass: 'mfp-fade',
@@ -59,7 +59,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-  $('.popup-youtube').magnificPopup({
+  $('.popup-vimeo, .popup-youtube').magnificPopup({
     disableOn: 700,
     type: 'iframe',
     mainClass: 'mfp-fade',
