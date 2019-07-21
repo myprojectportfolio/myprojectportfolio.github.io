@@ -23,7 +23,7 @@ $(function() {
       }
     });
     var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(' ');
-    $(".s-adv-item h3 span").each(function() {
+    $(".s-adv-itewm h3 span").each(function() {
       var tcount = $(this).data("count");
       $(this).animateNumber({ number: tcount,
         easing: 'easeInQuad',
@@ -46,6 +46,29 @@ if ($(this).scrollTop() > 1){
   }
 });
 
+$(document).ready(function() {
+  $('.popup-gmaps').magnificPopup({
+    disableOn: 700,
+    type: 'image',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+
+    fixedContentPos: false
+  });
+});
+
+$(document).ready(function() {
+  $('.popup-vimeo, .popup-youtube').magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+
+    fixedContentPos: false
+  });
+});
 
 $(document).ready(function() {
 	$('.popup-gallery').magnificPopup({
