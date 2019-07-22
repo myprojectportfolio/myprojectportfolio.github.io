@@ -66,15 +66,19 @@ $(document).ready(function() {
 
 $(window).scroll(function() {
 if ($(this).scrollTop() > 1){  
-    $('.menu-line').addClass("sticky");
+    $('.mnu-line').addClass("sticky");
   }
   else{
-    $('.menu-line').removeClass("sticky");
+    $('.mnu-line').removeClass("sticky");
   }
 });
 
 $(function(){
   $("#phone1").mask("+38(999) 999-9999");
+});
+
+$(function(){
+  $("#phone2").mask("+38(999) 999-9999");
 });
 
 $(document).ready(function() {
