@@ -36,14 +36,6 @@ $(function() {
     offset: '70%'
   });
 
-$(window).scroll(function() {
-if ($(this).scrollTop() > 1){  
-    $('.mnu-line').addClass("sticky");
-  }
-  else{
-    $('.mnu-line').removeClass("sticky");
-  }
-});
 
 $(document).ready(function() {
   $('.zoom-gallery').magnificPopup({
@@ -70,6 +62,23 @@ $(document).ready(function() {
     }
     
   });
+});
+
+$(window).scroll(function() {
+if ($(this).scrollTop() > 1){  
+    $('.mnu-line').addClass("sticky");
+  }
+  else{
+    $('.mnu-line').removeClass("sticky");
+  }
+});
+
+$(function(){
+  $("#phone1").mask("+38(999) 999-9999");
+});
+
+$(function(){
+  $("#phone2").mask("+38(999) 999-9999");
 });
 
 $(document).ready(function() {
@@ -136,3 +145,12 @@ $('.partners').owlCarousel({
 $(window).on('load', function() {
   $('.preloader').delay(1000).fadeOut('slow')
 });
+
+
+function hide(id){
+      x = document.getElementById(id);
+      if(x.style.display == 'block'){
+      x.style.display = 'none';
+      }else {(x.style.display = 'block')
+        } 
+        }
