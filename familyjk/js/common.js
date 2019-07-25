@@ -6,7 +6,7 @@ $(function() {
     return false;
   });
 
-  $('.s-profile').parallax({imageSrc: 'img/profile.jpg'});
+  $('.s-profile').parallax({imageSrc: 'img/profile.JPG'});
    $('.s-invest').parallax({imageSrc: 'img/invest.JPG'});
 
 	$(".s-adv").waypoint(function() {
