@@ -7,7 +7,15 @@ $(function() {
   });
 
   $('.s-profile').parallax({imageSrc: 'img/profile.JPG'});
-   $('.s-invest').parallax({imageSrc: 'img/investoram.JPG'});
+  $('.s-invest').parallax({imageSrc: 'img/investoram.JPG'});
+
+  $(function(){
+    $("#phone1").mask("+38(999) 999-9999");
+  });
+
+  $(function(){
+    $("#phone2").mask("+38(999) 999-9999");
+  });
 
 	$(".s-adv").waypoint(function() {
 
@@ -163,6 +171,13 @@ $('.partners').owlCarousel({
   }
 });
 
+function carouselService() {
+    $('.carousel-item').each(function() {
+      var t = $(this),
+      h = t.find('.carousel-text').outerHeight();
+      t.find('.carousel-pic').css('min-height', h);
+    });
+  }carouselService();
 
 });
 $(window).on('load', function() {
