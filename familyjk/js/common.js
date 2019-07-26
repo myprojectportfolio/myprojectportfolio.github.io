@@ -9,6 +9,7 @@ $(function() {
   $('.s-profile').parallax({imageSrc: 'img/profile.JPG'});
   $('.s-invest').parallax({imageSrc: 'img/investoram.JPG'});
 
+ 
   $(function(){
     $("#phone1").mask("+38(999) 999-9999");
   });
@@ -17,32 +18,7 @@ $(function() {
     $("#phone2").mask("+38(999) 999-9999");
   });
 
-	$(".s-adv").waypoint(function() {
-
-    $({blurRadius: 5}).animate({blurRadius: 0}, {
-      duration: 1200,
-      easing: 'swing',
-      step: function() {
-        $(".s-adv-item h3 span").css({
-          "-webkit-filter": "blur("+this.blurRadius+"px)",
-          "filter": "blur("+this.blurRadius+"px)"
-        });
-      }
-    });
-    var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(' ');
-    $(".s-adv-item h3 span").each(function() {
-      var tcount = $(this).data("count");
-      $(this).animateNumber({ number: tcount,
-        easing: 'easeInQuad',
-        "font-size": "34px",
-        numberStep: comma_separator_number_step},
-        1200);
-    });
-    this.destroy();  
-
-  }, {
-    offset: '70%'
-  });
+	
 
 $(window).scroll(function() {
 if ($(this).scrollTop() > 1){  
@@ -144,7 +120,7 @@ $(document).ready(function() {
   });
 });
 
-
+$(".animenu ul a").mPageScroll2id();
 
 $('.partners').owlCarousel({
   loop: true,
@@ -181,5 +157,7 @@ function carouselService() {
 
 });
 $(window).on('load', function() {
-  $('.preloader').delay(1000).fadeOut('slow')
+  $('.preloader').delay(1000).fadeOut('slow');
+
+  
 });
