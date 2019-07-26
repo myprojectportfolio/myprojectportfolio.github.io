@@ -44,7 +44,7 @@ if ($(this).scrollTop() > 1){
 });
 
 $(document).ready(function() {
-  $('.popup-vimeo, .popup-youtube').magnificPopup({
+  $('.popup-youtube').magnificPopup({
     disableOn: 700,
     type: 'iframe',
     mainClass: 'mfp-fade',
