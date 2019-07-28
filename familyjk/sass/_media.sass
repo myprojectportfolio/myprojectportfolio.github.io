@@ -5,7 +5,12 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 	.mnu-line
-		position: relative
+		top: 0
+		position: fixed
+		width: 100%
+		opacity: 1
+		padding: 0px 0px 4px
+		text-align: right
 		&.sticky
 			display: block
 			height: auto
@@ -14,9 +19,7 @@
 		.phone
 			text-align: left
 			padding: 0
-	.animenu
-		margin-top: 2px
-
+	
 	.animenu__toggle
     display: inline-block
 
@@ -39,7 +42,7 @@
    		
 	.animenu__nav > li > a 
 		width: 100%
-		padding: 20px 15px
+		padding: 10px 10px
 		border-color: #6d6e71
 		position: relative
 	.animenu__nav__child 
@@ -70,7 +73,7 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	.mnu-line
-		position: relative
+		
 		.phone
 			text-align: left
 			padding: 0
@@ -100,12 +103,11 @@
 		display: none
 	.header_topline .main-header_top_nav
 		display: none
-	.mnu-line
-		text-align: right
-		position: relative
+	
 	.logo
-		
 		text-align: center
+		img
+			padding-top: 50px
 		.phone
 			text-align: left
 			padding: 0
@@ -130,6 +132,8 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 576px)
 	.header-second
+		.adress
+			display: none
 		.contacts-text
 			text-align: center
 			padding-bottom: 20px
@@ -138,15 +142,13 @@
 			height: 40px
 			i
 				padding-top: 10px
-	.mnu-line
-		text-align: right
-		position: relative
+	
 	.logo
 		display: block
 		opacity: 1
 		img
 			width: 220px
-			padding-top: 15px
+			padding-top: 50px
 		.phone
 			text-align: center
 			padding: 0
