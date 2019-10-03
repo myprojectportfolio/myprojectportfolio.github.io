@@ -1,0 +1,397 @@
+	
+body
+	font-family: "RobotoRegular", sans-serif
+	font-size: 16px
+
+.wrapper
+	min-width: 380px
+
+.fixed
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 5
+	background-color: #ffffff
+
+.content_section
+	margin-top: 100px
+	z-index: 2
+
+.logo_section
+	width: 100%
+	height: 30px
+	margin-top: 0
+	background-color: #ffffff
+
+.sidebar_container img
+	margin-top: 20px
+	border-radius: 3px
+	width: 100%
+	height: 350px
+
+.sidebar_container
+	position: relative
+	z-index: 1
+
+.next_button, .prev_button
+	background-color: rgba(255, 255, 255, 0.4)
+	padding: 0 20px
+	border-radius: 40px
+	color: #fff 
+	font-size: 40px
+	position: absolute
+	z-index: 1
+	cursor: pointer
+	top: 150px
+
+.next_button 
+	right: 20px
+
+.prev_button 
+	left: 20px
+
+.redline
+	width: 100%
+	height: 12px
+	background-color: #f24e5e
+	margin-top: 17px
+	margin-right: 0px
+	margin-left: 0px
+	margin-bottom: 8px
+
+.greyline
+	width: 100%
+	height: 48px
+	background-color: #6d6e71
+	position: relative
+    
+.main_logo
+	width: 270px
+	height: 78px
+	margin-top: -28px
+	background-color: #ffffff
+	padding: 5px
+	position: absolute
+	z-index: 1
+	
+.animenu__toggle
+	display: none
+	cursor: pointer
+	background-color: #6d6e71
+	border: 1px
+	padding: 10px
+	height: 30px
+	width: 30px
+	float: right
+	margin-top: 8px
+	z-index: 0
+
+.focused
+	outline: 0  
+
+.animenu__toggle__bar
+	display: block
+	width: 25px
+	height: 3px
+	background-color: #ffffff
+	margin-top: 8px
+
+.animenu__toggle__bar + .animenu__toggle__bar
+	margin-top: 5px
+
+.animenu__toggle--active .animenu__toggle__bar
+	margin: 0
+	position: absolute
+
+.animenu__toggle--active .animenu__toggle__bar:nth-child(1)
+	transform: rotate(45deg)
+
+.animenu__toggle--active .animenu__toggle__bar:nth-child(2)
+	opacity: 0
+
+.animenu__toggle--active .animenu__toggle__bar:nth-child(3)
+	transform: rotate(-45deg)
+
+.animenu
+	display: block
+	margin-top: -7px
+
+.animenu ul
+	padding: 0
+	list-style: none
+	font: 0px
+   
+.animenu li
+	display: inline-block
+	font-size: 14px
+
+.animenu a
+	display: inline-block
+	font-size: 12px
+	color: #fff
+	text-decoration: none
+
+.animenu__nav > li
+	position: relative
+
+.animenu__nav > li > a
+	padding: 9px 6px
+	font-size: 14px
+	text-transform: uppercase
+
+.animenu__nav > li:hover > ul
+	opacity: 1
+	visibility: visible
+	margin: 0
+	background-color:#f24e5e
+
+.animenu__nav > li:hover > a
+	color: #fff
+	background-color:#f24e5e
+
+.animenu__nav__child
+	width: 295px
+	position: absolute
+	top: 100%
+	left: 0
+	z-index: 2
+	opacity: 0
+	visibility: hidden
+	padding: 5px
+	background-color: #f24e5e
+	text-transform: uppercase
+	border-top: 1px solid
+
+.animenu__nav__child > li
+	width: 100%
+	line-height: 8px
+
+.animenu__nav__child > li:last-child
+	border: 0
+
+.animenu__nav__child a
+	padding: 10px
+	width: 100%
+  
+.animenu__nav   a:hover
+	background-color: #6d6e71
+	color: #fff
+
+.animenu__nav ,
+.animenu__nav__child a:hover
+	background-color: #6d6e71
+	color: #fff
+
+.catalog_item
+	margin-top: 30px
+	margin-bottom: 30px
+
+.catalog_item img
+	width: 100%
+	height: auto
+
+.catalog_item a 
+	font-size: 26px
+	color: #6d6e70
+	word-spacing: 2px
+	padding-top: 0
+	padding-bottom: 5px 
+	text-transform: uppercase
+	display: block
+
+.catalog_item a:hover 
+	text-decoration: underline
+
+.time
+	float: left
+	font-size: 15px
+	color: #b0b0b0
+
+.next a
+	text-transform: none
+	float: right
+	color: #f24e5e
+	text-decoration: none
+	font-size: 15px
+        
+.next a:hover
+    text-decoration: underline
+     
+.navigation 
+	color: #6d6e70
+	text-align: center
+	font-size: 16px
+	padding: 16px 0 0 0
+	margin-bottom: 60px 
+
+.navigation span 
+    color: #6d6e70
+    margin: 0 2px
+
+.navigation a 
+    margin: 0 2px
+    color: #f24e5e
+    text-decoration: none
+
+.navigation a:hover 
+    text-decoration: underline 
+  
+.main-header_top_date
+	font-size: 15px
+	color: #6d6e71
+
+.top_search
+	position: relative
+	
+	
+.top_search .fa
+ 	color: #B7B7B7
+ 	background: #f4f4f4
+
+.top_search input[type="text"]
+ 	background: #ffffff
+ 	width: 200px
+ 	height: 30px
+ 	border: 1px #6d6e71 solid 
+ 	padding: 0 5px 0 25px
+ 	font-size: 18px
+ 	font-style: italic
+ 	border-radius: 2px
+
+.top_search .fa-search
+	position: absolute
+	top: 6px
+	left: 5px
+	background: #FFFFFF
+
+.widget 
+	background-color: #f4f4f4
+	padding: 30px
+	margin-top: 20px
+	border: 1px solid #6d6e71
+	border-radius: 5px 
+  
+.widget_title span 
+    color: #f24e5e
+    text-transform: uppercase
+    font-size: 16px
+    margin-bottom: 20px
+
+.widget_body_menu
+	font-size: 16px
+	padding: 0
+	margin: 0
+	list-style: none
+  
+.widget_body_menu li 
+	padding: 10px 0 0 0
+
+.widget_body_menu li a 
+    text-decoration: none
+    text-transform: uppercase
+    color: #6d6e71
+    font-size: 15px
+ 
+.widget_body_menu li a:hover
+ 	text-decoration: underline
+   
+.widget_body_menu .fa 
+	padding-right: 10px
+	color:#f24e5e 
+
+.text-center
+	text-align: center
+	font-size: 25px
+	color: #6d6e70
+	font-weight: 400
+	text-transform: uppercase
+
+.time_article
+	text-align: right
+	font-size: 15px
+	color: #6d6e70
+	padding-bottom: 3px
+
+.main_content_article_img
+	margin: 0 0 16px
+	width: 100%
+
+.main_content_article_img img
+	width: 850px
+	height: auto
+  
+.main_content_tag 
+	font-size: 16px
+	color: #6d6e70
+	margin-bottom: 15px
+ 	
+.main_content_tag a
+	color: #6d6e70 
+
+.main_content_tag a:hover 
+	text-decoration: underline
+
+.widget_body_menu_level1 li a
+	font-size: 13px
+
+.widget_body_menu_level1 li 
+	font-size: 13px
+
+.position_fixed
+	position: fixed
+	
+.catalog_title
+	position: relative
+	margin-top: 16px
+	margin-bottom: 16px
+
+.catalog_title span
+	color: #6d6e70
+	text-transform: uppercase
+	font-size: 18px
+	background: #ffffff
+	padding-right: 5px
+	position: relative
+	z-index: 1
+
+.catalog_title:after
+	content: ""
+	display: block
+	width: 100%
+	height: 6px
+	right: 0
+	background-color: #6d6e71
+	top: 50%
+	position: absolute
+	margin-top: -5px
+
+.catalog_item_level2
+	position: relative
+	margin-top: 20px
+	margin-bottom: -20px
+	border: 1px solid #6d6e71
+	border-radius: 2px
+	
+.catalog_item_level2 img
+	float: left
+	padding: 10px
+	width: 200px
+	height: 250px
+
+.catalog_item_level2 p
+	padding-left: 10px
+
+.copyright_section
+	background-color: #d3d3d3
+	margin-top: 40px
+	position: relative
+
+.copyright_section span
+	display: block
+	text-align: center
+	margin: 25px 0
+	font-size: 14px
+
+
+@import "media"	
