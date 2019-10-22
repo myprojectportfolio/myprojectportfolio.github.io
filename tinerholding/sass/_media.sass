@@ -1,0 +1,108 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.mnu-line
+		position: relative
+		&.sticky
+			display: none
+		.phone
+			text-align: left
+			padding: 0
+		.toggle-mnu
+			top: 0
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.mnu-line
+		position: relative
+		.phone
+			text-align: left
+			padding: 0
+		.toggle-mnu
+			top: 0px	
+	.s-contact	
+		.contact-form
+			margin-top: 30px
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.mnu-line
+		text-align: center
+		position: relative
+		.logo
+			display: inline-block
+		.phone
+			text-align: left
+			padding: 0
+			margin-top: 20px
+	.top_adress
+		text-align: center
+	.social
+		display: inline-block
+	.s-realiz
+		.realiz-item
+			.fas, .far
+				font-size: 82px
+			p
+				font-size: 22px
+				padding-bottom: 30px
+				margin-bottom: 0
+	.s-review .quotes
+			display: none		
+				
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 576px)
+	.mnu-line
+		text-align: center
+		position: relative
+
+		.logo
+			display: inline-block
+		
+		.toggle-mnu
+			top: -40px
+
+	.top_adress
+		text-align: center
+	.s-about
+		padding: 0 20px
+		text-align: center	
+	.header-content
+		padding-top: 25%
+		h1
+			font-size: 28px
+		h2
+				font-size: 22px	
+	.s-about
+		.figure
+			overflow: hidden
+			background-size: cover
+			width: 100%
+			height: 250px
+			img
+				width: 100%
+				display: block
+				height: 250px		
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 576px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
