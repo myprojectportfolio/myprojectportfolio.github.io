@@ -26,7 +26,16 @@ $(function() {
   event.preventDefault();
 });
 
-	
+//   $(function() {
+//     $("img.lazy").lazyload();
+// });
+
+  $(function() {
+    $("img.lazy").lazyload();
+});
+
+	// $('img.lazy').lazyload();
+
 	$(".s-adv").waypoint(function() {
 
     $({blurRadius: 5}).animate({blurRadius: 0}, {
