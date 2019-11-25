@@ -35,65 +35,33 @@ body
 b, strong
 	font-weight: bold
 
+
 .btn-red
 	color: #fff
 	background-color: $warning
 	border: 2px solid $warning
 	text-transform: uppercase
+	+mt(.5s)
 	&:focus
 		outline: 0
-		box-shadow: 0 0 0 0.2rem rgba(144,12,12,.25)
+		box-shadow: 0 0 0 0.2rem #630404
 	&:hover
-		background-color: $blue
+		// background-color: $blue
+		box-shadow: inset 32em 0 #630404
+
 .btn-outline-red
 	color: $warning
 	border: 2px solid $warning
 	background-color: #fff
 	text-transform: uppercase
+	+mt(.5s)
 	&:focus
 		outline: 0
 		box-shadow: 0 0 0 0.2rem rgba(144,12,12,.25)
 	&:hover
-		background-color: $blue
+		box-shadow: inset 15em 0 $warning
 		color: #fff
-// .button-item
-// 	a
-// 		text-decoration: none
-// 		font-weight: 500
-// 		position: relative
-// 		color: #fff!important
-// 		display: inline-block
-	
-// .btn-1
-// 	padding: 1em 3em
-// 	border: 3px solid $warning
-// 	// background-color: $warning
-// 	transition: all 300ms ease
-// 	box-shadow: 0px 4px 10px 2px rgba(black, 0.2)
-// 	&:before
-// 		position: absolute
-// 		content: ''
-// 		width: 0%
-// 		height: 100%
-// 		background-color: $blue
-// 		top: 0
-// 		left: 50%
-// 		z-index: -1
-// 		+mt(.4s)
-// 	&:hover
-// 		color: #fff
-// 		box-shadow: none
-// 		// background-color: $blue
-// 		&:before
-// 			position: absolute
-// 			content: ''
-// 			width: 100%
-// 			height: 100%
-// 			background-color: $blue
-// 			top: 0
-// 			left: 0
-// 			z-index: -1
-// 			+mt(.4s)		
+		
  
 .header_topline
 	.logo
@@ -536,6 +504,22 @@ nav, .header-content, .s-about
 			text-transform: uppercase
 			font-weight: 600
 
+.s-we
+	background-image: url(../img/background_065.jpg)
+	background-size: cover
+	h5
+		font-weight: 600
+		font-size: 24px
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+		font-weight: 600
+	.we-item
+		display: flex
+	.fas
+		font-size: 60px
+		color: $warning
+		margin-right: 20px
 .s-about
 	.h2
 		text-transform: uppercase
