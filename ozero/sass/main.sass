@@ -1,0 +1,1427 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $dark
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+		
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.btn-outline-green
+	color: $green
+	border: 2px solid $green
+	background-color: #fff
+	text-transform: uppercase
+	+mt(.5s)
+	&:focus
+		outline: 0
+		// box-shadow: 0 0 0 0.2rem rgba(144,12,12,.25)
+	&:hover
+		background-color: $green
+		color: #fff
+
+.btn-green
+	color: #fff
+	border: 2px solid $green
+	background-color: $green
+	text-transform: uppercase
+	+mt(.5s)
+	&:focus
+		outline: 0
+		// box-shadow: 0 0 0 0.2rem rgba(144,12,12,.25)
+	&:hover
+		background-color: #13a19c
+		color: #fff
+
+.bg-darks
+	background-color: #c6c6c6!important
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.header-second
+	
+	.inline-block-top
+		display: inline-block
+		vertical-align: top
+	.contacts-text
+		font-size: 16px
+		padding-top: 10px
+		a
+			margin: 0
+			display: block
+			text-decoration: none
+			padding: 0
+			color: $dark
+			opacity: 1
+		.fa
+			color: $warn
+	.adress
+		background-repeat: no-repeat
+		background-position: left
+		font-size: 16px
+		padding: 0 0 0 30px
+		margin: 10px 0 0 0	
+		p
+			line-height: 1.4
+			display: flex
+			.fa,.fas
+				color: $warn
+				padding-top: 2px
+				padding-right: 5px
+	
+
+.logo
+	display: block
+	opacity: 1
+	padding-top: 4px
+	img
+		width: 60px
+		
+.hidden
+	display: none
+.mnu-line
+	overflow: hidden
+	transition: all 0.2s ease
+	background-color: $green
+	opacity: .9
+	&.sticky
+		top: 0
+		position: fixed
+		width: 100%
+		height: 60px
+		padding: 0
+		z-index: 2
+		border-bottom: 0px
+		opacity: 1
+		
+.animenu__toggle
+	display: none
+	cursor: pointer
+	background-color: $green 
+	border: 1px
+	padding: 8px
+	height: 40px
+	width: 40px
+	z-index: 0
+
+.animenu__toggle__bar
+	display: block
+	width: 25px
+	height: 3px
+	background-color: #fff
+	margin-top: 5px
+
+.animenu__toggle__bar + .animenu__toggle__bar
+	margin-top: 5px
+
+.animenu__toggle--active .animenu__toggle__bar
+	margin: 0
+	position: absolute
+
+.animenu__toggle--active .animenu__toggle__bar:nth-child(1)
+	transform: rotate(45deg)
+
+.animenu__toggle--active .animenu__toggle__bar:nth-child(2)
+	opacity: 0
+
+.animenu__toggle--active .animenu__toggle__bar:nth-child(3)
+	transform: rotate(-45deg)
+
+.animenu
+	display: block
+	
+.animenu ul
+	padding: 0
+	margin: 0
+	list-style: none
+   
+.animenu li, .animenu a
+	display: inline-block
+	font-size: 14px
+
+.animenu a 
+	color: #fff
+	text-decoration: none
+	font-weight: 600
+	font-size: 16px
+		
+.animenu__nav > li
+	position: relative
+	display: table-cell
+	text-align: center
+	line-height: 1.2
+	width: 1%
+	
+.animenu__nav > li > a
+	padding: 20px 15px
+	text-transform: uppercase
+	
+.animenu__nav > li > a
+	
+	.header-sprite
+		height: 30px
+		width: 50px
+		background-position: center
+		background-repeat: no-repeat
+		background-size: contain
+	i
+		display: block
+		position: absolute
+		bottom: 60px
+		left: 0
+		right: 0
+		margin: auto
+.animenu__nav > li:hover > ul
+	opacity: 1
+	visibility: visible
+	margin: 0
+	background-color: $accent
+	text-align: left
+	
+.animenu__nav li >a:hover
+	color: #fff
+	background-color: $warn
+	
+.animenu__nav__child
+	width: 280px
+	position: absolute
+	top: 100%
+	left: 0
+	z-index: 2
+	opacity: 0
+	visibility: hidden
+	padding: 5px
+	background-color: $accent
+	text-transform: uppercase
+	//border-top: 1px solid
+
+.animenu__nav__child > li
+	width: 100%
+	line-height: 10px
+	
+.animenu__nav__child > li:last-child
+	border: 0
+
+.animenu__nav__child a
+	padding: 10px
+	width: 100%
+	color: #fff
+.animenu__nav__child li:hover
+	background-color: lighten($warn, 40%)
+	
+.animenu__nav a:hover 
+	//background-color: $main-color
+	color: #fff
+
+.animenu__nav ,
+.animenu__nav__child a:hover
+	///background-color: $main-color
+	///color: $accent-color
+.animenu__nav li
+	vertical-align: top
+					
+.phone
+	text-align: right
+	.phone-wrap
+		padding-top: 5px
+		font-family: "RalewayExtraBold", sans-serif
+		font-size: 18px
+		.fa
+			font-size: 20px
+			position: relative
+			top: 2px
+			margin-right: 8px
+
+.header-content
+	position: relative
+	display: block
+	background-size: cover
+	height: 90vh
+	width: 100%
+	background-image: url(../img/head.jpg)
+	background-position: top
+
+	&:before
+		content: ''
+		width: 100%
+		height: 100%
+		background-color: #000
+		position: absolute
+		opacity: .5
+	.transh
+		clip-path: polygon(20% 0, 100% 0, 100% 100%, 4% 100%)
+	.carousel-control-next, .carousel-control-prev
+		width: 2%!important
+		
+			
+	.header_center
+		position: relative
+		height: 520px
+		display: block
+		text-align: center
+	h1
+		position: absolute
+		top: 25%
+		line-height: 1.1em
+		color: #fff
+		font-weight: 700
+		width: 70%
+		z-index: 1
+		display: block
+		letter-spacing: 5px
+			
+	h2
+		line-height: 1.1em
+		color: #fff
+		z-index: 1
+		padding-top: 20px
+		width: 70%
+		display: block
+		position: relative
+		font-size: 24px
+	p
+		
+		display: block
+		position: relative
+		line-height: 1.2
+		font-weight: 300
+		font-size: 19px
+		color: rgba(255, 255, 255, .8)
+		z-index: 1
+		
+.main-head
+	position: relative
+	background-size: cover
+
+.s-slide
+	padding: 50px 15px 50px
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.1em
+		font-weight: 600
+		font-size: 28px
+	.carousel-inner
+		height: auto
+.s-sale
+	padding: 50px 15px 50px
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.1em
+		font-weight: 600
+		font-size: 28px
+		span
+			color: #f9421a
+		
+	.btn-s
+		font-size: 21px
+		font-weight: 500
+
+
+.s-profile
+	position: relative
+	background-size: cover
+	min-height: 100vh
+	///background-image: url(../img/main_pic.jpg)
+	&:before
+		content: ''
+		width: 100%
+		height: 100%
+		background-color: #000
+		position: absolute
+		opacity: .8
+		
+	.card
+		&:hover
+			opacity: 1
+			img
+				transform: scale(1.2)
+				+mt(.4s)
+		figure.effect-chico .fa
+			opacity: 0
+			font-size: 48px
+			color: #fff
+			padding-top: 65px
+		figure.effect-chico:hover .fa
+				opacity: 1		
+		figure
+			position: relative
+			text-align: center
+			overflow: hidden
+			cursor: pointer
+			opacity: .98
+		img
+			width: 100%
+			height: 200px
+			position: relative
+			display: block
+			max-width: 100%
+		figcaption
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			display: block
+			&:hover
+				background-color: $green
+				opacity: .6
+
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.1em
+		font-weight: 600
+		font-size: 28px
+		color: #fff
+	.h5
+		text-transform: uppercase
+		font-size: 18px
+		padding-top: 15px
+	.card
+		position: relative
+		.card-body
+			.card-title
+				text-transform: uppercase
+				font-weight: 600
+		.card-0
+			overflow: hidden
+			display: block
+		&:hover
+			opacity: 1
+			img
+				transform: scale(1.2)
+				+mt(.4s)
+
+.s-new
+	position: relative
+	background-size: cover
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.1em
+		font-weight: 600
+		font-size: 28px
+		
+	.card
+		position: relative
+
+		&:hover
+			opacity: 1
+			img
+				transform: scale(1.2)
+				+mt(.4s)
+		figure.effect-chico .fa
+			opacity: 0
+			font-size: 48px
+			color: #fff
+			padding-top: 65px
+		figure.effect-chico:hover .fa
+				opacity: 1		
+		figure
+			position: relative
+			text-align: center
+			overflow: hidden
+			cursor: pointer
+			opacity: .98
+		img
+			width: 100%
+			height: 200px
+			position: relative
+			display: block
+			max-width: 100%
+		figcaption
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			display: block
+			&:hover
+				background-color: $green
+				opacity: .6
+		.card-body
+			time
+				font-size: 14px
+				color: #979797
+			.card-title
+				a
+					text-decoration: none
+					font-size: 18px
+					font-weight: 600
+					color: $dark
+					&:hover
+						color: $warn	
+
+.s-price
+	padding: 50px 15px 50px	
+	.card
+		.btn-p
+			font-size: 18px
+			font-weight: 500
+		&:hover
+			opacity: 1
+			img
+				transform: scale(1.2)
+				+mt(.4s)
+		figure.effect-chico .fa
+			opacity: 0
+			font-size: 48px
+			color: #fff
+			padding-top: 85px
+		figure.effect-chico:hover .fa
+				opacity: 1		
+		figure
+			position: relative
+			text-align: center
+			overflow: hidden
+			cursor: pointer
+			opacity: .98
+		img
+			width: 100%
+			height: 240px
+			position: relative
+			display: block
+			max-width: 100%
+		figcaption
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			display: block
+			&:hover
+				background-color: $warn
+				opacity: .8
+
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.1em
+		font-weight: 600
+		font-size: 28px
+	.h5
+		text-transform: uppercase
+		font-size: 18px
+		padding-top: 15px
+	.card
+		position: relative
+		.card-body
+			.card-title
+				text-transform: uppercase
+				font-weight: 600
+			
+		.card-0
+			overflow: hidden
+			display: block
+		&:hover
+			opacity: 1
+			img
+				transform: scale(1.2)
+				+mt(.4s)
+
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.1em
+		font-weight: 600
+		font-size: 28px
+		
+	.h5
+		text-transform: uppercase
+		font-size: 18px
+		padding-top: 15px
+
+.s-invest
+	position: relative
+	background-size: cover
+	///background-image: url(../img/invest.jpg)
+	&:before
+		content: ''
+		width: 100%
+		height: 100%
+		background-color: #000
+		position: absolute
+		opacity: .8
+	.h2
+		color: #fff
+		text-transform: uppercase
+		font-weight: 600
+		padding-top: 50px
+		padding-bottom: 1px
+	.h4
+		color: #fff
+		padding-top: 25px
+		padding-bottom: 50px
+	.btn-p
+		margin-top: 18px
+		margin-bottom: 10px
+		font-size: 18px	
+
+.mfp-counter
+	display: none !important
+
+.s-gallery
+	background-size: cover
+	position: relative
+	text-align: center
+	.line
+		width: 100px
+		height: 2px
+		background: $green
+		margin: 5px 0 16px 0
+	.gallery-item
+		figure.effect-chico .fa
+			opacity: 0
+			font-size: 48px
+			color: #fff
+			padding-top: 80px
+		figure.effect-chico:hover .fa
+				opacity: 1		
+		figure
+			position: relative
+			text-align: center
+			overflow: hidden
+			cursor: pointer
+			opacity: .98
+		img
+			width: 100%
+			// height: 300px
+			position: relative
+			display: block
+			max-width: 100%
+		figcaption
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			display: block
+			&:hover
+				background-color: $green
+				opacity: .8
+	.partner
+		figure.effect-chico .fa
+			opacity: 0
+			font-size: 48px
+			color: #fff
+			padding-top: 120px
+		figure.effect-chico:hover .fa
+				opacity: 1		
+		figure
+			position: relative
+			text-align: center
+			overflow: hidden
+			cursor: pointer
+			opacity: .98
+		img
+			width: 100%
+			// height: 300px
+			position: relative
+			display: block
+			max-width: 100%
+		figcaption
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			display: block
+			&:hover
+				background-color: $green
+				opacity: .8
+	.partners
+		margin-bottom: 20px
+
+		.partner
+			margin: 10px
+		.owl-stage
+			display: flex
+		.owl-item
+			margin-top: 20px
+			img
+				max-width: 100%
+				display: inline-block
+				margin: auto
+		.owl-nav
+			position: absolute
+			top: 0
+			width: 100%
+			z-index: 2
+			> div
+				text-align: center
+				position: absolute
+				top: 140px
+				font-size: 36px
+				color: #fff
+				transition: opacity .5s ease
+				padding: 10px 15px
+				background-color: $warn
+				opacity: .8
+				&:hover
+					opacity: .6
+				&.owl-prev
+					left: -60px
+					
+				&.owl-next
+					right: -60px
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.1em
+		font-weight: 600
+		font-size: 28px
+	.h3
+		font-weight: 600
+		font-size: 21px
+		padding-top: 30px			
+.bar-main
+	.bar
+		background: $warn
+		height: 1px
+		margin: 0 auto 5px
+		width: 250px
+	.bar-big
+		width: 300px
+
+@mixin opacity ($opacity)
+	opacity: $opacity / 100
+	filter: alpha(opacity=$opacity)				
+.preloader
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 100
+	background-color: $dark
+
+	.pulse
+		position: relative
+		left: 50%
+		top: 50vh
+		margin: 
+			left: -40px
+			top: -40px
+		&::before, &::after
+			content: ''
+			border: 5px solid $warn
+			width: 80px
+			height: 80px
+			border-radius: 500px
+			position: absolute
+		&::before
+			animation: pulse-outer .9s ease-in infinite
+		&::after
+			animation: pulse-inner .9s linear infinite	
+@keyframes pulse-outer
+	0%
+		@include opacity(100)
+	50%
+		@include opacity(50)
+	100%
+		@include opacity(0)
+@keyframes pulse-inner
+	0%
+		@include opacity(0)
+		transform: scale(0)
+	100%
+		@include opacity(100)
+		transform: scale(1)	
+.s-works
+	background-coalor: #F0F0F0
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+	.popup-gallery
+		.card
+			text-align: center
+			position: relative
+			background-size: cover
+			overflow: hidden
+			display: block
+			
+			&:hover
+				img
+					transform: scale3d(20px)
+					animation: roll 3s infinite
+					+mt(.5s)
+			
+			.card-img-overlay
+				padding-top: 25%
+				background-color: rgba(40, 167, 69, .5)
+				text-align: center
+				opacity: 0
+				+mt(.5s)
+				transform: scale(1.2)
+				.fa
+					color: #fff
+					font-size: 30px
+				h5
+					color: #fff	
+				&:hover
+					opacity: 1
+					transform: scale(.95)
+
+.s-infrastructura
+	padding: 50px 15px 50px
+	.card
+		padding: 10px 0
+		.fa, .fas
+			font-size: 55px
+			padding-bottom: 10px
+			color:  $warn
+			text-align: center
+		.card-title
+			text-transform: uppercase
+			font-weight: 600
+			font-size: 16px
+			text-align: center
+		ul
+			.list-p
+				padding: 5px
+				margin-bottom: 30px
+			li
+				font-size: 14px
+				list-style: square
+
+
+.s-contact
+	background-color: #1c626e
+	h2
+		color: #fff
+		text-transform: uppercase
+		font-weight: 600
+
+	.contacts-text
+		color: #fff
+		line-height: 15px
+		div
+			padding-bottom: 42px
+
+			a
+				color: #fff
+				&:hover
+					color: $warn
+					text-decoration: none
+		.socials
+			ul
+				padding: 0
+				margin: 0
+				li
+					list-style: none
+					display: inline-block
+		.fa
+			color: $warn
+			margin-right: 10px
+		.fab
+			color: $warn
+			margin-right: 20px
+			font-size: 35px
+			&:hover
+				color: #fff
+	.contact-form-head
+		color: #fff
+		h5
+			text-transform: uppercase
+		p
+			opacity: .6
+			font-size: 14px
+			line-height: 18px
+	.contact-form
+		padding: 30px 20px
+		background-color: darken($blue, 5%)
+		.form-group
+			label
+				color: #fff
+				opacity: .5
+				font-size: 14px	
+	
+.main-foot
+	background-color: #18545f
+	p
+		text-align: center
+		color: #fff	
+		margin-bottom: 0
+		opacity: .6
+		font-weight: 400
+		opacity: .8	
+
+.modal
+	.btn
+		font-size: 14px
+		background-color: $warn!important
+		border: 1px solid $warn!important
+		&:hover
+			opacity: .8
+		&:focus
+			box-shadow: 0 0 0 0.2rem rgba(86,44,113,.5)	
+
+.breadcrumb
+	li
+		display: inline-block
+		a
+			color: $green!important
+.s-catalog
+	.card
+		.card-body
+			p
+				text-align: left
+				line-height: 1.4
+				color: $accent
+				.art
+					opacity: .8
+
+			time
+				font-size: 14px
+				color: #979797
+			h5
+				a
+					color: $dark
+					font-size: 16px
+					display: block
+					&:hover
+						color: $green
+		.card-0
+			position: relative
+			.port_item_cont
+				overflow: hidden
+				width: 100%
+				height: 200px
+				&:hover img
+					transform: scale(1.1)
+					+mt(.4s)
+				img
+					background-size: cover
+					background-position: 100px 200px		
+	.btn
+		font-size: 14px
+		background-color: $warn!important
+		border: 1px solid $warn!important
+		&:hover
+			opacity: .8
+		&:focus
+			box-shadow: 0 0 0 0.2rem rgba(86,44,113,.5)	
+			
+	.line-cat
+		font-size: 16px
+		margin-bottom: 18px
+		position: relative
+
+		strong
+			color: $dark
+			background-color: #fff
+			padding-right: 10px
+			padding-left: 10px
+			position: relative
+			font-weight: 600
+			font-size: 28px
+			z-index: 1
+		&:after
+			content: ""
+			display: block
+			width: 100%
+			right: 0
+			top: 60%
+			height: 5px
+			background: $green
+			position: absolute
+	.widget_title_page
+		color: $dark
+		text-transform: uppercase
+		font-size: 18px
+		margin-top: 0
+		font-weight: 600
+		padding: 10px
+		background-color: #e9ecef
+	
+	.widget_body_page 
+		div
+			font-size: 16px
+		.widget_body_menu 
+			list-style: none
+			font-size: 14px
+			padding: 0
+			margin: 0
+
+			li
+				padding: 15px 0 0 0
+				position: relative
+			li a
+				text-decoration: none
+				color: $dark
+				opacity: .9
+				text-transform: uppercase
+				display: block
+				padding-left: 20px
+				line-height: 1.4
+				.fas
+					color: $green
+					padding-right: 5px
+				&:hover
+					text-decoration: none
+					color: $green
+.catalog-article
+	.fotorama__thumb-border
+		border-color: $green!important
+	.card	
+		.main_content_ops
+			padding: 12px
+			text-transform: uppercase
+			font-weight: 600
+			width: 180px
+			background-color: $green
+			color: #fff
+
+		.card-ops
+			border-top: 1px solid #e9ecef
+			padding: 20px
+			font-size: 14px
+	.main_content_article
+		h1
+			font-size: 21px
+			font-weight: 600
+	.main_content_article_img
+		padding-bottom: 10px
+		position: relative
+		img
+			width: 100%
+			height: 400px
+	.btn
+		font-size: 14px
+		background-color: $warn!important
+		border: 1px solid $warn!important
+		&:hover
+			opacity: .8
+		&:focus
+			box-shadow: 0 0 0 0.2rem rgba(86,44,113,.5)
+	.time_article
+		font-size: 16px
+		color: $dark
+		padding-top: 10px
+
+		span
+			color: $green
+			font-weight: 600
+	.count_article
+		padding-top: 15px
+		padding-bottom: 15px 
+		span
+			color: $green
+			font-weight: 600
+	.widget_title_page
+		color: $dark
+		text-transform: uppercase
+		font-size: 18px
+		margin-top: 0
+		font-weight: 600
+		padding: 10px
+		background-color: #e9ecef
+	
+	.widget_body_page 
+		div
+			font-size: 16px
+		.widget_body_menu 
+			list-style: none
+			font-size: 14px
+			padding: 0
+			margin: 0
+
+			li
+				padding: 15px 0 0 0
+				position: relative
+			li a
+				text-decoration: none
+				color: $dark
+				opacity: .9
+				text-transform: uppercase
+				display: block
+				padding-left: 20px
+				line-height: 1.4
+				.fas
+					color: $green
+					padding-right: 5px
+				&:hover
+					text-decoration: none
+					color: $green
+.s-about
+	padding: 50px 15px 50px
+
+	.btn-s
+		font-size: 21px
+		font-weight: 500
+	.line
+		width: 100px
+		height: 2px
+		background: $green
+		margin: 5px 0 16px 0
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.1em
+		font-weight: 600
+		font-size: 28px	
+	.line-cat
+		font-size: 16px
+		margin-bottom: 18px
+		position: relative
+
+		strong
+			color: $dark
+			background-color: #fff
+			padding-right: 10px
+			padding-left: 10px
+			position: relative
+			font-weight: 600
+			font-size: 28px
+			z-index: 1
+		&:after
+			content: ""
+			display: block
+			width: 100%
+			right: 0
+			top: 60%
+			height: 5px
+			background: $green
+			position: absolute
+.s-video-galery
+	padding: 10px 15px 50px
+	.video_vantage
+		overflow: hidden
+		position: relative
+		width: 100%
+		cursor: pointer
+		.wrap_play
+			margin-left: -50px
+			margin-top: -50px
+			left: 50%
+			height: 100px
+			top: 50%
+			position: absolute
+			width: 100px
+			.iq-waves
+				position: absolute
+				width: 384px
+				width: 24rem
+				height: 384px
+				height: 24rem
+				left: 50%
+				top: 50%
+				-webkit-transform: translate(-50%, -50%)
+				-ms-transform: translate(-50%, -50%)
+				transform: translate(-50%, -50%)
+				z-index: 2
+				.waves
+					position: absolute
+					width: 384px
+					width: 24rem
+					height: 384px
+					height: 24rem
+					background: rgba(255, 255, 255, .2)
+					opacity: 0
+					-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+					border-radius: 320px
+					background-clip: padding-box
+					-webkit-animation: waves 3s ease-in-out infinite
+					animation: waves 3s ease-in-out infinite
+					
+				.wave-1
+					-webkit-animation-delay: 0s
+					animation-delay: 0s
+				.wave-2
+					-webkit-animation-delay: 1s
+					animation-delay: 1s
+				.wave-3
+					-webkit-animation-delay: 2s
+					animation-delay: 2s
+@-webkit-keyframes waves
+	0%
+		-webkit-transform: scale(0.2, 0.2)
+		transform: scale(0.2, 0.2)
+		opacity: 0
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+
+	50%
+		opacity: 0.9 
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"
+	100%
+		-webkit-transform: scale(0.9, 0.9)
+		transform: scale(0.9, 0.9) 
+		opacity: 0
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+
+@keyframes waves
+	0% 
+		-webkit-transform: scale(0.2, 0.2)
+		transform: scale(0.2, 0.2)
+		opacity: 0
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+
+	50%
+		opacity: 0.9
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"
+
+	100%
+		-webkit-transform: scale(0.9, 0.9)
+		transform: scale(0.9, 0.9)
+		opacity: 0
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+
+
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.1em
+		font-weight: 600
+		font-size: 28px
+		
+	.card-img-top
+		height: 200px
+	p.card-text
+		line-height: 1.1
+	.card
+		position: relative
+		
+		.card-title
+			text-transform: uppercase
+			font-weight: 500
+		.card-0
+			overflow: hidden
+			display: block
+			width: 100%
+			height: 200px
+			.port_item_cont
+				cursor: pointer
+				.port-cont
+					position: relative
+					overflow: hidden
+					display: block
+					height: 100%
+					&::before
+						content: ''
+						background-image: url('../img/play-button.png')
+						width: 160px
+						height: 160px
+						position: absolute
+						top: 50%
+						left: 55%
+						transform: translate(-100%,-50%)
+						font-size: 40px
+						color: #fff
+						opacity: 1
+						transition: .4s ease-out all
+		
+.s-blog
+	.line-cat
+		font-size: 16px
+		margin-bottom: 18px
+		position: relative
+
+		strong
+			color: $dark
+			background-color: #fff
+			padding-right: 10px
+			padding-left: 10px
+			position: relative
+			font-weight: 600
+			font-size: 28px
+			z-index: 1
+		&:after
+			content: ""
+			display: block
+			width: 100%
+			right: 0
+			top: 40%
+			height: 5px
+			background: $green
+			position: absolute
+	.card
+		&:hover
+			opacity: 1
+			img
+				transform: scale(1.2)
+				+mt(.4s)
+		figure.effect-chico .fa
+			opacity: 0
+			font-size: 48px
+			color: #fff
+			padding-top: 65px
+		figure.effect-chico:hover .fa
+				opacity: 1		
+		figure
+			position: relative
+			text-align: center
+			overflow: hidden
+			cursor: pointer
+			opacity: .98
+		img
+			width: 100%
+			height: 180px
+			position: relative
+			display: block
+			max-width: 100%
+		figcaption
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			display: block
+			&:hover
+				background-color: $green
+				opacity: .6
+	
+	
+	.h5
+		text-transform: uppercase
+		font-size: 16px
+		padding-top: 15px
+	
+	p
+		font-size: 14px
+		opacity: .9
+	.card
+		position: relative
+		.card-body
+			.date
+				font-size: 14px
+				opacity: .8
+				padding-bottom: 10px
+			.card-title
+				text-transform: uppercase
+				a
+					color: $green
+					text-decoration: none
+					font-weight: 600
+					font-size: 16px
+					display: block
+					&:hover
+						color: $green!important
+		.card-0
+			overflow: hidden
+			display: block
+		&:hover
+			opacity: 1
+			img
+				transform: scale(1.2)
+				+mt(.4s)
+.s-blog-art
+	.card-body
+		h1
+			font-size: 18px
+			font-weight: 600
+			display: block
+		.date
+			color: $accent
+			padding: 10px 0
+		.far
+			color: $green
+		p
+			font-size: 16px
+			opacity: .9
+
+	.widget_body_page 
+		div
+			font-size: 16px
+		.widget_body_menu 
+			list-style: none
+			font-size: 16px
+			padding: 0
+			margin: 0
+
+			li
+				padding: 15px 0 0 0
+				position: relative
+			li a
+				text-decoration: none
+				color: $dark
+				opacity: .9
+				text-transform: uppercase
+				display: block
+				padding-left: 30px
+				line-height: 1.4
+				.fas
+					color: $green
+					padding-right: 15px
+				&:hover
+					text-decoration: none
+					color: $green
+.s-info
+	
+	.line-cat
+		font-size: 16px
+		margin-bottom: 18px
+		position: relative
+
+		strong
+			color: $dark
+			background-color: #fff
+			padding-right: 10px
+			padding-left: 10px
+			position: relative
+			font-weight: 600
+			font-size: 28px
+			z-index: 1
+		&:after
+			content: ""
+			display: block
+			width: 100%
+			right: 0
+			top: 60%
+			height: 5px
+			background: $green
+			position: absolute
+	h3
+		font-size: 20px
+		font-weight: 600
+		text-transform: uppercase
+		margin: 20px 0
+		color: $accent
+	h4
+		color: $green
+		font-size: 14px
+		font-weight: 600
+		text-transform: uppercase
+		padding: 20px 0 0
+	p
+		color: $dark
+		font-size: 16px
+		padding-top: 8px
+	.far, .fa
+		color: $warn
+		padding-right: 10px
+		opacity: .9
+	a
+		display: block
+		text-decoration: none
+		line-height: 1.4
+		color: $dark
+		opacity: 1
+		padding-bottom: 10px
+		.fa
+			color: $warn
+			padding-right: 10px
+			opacity: .9
+
+
+@import "media" // Always at the end
