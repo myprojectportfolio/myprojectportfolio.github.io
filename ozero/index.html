@@ -74,12 +74,11 @@
   					<ul class="animenu__nav">
   							
 							<li><a href="#1">Головна</a></li>
-							<li><a href="#3">Ресторан</a></li>
-							<li><a href="#4">Баня</a></li>
 							<li><a href="#5">Альтанки</a></li>
+							<li><a href="#4">Баня</a></li>
 							<li><a href="#6">Риболовля</a></li>
+							<li><a href="#3">Ресторан</a></li>
 							<li><a href="#7">Розваги</a></li>
-							<li><a href="#7">Бар</a></li>
 							<li><a href="#7">Галерея</a></li>
 							<li><a href="#2">Новини</a></li>
 							<li><a href="#8">Контакти</a></li>
@@ -393,7 +392,8 @@
 	</div>
 </section>
 
-<section id="6" class="s-gallery section-overley py-5 bg-light">
+
+<section id="6" class="s-gallery section-overley bg-light py-5">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col text-center">
@@ -526,7 +526,80 @@
 			
 
 </section>
+<section class="s-video-galery">
+	<div class="container">
+		<div class="row">
+			
+				<div class="col-md-6">
+				<div class="contact-form-head text-center pb-4">
+						<h3 class="h3">Забронювати</h3>
+						<div class="bar-main pt-1">
+							<div class="bar"></div>
+					
+						</div>
+				</div>
+			<form class="contact-form ajax_form" action="#" method="post" id="contactform">
+  			<div class="message"></div>
+				
+				<div class="form-group hidden">
+      		
+      		<input type="text" name="user" class="form-control" placeholder="Имя">
+      	</div>
+      	<div class="form-row">	
+      	<div class="form-group col-md-6">
+      		
+      		<input type="text" name="name" class="form-control" placeholder="Імя *" required="">
+      	</div>
+      	<div class="form-group col-md-6">
+      		
+      		<input type="text" id="phone1" name="phone" class="form-control" placeholder="Телефон *" required="">
+      	</div>
+      	</div>	
+    		<div class="form-group">
+			    
+      		<!-- <label for="inputState">Категорії</label> -->
+      			<select name="category" class="form-control">
+        			<option selected="">Вибрати послугу</option>
+        			<option value="графіка">Альтанка</option>
+        			<option value="Web розробка">Риболовля</option>
+        			<option value="Анімація">Баня</option>
+        			<option value="Фотографія">Ресторан</option>
+        			<option value="Відеомонтаж">Інше</option>
+      			</select>
+    			
+		</div>
+        <div class="form-group">
+      		
+      		<textarea class="form-control" name="subject" id="exampleFormControlTextarea1" rows="3" placeholder="Повідомлення"></textarea>
+      	</div>
+      				
+        <button type="submit" name="submit" class="btn btn-green w-100 py-2 mb-3">Відправити</button>
 
+</form>
+			</div>
+			
+			<div class="col-md-6">
+				<div class="card border-0">
+    				<div class="video_vantage">
+                		<img class="video_poster img-fluid" src="img/head.jpg" alt="" title="Переглянути">
+                		<div class="wrap_play">
+                			<a class="popup-youtube" href="https://www.youtube.com/watch?v=EseNUilp_QQ">
+                				<img src="img/play-button.png" alt="" class="video-play img-fluid" title="Переглянути">
+                				<div class="iq-waves">
+                					<div class="waves wave-1"></div>
+                					<div class="waves wave-2"></div>
+                					<div class="waves wave-3"></div>
+                				</div>
+                			</a>
+                		</div>
+                	</div>
+    				
+    				
+  				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 <section id="8" class="s-contact py-5">
 	<div class="container">
