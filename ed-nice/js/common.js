@@ -15,6 +15,7 @@ $(function() {
 
   $('.s-advant').parallax({imageSrc: 'img/students_1.jpg'});
   $('.main-head').parallax({imageSrc: 'img/header2.jpg'});
+  $('.s-team').parallax({imageSrc: 'img/students_1.jpg'});
 
   $(function(){
     $("#phone1").mask("+38(999) 999-9999");
