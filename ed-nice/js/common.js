@@ -16,6 +16,9 @@ $(function() {
   $('.s-advant').parallax({imageSrc: 'img/students_1.jpg'});
   $('.main-head').parallax({imageSrc: 'img/header2.jpg'});
   $('.s-team').parallax({imageSrc: 'img/students_1.jpg'});
+  $('.s-about').parallax({imageSrc: 'img/image_full.png'});
+  // $('.s-proekt').parallax({imageSrc: 'img/image_full.png'});
+
 
   $(function(){
     $("#phone1").mask("+38(999) 999-9999");
@@ -68,6 +71,7 @@ $('.partners').owlCarousel({
 
 
 });
+
 
 $(window).scroll(function() {
   if ($(this).scrollTop() > $(this).height()) {
