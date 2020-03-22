@@ -34,17 +34,17 @@
 	<div class="mnu-line" id="navbar">
 		<div class="container">
 			<div class="row">
-				<div class="col-xl-3 col-lg-5 col-md-5 col-sm-12 col-xs-12 order-lg-1">
+				<div class="col-xl-3 col-lg-5 col-md-5 col-sm-6 col-xs-12 order-lg-1">
 					<a href="#" class="logo img-responsive"><img src="img/logo_vsf2.png" alt="Vip Sports Fitnes"></a>
 				</div>
-				<div class="col-xl-3 col-lg-8 d-lg-none d-xl-block col-md-6 col-sm-10 col-xs-10 order-lg-3">
-					<div class="phone mt-3">
-						<a href="whatsapp://send?text=I am interested in your Services&amp;phone=+97450588778abid" class="btn btn-danger"><i class="fab fa-whatsapp pr-2"></i> WHATS APP</a>
-						<!-- <a href="#">
-							<button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger">REQUEST A CALL</button>
-						</a> -->
-						
+				<div class="col-xl-3 col-lg-8 d-lg-none d-xl-block col-md-6 col-sm-4 col-xs-10 order-lg-3">
+					<div class="phone">
+						<ul class="babel-p">
+            <li ><a class="active" href="#">en</a></li>
+						<li><a href="#">ar</a></li>
+	        </ul>
 					</div>
+					
 						
 				</div>
 				<div class="col-md-1 col-sm-2 col-xs-2 d-lg-none">
@@ -56,23 +56,23 @@
 					<nav class="main-menu d-none d-lg-block">
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">About us</a></li>
+							<li class="active-mnu"><a href="about.html">About us</a></li>
 							<li><a href="services.html">Services</a></li>
 							<!--<li><a href="#">Gallery</a></li>-->
 							<li><a href="articles.html">Articles</a></li>
-							<li><a href="contacts.html">Contact</a></li>
+							<li><a href="contacts.html">Contacts</a></li>
 						</ul>
 					</nav>
 				</div>
 				<div class="col-12">
 					<nav class="main-mnu hidden-mnu d-lg-none clearfix pb-2">
 						<ul>
-							<li><a href="#">Home</a></li>
-							<li><a href="#">About us</a></li>
-							<li><a href="#">Services</a></li>
+							<li><a href="index.html">Home</a></li>
+							<li class="active-mnu"><a href="about.html">About us</a></li>
+							<li><a href="services.html">Services</a></li>
 							<!--<li><a href="#">Gallery</a></li>-->
-							<li><a href="#">Articles</a></li>
-							<li><a href="#">Contact</a></li>
+							<li><a href="articles.html">Articles</a></li>
+							<li><a href="contacts.html">Contacts</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -114,11 +114,13 @@
 					<p>«VipSportsFitness» cares about its customers by hiring only elite Personal Trainers from Europe and the
 					USA.</p>
 					<p>VipSportsFitness’s Personal Trainers boast:</p>
-					<p>-High achievements in sports as professional athletes in their past.</p>
-					<p>-Higher education in Sports, Fitness, Physical Rehabilitation, Massage, Nutrition.</p>
-					<p>- More than 1O years of coaching experience with ordinary people as well as with celebrities and professional athletes.</p>
-					<p>-All our customers achieved their goals.</p>
-					
+					<ul>
+						<li>High achievements in sports as professional athletes in their past.</li>
+						<li>Higher education in Sports, Fitness, Physical Rehabilitation, Massage, Nutrition.</li>
+						<li>More than 1O years of coaching experience with ordinary people as well as with celebrities and professional athletes.</li>
+						<li>All our customers achieved their goals.</li>
+					</ul>
+									
 				</div>
 				
 			</div>
@@ -127,15 +129,30 @@
   					<img src="img/about.jpg" class="figure-img img-fluid" alt="#">
   				</figure>
 			</div>
+			<div class="col-md-12 text-center">
+					<a href="#">
+						<button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger">GET THE CONSULTATION</button>
+					</a>
+			</div>
 		</div>
 	</div>
+	
 </section>
 
 <section class="s-contact py-5">
 	
 	<div class="container">
 		<div class="row">
-			
+			<!-- <div class="col-md-6 col-lg-5 text-center animation_2">
+				<h3 class="h3 py-3">Services</h3>
+					<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Articles</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+				</div> -->
 			<div class="col-md-6 col-lg-4">
 				<h3 class="h3 py-3">Contact Us</h3>
 				<div class="contacts-text">
@@ -168,10 +185,10 @@
 				<form class="contact-form">
 				  <div class="form-row">
     				<div class="form-group col-md-6">
-      				<input type="text" class="form-control" placeholder="Name" required>
+      				<input type="text" class="form-control" placeholder="Name *" required>
     				</div>
     				<div class="form-group col-md-6">
-      				 <input type="text" name="phone" class="form-control" placeholder="Phone" required="">
+      				 <input type="text" name="phone" class="form-control" placeholder="Phone *" required="">
     				</div>
   				</div>
   				<div class="form-group">
@@ -184,7 +201,20 @@
 				  <button type="submit" class="btn btn-danger w-100 mt-1 py-2">Send Message</button>
 				</form>
 			</div>
-			
+			<!-- <div class="col-md-12 col-lg-3 text-center animation_2">
+				<h3 class="h3 py-3">FOLLOW US</h3>
+					<ul class="social">
+						<li class="facebook">
+							<a href="#"><i class="fab fa-facebook-f"></i></a>
+						</li>
+						<li class="instagram">
+							<a href="#"><i class="fab fa-instagram"></i></a>
+						</li>
+						<li class="custom">
+							<a href="#"><i class="fa fa-envelope"></i></a>
+						</li>
+					</ul>
+				</div> -->
 		</div>
 	</div>
 </section>
@@ -203,7 +233,7 @@
   <div class="modal-dialog modal-md modal-dialog-centered" role="document">
     <div class="modal-content border border-secondary">
       <div class="modal-header text-white bg-dark">
-        <h5 class="modal-title" id="exampleModalLabel">Заказать обратный звонок</h5>
+        <h5 class="modal-title" id="exampleModalLabel">GET THE CONSULTATION</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span class="text-white" aria-hidden="true">&times;</span>
         </button>
@@ -211,17 +241,17 @@
       <div class="modal-body">
       	<form>
       	<div class="form-group">
-      		<input type="text" class="form-control" placeholder="Имя" required>
+      		<input type="text" class="form-control" placeholder="Name *" required>
       	</div>
       	<div class="form-group">
-      		<input type="text" class="form-control" placeholder="Телефон" required>
+      		<input type="text" class="form-control" placeholder="Phone *" required>
       	</div>	
     	<div class="form-group">
-            <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="E-mail (не обязательно)">
+            <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="E-mail">
             
         </div>
         
-        <button type="submit" class="btn btn-success w-100">Отправить</button>
+        <button type="submit" class="btn btn-danger w-100">Send</button>
 
         </form>  
       </div>
@@ -229,7 +259,7 @@
     </div>
   </div>
 </div>		
-	
+<div class="top" title="Up"><i class="fa fa-angle-double-up"></i></div>
 <script src="js/scripts.min.js"></script>
 
 </body>
