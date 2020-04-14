@@ -1,11 +1,26 @@
 $(function() {
+$(".sky-mega-menu").after("<div id='my-menu'>");
+$(".sky-mega-menu").clone().appendTo("#my-menu");
+$("#my-menu").find("*").attr("style","");    
+$("#my-menu").find("ul").removeClass("sky-mega-menu"); 
+$("#my-menu").mmenu({
+  extensions: [ 'effect-menu-slide', 'pagedim-black', 'border-full'],
+  navbar: {
+   title: "КАТАЛОГ ТОВАРОВ"
+  }
+ });  
+var api = $("#my-menu").data("mmenu");
 
-  $(".toggle-mnu").click(function() {
-    $(this).toggleClass("on");
-    $(this).parent().next().next().find(".main-mnu").slideToggle();
-    return false;
-  });
+$(".mobile-mnu").click(function(){
+  var mmAPI = $("#my-menu").data("mmenu");
+  mmAPI.open();
+  var thiss = $(this).find(".toggle-mnu");
+  thiss.toggleClass("on");
+  $(".main-mnu").slideToggle();
+  return false;   
+});
 
+ 
 	$(".s-adv").waypoint(function() {
 
     $({blurRadius: 5}).animate({blurRadius: 0}, {
@@ -98,29 +113,6 @@ $('.partners').owlCarousel({
   }
 });
 
-$('.partners-2').owlCarousel({
-  loop: true,
-  smartSpeed: 100,
-  dots: true,
-  nav: true,
-  autoplay: true,
-  autoplayTimeout: 5000,
-  autoplayHoverPause: true,
-  navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
-  responsiveClass: true,
-  responsive: {
-    0: {
-      items: 1
-    },
-    480: {
-      items: 2
-    },
-    992: {
-      items: 4
-    },
-    
-  }
-});
 
 });
 $(window).on('load', function() {

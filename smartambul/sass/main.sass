@@ -41,7 +41,8 @@ body
 		background-color: $red!important
 		&:hover
 			opacity: .8
-
+body.modal-open .mm-slideout
+	z-index: inherit
 b, strong
 	font-weight: bold
 .header_topline
@@ -51,7 +52,18 @@ b, strong
 		background-color: $red!important
 		&:hover
 			opacity: .8
-		
+	.babel-p 
+		display: inline-flex
+		list-style: none
+		text-transform: uppercase
+		padding: 0
+		margin: 0
+		li
+			padding: 0 20px 0 0
+			a
+				color: $red
+				font-weight: 600
+				opacity: .8	
 	.main-header_top_nav
 		font-size: 16px
 		display: block
@@ -103,7 +115,6 @@ b, strong
 			opacity: 1
 			&:hover
 				opacity: .9
-
 .header-second
 	border-top: 1px solid #e2e1de
 	.btn-outline-danger
@@ -170,10 +181,108 @@ b, strong
 	opacity: 1
 	img
 		width: 250px
-		padding-top: 25px
+		padding-top: 30px
 .hidden
 	display: none
 
+.toggle-mnus 
+	display: block
+	width: 28px
+	height: 28px
+	margin-top: 14px
+
+	span:after, span:before 
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+
+	span:after
+		top: 18px
+
+	span 
+		position: relative
+		display: block
+
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: $accent
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+
+	&.on span 
+		background-color: transparent
+
+	&.on span:before 
+		transform: rotate(45deg) translate(-1px, 0px)
+
+	&.on span:after 
+		transform: rotate(-45deg) translate(6px, -7px) 
+
+.sky-mega-menu li:hover>a
+	background-color: $red
+	color: #fff 
+.mega-menu
+	.widget_title_menu
+		display: block
+		font-weight: 600
+		font-size: 14px
+		padding: 15px 17px
+		text-transform: uppercase
+		background-color: $red
+		color: #fff
+.toggle-mnu 
+	display: block
+	width: 28px
+	height: 28px
+	float: left
+
+	span:after, span:before 
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+
+	span:after
+		top: 18px
+
+	span 
+		position: relative
+		display: block
+
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: #fff
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+
+
+	&.on span 
+		background-color: transparent
+
+	&.on span:before 
+		transform: rotate(45deg) translate(-1px, 0px)
+
+	&.on span:after 
+		transform: rotate(-45deg) translate(6px, -7px)
+
+.mobile-mnu
+	padding: 8px 15px
+	color: #fff
+	background-color: $red
+	position: absolute
+	top: 0
+	width: 100%
+	z-index: 2
+	cursor: pointer
+	b
+		display: block
+		text-align: center
+		font-weight: normal
 
 .animenu__toggle
 	display: none
@@ -226,23 +335,34 @@ b, strong
 	text-decoration: none
 	font-weight: 600
 	font-size: 16px
+	
+// .animenu li a:last-child
+// 	border-right: 0
 .animenu
 	.widget_title_menu
 		font-weight: 600
 		font-size: 14px
 		padding: 15px 17px
-		border-bottom: 1px solid #e2e1de
 		text-transform: uppercase
 		background-color: $red
 		color: #fff
+		display: none
 .animenu__nav > li
 	position: relative
-	border-bottom: 1px solid #e2e1de
-	// display: table-cell
-	// text-align: center
+	border-right: 1px solid #e2e1de
+	display: table-cell
+	text-align: center
 	line-height: 1.2
+	padding: 0
+	margin: 0
+.animenu__nav > li:hover
+	background-color: $red
+	color: #fff
+.animenu__nav > li:last-child
+	border: 0
+	padding-right: 5px
 .animenu__nav > li > a
-	padding: 12px 15px
+	padding: 15px 39px
 	width: 100%
 	// text-transform: uppercase
 	
@@ -270,10 +390,6 @@ b, strong
 	background-color: $accent
 	text-align: left
 	
-.animenu__nav > li:hover
-	background-color: $red
-	color: #fff
-
 .animenu__nav__child
 	width: 280px
 	position: absolute
@@ -311,7 +427,7 @@ b, strong
 	///color: $accent-color
 .animenu__nav li
 	vertical-align: top
-	width: 100%						
+	// width: 100%						
 .phone
 	text-align: right
 	.phone-wrap
@@ -348,13 +464,13 @@ b, strong
 		.partner
 			margin: 10px
 			.card
-				border: 3px solid #fff
+				border: 2px solid #e2e1de
 				.button-buy
 					opacity: 0
 				&:hover
-					border: 3px solid $red
+					border: 2px solid $red
 					display: block
-					+mt(.4s)
+					+mt(.3s)
 					.button-buy
 						opacity: 1
 				.card-body	
@@ -736,6 +852,7 @@ b, strong
 					color: $dark
 					opacity: .8
 					&:hover
+						color: $red
 						text-decoration: none
 						opacity: 1
 	.contacts-text
@@ -765,7 +882,7 @@ b, strong
 	.marg-1
 		padding-top: 50px
 .main-foot
-	background-color: darken($blue, 10%)
+	background-color: darken($blue, 25%)
 	p
 		text-align: center
 		color: #fff	
