@@ -20,7 +20,12 @@ $(".mobile-mnu").click(function(){
   return false;   
 });
 
- 
+  $(".toggle-mnus").click(function() {
+    $(this).toggleClass("on");
+    $(this).parent().next().next().find(".main-mnu").slideToggle();
+    return false;
+  });
+  
 	$(".s-adv").waypoint(function() {
 
     $({blurRadius: 5}).animate({blurRadius: 0}, {

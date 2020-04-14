@@ -6,11 +6,8 @@
 @media only screen and (max-width : 1200px)
 	.mnu-line
 		position: relative
-		&.sticky
-			display: none
-		.phone
-			text-align: left
-			padding: 0
+		.toggle-mnu
+			top: 0
 	.animenu
 		margin-top: 2px
 		background-color: #6d6e71
@@ -74,6 +71,7 @@
 @media only screen and (max-width : 992px)
 	.mnu-line
 		position: relative
+		background-color: #828384
 		.phone
 			text-align: left
 			padding: 0
@@ -88,11 +86,15 @@
 	.mm-panels>.mm-panel>.mm-listview
 		margin: 0px -20px	
 	.header-second
+		padding-top: 50px
 		.contacts-text
 			font-size: 14px
 		.btn
 			display: none
-			
+	.toggle-mnus
+		margin-left: 8px
+	.header_topline
+		display: none	
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	.s-slider .partners .owl-nav>div
@@ -107,8 +109,8 @@
 		.widget_title_menu
 			display: none	
 	.mnu-line
-		text-align: center
 		position: relative
+		background-color: #828384
 	.logo
 		text-align: center
 		.phone
@@ -141,19 +143,15 @@
 			i
 				padding-top: 10px
 	.mnu-line
-		text-align: center
+		text-align: left
 		position: relative
 	.logo
 		display: block
 		opacity: 1
 		img
 			// width: 220px
-			padding-top: 40px
-		.phone
-			text-align: center
-			padding: 0
-			margin-top: 8px
-		.toggle-mnu
+			padding-top: 25px
+		.toggle-mnus
 			top: -15px
 	.top_adress
 		text-align: center
