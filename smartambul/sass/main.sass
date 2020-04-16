@@ -378,6 +378,13 @@ nav, .header-content, .s-about
 		text-transform: uppercase
 		background-color: $red
 		color: #fff
+	a
+		i
+			float: right
+			font-size: 18px
+			position: absolute
+			right: 10px
+			top: 15px
 .toggle-mnu 
 	display: block
 	width: 28px
@@ -1232,6 +1239,7 @@ nav, .header-content, .s-about
 	h2
 		text-transform: uppercase
 		font-weight: 600
+		font-size: 24px
 	h3
 		color: $red
 	.main-actions_l1
@@ -1282,12 +1290,15 @@ nav, .header-content, .s-about
 			&:hover
 				background-color: $red
 				opacity: .6
-	
-	.h2
+	h2
 		text-transform: uppercase
-		letter-spacing: 0.1em
 		font-weight: 600
-		font-size: 28px
+		font-size: 24px
+	.line
+		width: 100px
+		height: 2px
+		background: $red
+		margin: 5px 0 16px 0
 	.h5
 		text-transform: uppercase
 		font-size: 16px
@@ -1326,14 +1337,21 @@ nav, .header-content, .s-about
 				transform: scale(1.2)
 				+mt(.4s)
 .s-blog-art
-	.card-body
+	.line
+		width: 100px
+		height: 2px
+		background: $red
+		margin: 5px 0 16px 0
+	.main-content
 		h1
 			font-size: 18px
 			font-weight: 600
 			display: block
 		.date
+			display: block
 			color: $accent
 			padding: 10px 0
+			// text-align: right
 		.far
 			color: $red
 		p
