@@ -1,0 +1,1144 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $dark
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+		
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+b, strong
+	font-weight: bold
+
+.btn-red
+	color: #fff
+	background-color: $warning
+	border: 2px solid $warning
+	text-transform: uppercase
+	+mt(.5s)
+	&:focus
+		outline: 0
+		box-shadow: 0 0 0 0.2rem rgba(144,12,12,.25)
+	&:hover
+		box-shadow: inset 32em 0 #c05102
+		color: #fff
+
+.btn-outline-red
+	color: $warning
+	border: 2px solid $warning
+	background-color: #fff
+	text-transform: uppercase
+	+mt(.5s)
+	&:focus
+		outline: 0
+		box-shadow: 0 0 0 0.2rem rgba(144,12,12,.25)
+	&:hover
+		box-shadow: inset 15em 0 $warning
+		color: #fff
+		
+ 
+.header_topline
+	.logo
+		display: block
+		opacity: 1
+		img
+			width: 125px
+			height: auto
+	.main-slogan
+		color: $warning
+		text-transform: uppercase
+		font-weight: 600
+	
+	.btn-outline-red
+		padding: 12px 22px
+	.contact-phone 
+		a
+			margin: 0
+			display: block
+			text-decoration: none
+			padding: 0
+			color: $dark
+			opacity: 1
+			font-weight: 600
+			letter-spacing: 1px
+			&:hover
+				color: $warning
+		.fa
+			margin-right: 5px
+			color: $warning	
+	.phone
+		text-align: right
+		
+.social
+	margin: 0
+	text-align: center
+	li
+		display: block
+		padding-bottom: 20px
+	.fab, .fa
+		color: #fff
+		opacity: .6
+		font-size: 38px
+		&:hover
+			opacity: .9
+.mnu-line
+	overflow: hidden
+	padding: 20px 0
+	transition: all 0.2s ease
+	border-top: 1px solid #dfe0e0
+
+	.babel-p 
+		display: inline-flex
+		list-style: none
+		text-transform: uppercase
+		padding: 0
+		margin: 0
+		li
+			padding: 0 20px 0 0
+			a
+				color: $warning
+				font-weight: 600
+				opacity: .8	
+
+nav, .header-content, .s-about
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+	li
+		display: inline-block
+.hidden
+	display: none
+
+
+// toggle menu
+
+.toggle-mnu 
+	display: block
+	width: 28px
+	height: 28px
+	margin-top: 14px
+
+	span:after, span:before 
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+
+	span:after
+		top: 18px
+
+	span 
+		position: relative
+		display: block
+
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: $accent
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+
+	&.on span 
+		background-color: transparent
+
+	&.on span:before 
+		transform: rotate(45deg) translate(-1px, 0px)
+
+	&.on span:after 
+		transform: rotate(-45deg) translate(6px, -7px) 
+
+.toggle-mnu
+	position: absolute
+	top: 0
+	right: 15px
+.hidden-mnu
+	display: none
+	position: relative
+	top: 20px
+	li
+		display: block
+
+	> ul
+		> li
+			&.active
+				a
+					text-decoration: underline
+					color: $accent
+			> a
+				color: $accent !important
+				&:hover
+					color: $warning
+					text-decoration: none
+
+.main-menu
+	> ul
+		> li
+			padding-right: 30px
+			&:hover
+				padding-right: 30px
+			> a
+				color: $dark
+				font-size: 16px
+				font-weight: 600
+				text-transform: uppercase
+				+mt(.4s)
+				&:hover
+					color: $warning
+					border-bottom: 3px solid $warning
+					text-decoration: none
+					
+				
+.main-mnu
+	text-align: center
+	> ul
+		> li
+			> a
+				padding-right: 30px
+				color: $accent
+				font-size: 15px
+				text-transform: uppercase
+				+mt(.4s)
+				&:hover
+					color: $warning
+					text-decoration: none
+														
+
+.header-content
+	display: flex
+	padding-top: 3%
+	position: relative
+	z-index: 3
+	.btn-red
+		color: #fff
+		background-color: $warning
+		border: 2px solid $warning
+		text-transform: uppercase
+		+mt(.5s)
+		&:focus
+			outline: 0
+			box-shadow: 0 0 0 0.2rem rgba(144,12,12,.25)
+		&:hover
+			box-shadow: inset 11em 0 #c05102
+			color: #fff
+	h1
+		letter-spacing: 0.2em
+		line-height: 1.4em
+		font-size: 24px
+		color: #FFF
+		// color: $dark
+		font-weight: 600
+		text-transform: uppercase
+	h2
+		text-transform: uppercase
+		color: #fff
+		font-size: 28px
+		opacity: .6!important
+	ul.home-list
+		margin: 40px 0
+		font-size: 16px
+		li
+			display: block
+			background-color: #efefef
+			font-weight: 600
+			// color: #fff
+			padding: 10px 60px
+			margin: 8px 0
+			border-radius: 20px
+			position: relative
+			text-transform: uppercase
+			width: 90%
+		.fa
+			color: $blue
+			padding: 8px
+			font-size: 28px
+			position: absolute
+			top: 0
+			left: 0
+			border: 2px solid $warning
+			border-radius: 20px
+			background-color: #efefef 	
+
+.section-circle
+	position: relative
+	min-height: 650px
+	.shape-style
+		// background: linear-gradient(0deg, rgba(255,255,255,1) 2%, rgba(235,195,52,1) 82%)
+		// background: linear-gradient(0deg, rgba(255,255,255,1) 2%, rgba(255,157,17,1) 82%)
+		background: linear-gradient(0deg,#c9d2ff 2%,#3873d7 82%)
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		z-index: -1
+		span
+			position: absolute
+			border-radius: 100px 130px 100px 315px
+			
+		.circle-150
+			width: 150px
+			height: 150px
+			bottom: auto
+			left: -3%
+			top: -20px
+			background: rgba(255, 255, 255, .1)
+		.circle-50
+			width: 50px
+			height: 50px
+			right: 20%
+			top: 15%
+			background: rgba(255, 255, 255, .1)
+		.circle-70
+			width: 70px
+			height: 70px
+			right: 6%
+			top: 25%
+			background: rgba(255, 255, 255, .2)
+		.circle-80
+			width: 80px
+			height: 80px
+			right: 12%
+			top: 20px
+			background: rgba(255, 255, 255, .2)
+		.circle-85
+			width: 85px
+			height: 85px
+			right: 40%
+			top: 20px
+			background: rgba(255, 255, 255, .1)
+		.circle-90
+			width: 85px
+			height: 85px
+			left: 5%
+			top: 250px
+			background: rgba(255, 255, 255, .2)	
+	.section-shape
+		bottom: 0
+		left: 0
+		position: absolute
+		right: 0
+		z-index: 1
+		
+
+.main-head
+	position: relative
+	overflow: hidden
+	z-index: 1
+	color: rgb(255, 255, 255)
+	background-color: rgb(12, 12, 12)
+	// min-height: 100vh
+	.bg-head
+		background-image: url(../img/background_065.jpg)
+		background-size: cover
+		background-position: 30% 10%
+		width: 100%
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: -1
+		opacity: .5
+
+.s-advant
+	text-align: center
+	margin: 20px 0px
+	.fas 
+		font-size: 55px
+		padding-bottom: 15px
+		color: $warning
+	.card
+		box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.12)
+		.card-title
+			font-size: 16px
+			text-align: left
+.s-adv
+	h4
+		color: #fff
+		text-transform: uppercase
+		letter-spacing: 0.2em
+	.s-adv-item
+		font-size: 15px
+		line-height: 21px
+		h3
+			margin: 0
+			font-size: em(20px)
+			span
+				font-size: 20px
+				color: $warning
+			.fas
+				color: $warning
+				opacity: .8
+				margin-left: 10px	
+		p
+			margin-top: 8px
+			margin-bottom: 0
+			color: #fff
+.s-profile
+
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+	.h5
+		text-transform: uppercase
+		font-size: 18px
+		padding-top: 15px
+	.fa
+		font-size: 48px
+		color: $warning
+	.card
+		position: relative
+
+		.card-title
+			text-transform: uppercase
+			color: $warning
+			font-weight: 500
+		.card-0
+			overflow: hidden
+			display: block
+			width: 100%
+			height: 150px
+		&:hover
+			opacity: 1
+			img
+				transform: scale(1.2)
+				+mt(.4s)
+
+					
+.bar-main
+	.bar
+		background: $warning
+		height: 1px
+		margin: 0 auto 5px
+		width: 230px
+	.bar-big
+		width: 280px
+
+@mixin opacity ($opacity)
+	opacity: $opacity / 100
+	filter: alpha(opacity=$opacity)				
+.preloader
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 100
+	background: linear-gradient(0deg,#c9d2ff 2%,#3873d7 82%)
+
+	.pulse
+		position: relative
+		left: 50%
+		top: 50vh
+		margin: 
+			left: -80px
+			top: -80px
+		&::before, &::after
+			content: ''
+			border: 5px solid $warning
+			width: 160px
+			height: 160px
+			border-radius: 500px
+			position: absolute
+		&::before
+			animation: pulse-outer .9s ease-in infinite
+		&::after
+			animation: pulse-inner .9s linear infinite	
+@keyframes pulse-outer
+	0%
+		@include opacity(100)
+	50%
+		@include opacity(50)
+	100%
+		@include opacity(0)
+@keyframes pulse-inner
+	0%
+		@include opacity(0)
+		transform: scale(0)
+	100%
+		@include opacity(100)
+		transform: scale(1)	
+
+.s-price
+	position: relative
+	display: block
+	background-size: cover
+
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+		font-weight: 600
+	.line
+		width: 100px
+		height: 2px
+		background: $warning
+		margin: 5px 0 16px 0
+	.table
+		.title-table
+			font-size: 20px
+			font-weight: 600
+		.price-table
+			font-size: 16px
+			span
+				font-size: 20px
+				font-weight: 600
+				color: $warning	
+.s-diagnostic
+	.card
+		img
+			height: 100%
+		.card-body
+			.card-title
+				font-size: 20px
+				font-weight: 600
+				color: $warning
+				border: 2px solid
+				width: 115px
+				padding: 5px 20px
+				border-radius: 10px
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+		font-weight: 600
+	.line
+		width: 100px
+		height: 2px
+		background: $warning
+		margin: 5px 0 16px 0
+.s-work
+	position: relative
+	display: block
+	background-size: cover
+
+	.p
+		text-transform: uppercase
+		color: $warning
+		font-weight: 600
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+		font-weight: 600
+	.h5
+		font-weight: 600
+		font-size: 18px
+		padding-top: 15px
+	.fa
+		font-size: 48px
+		color: $warning
+	.card
+		position: relative
+		.btn-outline-red
+			text-transform: initial
+			
+		.card-title
+			font-weight: 600
+		.card-0
+			overflow: hidden
+			display: block
+			width: 100%
+			height: 150px
+			img
+				height: inherit
+				&:hover
+					transform: scale(1.2)
+					+mt(.4s)
+
+.s-blog
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+	.h5
+		text-transform: uppercase
+		font-size: 18px
+		padding-top: 15px
+	.fa
+		font-size: 48px
+		color: $warning
+	.card
+		position: relative
+		
+		.card-title
+			text-transform: uppercase
+			font-weight: 500
+		.card-0
+			overflow: hidden
+			display: block
+			width: 100%
+			height: 250px
+			&:hover img
+				transform: scale(1.2)
+				+mt(.4s)
+		.card-body
+			a
+				text-transform: uppercase
+				color: $warning
+				font-weight: 600
+				text-decoration: none
+				line-height: 1.2
+				display: block
+				&:hover
+					color: #000
+			p
+				color: #000
+				opacity: .5
+
+.s-work-item
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+	h5
+		text-transform: uppercase
+		font-size: 24px
+		padding-top: 15px
+		color: #fff
+	.card
+		position: relative
+		.card-0
+			overflow: hidden
+			display: block
+			width: 100%
+			height: 220px
+			&:hover img
+				transform: scale(1.2)
+				+mt(.4s)
+		.fas
+			color: #fff
+			font-size: 50px		
+		.port_item_cont
+			position: absolute
+			overflow: hidden
+			background-size: cover
+			top: 0
+			left: 0
+			width: 100%
+			height: 220px
+			text-transform: uppercase
+			letter-spacing: 1px
+			background-color: $warning
+			text-align: center
+			padding-top: 15%
+			opacity: 0
+			+mt(.4s)
+			&:hover
+				opacity: 1
+				padding-top: 20%
+			
+		.card-title
+			text-transform: uppercase
+			font-weight: 600
+.s-wes
+	position: relative
+	min-height: 550px
+	.we-item
+		ul
+			margin: 0
+			padding: 0
+			li
+				display: block
+				background-color: #efefef
+				font-weight: 600
+				// color: #fff
+				padding: 16px 70px
+				margin: 0 0 13px 0
+				border-radius: 20px
+				position: relative
+				text-transform: uppercase
+		.fas
+			color: $blue
+			padding: 12px
+			font-size: 32px
+			position: absolute
+			top: 0
+			left: 0
+			border: 2px solid $warning
+			border-radius: 20px
+			background-color: #efefef
+
+	.master-phone
+		margin-top: 22px
+		padding: 20px
+		border: 1px solid #dcdcdc
+		background-color: #efefef
+		text-align: center
+		h5
+			font-weight: 600
+			font-size: 18px
+			margin: 0
+		a
+			color: $warning
+			font-size: 30px
+			font-weight: 600
+			text-decoration: none
+	.contact-form
+		padding: 20px
+		border: 1px solid #dcdcdc
+		background-color: #efefef
+		.contact-form-head
+			// background-color: $warning
+			color: $dark
+			padding: 10px 10px
+			margin-bottom: 20px
+			text-transform: uppercase
+			h5
+				font-weight: 600
+				font-size: 18px
+				margin: 0
+	.bg-we
+		background: linear-gradient(0deg,#c9d2ff 2%,#3873d7 82%)
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		z-index: -1
+	.section-wave
+		// bottom: 0
+		left: 0
+		// position: absolute
+		right: 0
+		z-index: 1	
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+		font-weight: 600
+		color: #fff
+		// padding-top: 130px
+	.line
+		width: 100px
+		height: 2px
+		background: $warning
+		margin: 5px 0 16px 0
+.s-we
+	background-image: url(../img/background_065.jpg)
+	background-size: cover
+	h5
+		font-weight: 600
+		font-size: 24px
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+		font-weight: 600
+	.we-item
+		display: flex
+	.fas
+		font-size: 60px
+		color: $warning
+		margin-right: 20px
+.s-about
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+		font-weight: 600
+		
+	.line
+		width: 100px
+		height: 2px
+		background: $warning
+		margin: 5px 0 16px 0
+	.about-item
+		text-align: justify
+		p
+			font-size: 16px
+			line-height: 1.5
+	.figure
+		overflow: hidden
+		background-size: cover
+		width: 100%
+		height: 450px
+		img
+			width: 100%
+			display: block
+			height: 450px
+	ul.home-list
+		margin: 50px 0
+		font-size: 16px
+		font-weight: 600
+		li
+			display: block
+			background: linear-gradient(0deg,#f89f54 2%,#ff8100 82%)
+			color: #fff
+			padding: 15px 70px
+			margin: 10px 0
+			border-radius: 20px
+			position: relative
+			text-transform: uppercase
+		.fas
+			color: $blue
+			padding: 10px
+			font-size: 32px
+			position: absolute
+			top: 0
+			left: 0
+			border: 2px solid $warning
+			border-radius: 20px
+			background-color: #efefef
+
+.s-buy
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+		font-weight: 600
+
+	.line
+		width: 200px
+		height: 2px
+		background: $warning
+		margin: 5px 0 16px 0
+
+	.about-item
+		text-align: justify
+		p
+			font-size: 16px
+			line-height: 1.5
+	.figure
+		overflow: hidden
+		background-size: cover
+		width: 100%
+		height: 510px
+		img
+			width: 100%
+			display: block
+			height: 510px
+	.contact-form
+		padding: 20px
+		border: 1px solid #dcdcdc
+		background-color: #efefef
+		.contact-form-head
+			h5
+				font-weight: 600
+				font-size: 18px
+				margin: 0
+				color: $dark
+				// padding: 10px 10px
+				margin-bottom: 5px
+				text-transform: uppercase
+.s-brends
+	position: relative
+	min-height: 550px
+	.bg-we
+		background: linear-gradient(0deg,#c9d2ff 2%,#3873d7 82%)
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		z-index: -1
+	.section-wave
+		// bottom: 0
+		left: 0
+		// position: absolute
+		right: 0
+		z-index: 1	
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+		font-weight: 600
+		color: #fff
+		// padding-top: 130px
+	.line
+		width: 200px
+		height: 2px
+		background: $warning
+		margin: 5px 0 16px 0
+	.brend-item
+		width: 126px
+		height: 54px
+		border: 1px solid #efefef
+		border-radius: 2px
+		position: relative
+		margin: 0 0 20px 0
+		background-color: #fff
+		&:hover
+			border: 2px solid $warning
+		img
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			margin: auto
+			max-width: 100%
+
+
+.s-brend
+	background-image: url('../img/background_065.jpg')
+	background-size: cover
+	
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+		font-weight: 600
+	.brend-item
+		width: 126px
+		height: 54px
+		border: 1px solid #efefef
+		border-radius: 2px
+		position: relative
+		margin: 0 0 20px 0
+		background-color: #fff
+		img
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			margin: auto
+			max-width: 100%
+
+.s-content
+	h2
+		padding: 20px 0		
+	
+.s-realiz
+	h2
+		color: $accent
+		font-weight: 600
+		text-transform: uppercase
+		letter-spacing: 0.2em
+	.fa-angle-right
+		font-size: 52px
+		color: $warning
+		opacity: .5
+		position: relative
+		top: 10px
+
+	.realiz-item
+		.fas, .far
+			color: $warning
+			font-size: 52px
+		p
+			color: $accent
+			padding-top: 12px
+			margin-bottom: 0
+			text-align: left
+			opacity: .9
+			line-height: 1.4
+			span 
+				font-size: 24px
+				color: $warning
+.s-contact
+	position: relative
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+		font-weight: 600
+		color: #fff
+	.line
+		width: 100px
+		height: 2px
+		background: $warning
+		margin: 5px 0 16px 0
+	.bg-we
+		background: linear-gradient(0deg,#c9d2ff 2%,#10449d 82%)
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		z-index: -1	
+	h3
+		color: #fff
+		opacity: .8
+		text-transform: uppercase
+	
+	.contacts-text
+		line-height: 10px
+		opacity: .8
+		p
+			color: #fff
+		a
+			color: #fff
+			text-decoration: none	
+			
+		.fa
+			margin-right: 10px
+			color: $warning
+	.contact-form-head
+		color: #fff
+		h5
+			text-transform: uppercase
+		p
+			opacity: .6
+			font-size: 14px
+			line-height: 18px
+	.contact-form
+		padding: 30px 20px
+		background: linear-gradient(0deg,#7a88ce 2%,#083480 82%)
+		.form-group
+			label
+				color: #fff
+				opacity: .5
+				font-size: 14px
+.main-foot
+	background: linear-gradient(0deg,#5a72e9 2%,#1e5cc6 82%)
+	small
+		text-align: left
+		font-size: 21px
+		letter-spacing: 2px
+		color: #fff	
+		margin-bottom: 0
+		opacity: .9
+		font-weight: 400
+
+.bg-blue
+	background-color: #18545f	
+.s-galery
+	.owl-theme, .owl-dot, .owl-dots
+		outline: none
+	.partners
+		img
+			width: 100%
+			height: 250px
+			background-size: cover
+.breadcrumb
+	margin-bottom: 0px
+	li a 
+		color: #28a745
+
+.nav .current-active a
+	background-color: #28a745
+	color: #fff
+.nav a
+	border: 1px solid #28a745 			
+	text-align: center
+	border-radius: 2px
+	color: #343a40
+	background-color: #f9f9f9
+
+.s-review
+	position: relative
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+		font-weight: 600
+	.line
+		width: 200px
+		height: 2px
+		background: $warning
+		margin: 5px 0 16px 0
+	.bg-we
+		background: linear-gradient(0deg,#eff1ff 2%,#a5c4f8 82%)
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		z-index: -1
+	.section-wave
+		// bottom: 0
+		left: 0
+		// position: absolute
+		right: 0
+		z-index: 1	
+	.review
+		margin-top: 20px
+		padding: 0 20px
+		&-header
+			font-family: 'Times New Roman', serif
+			font-style: italic
+			font-size: 30px
+			font-weight: bold
+		&-date
+			font-family: 'Times New Roman', serif
+			font-style: italic
+			font-size: 15px
+			color: #5b5b5b	
+		&-stars
+			margin: 18px 0 30px
+			font-size: 14px
+			color: $warning
+			.fa
+			margin: 0 2.5px
+		&-text
+			color: #5b5b5b
+	.reviews
+		text-align: center
+
+		.owl-dots
+			width: 100%
+			text-align: center
+			margin-top: 60px
+			.owl-dot
+				width: 8px
+				height: 8px
+				background-color: #95989a
+				border-radius: 10em
+				display: inline-block
+				margin: 5px
+				transition: background-color .5s ease, transform
+				&.active
+					background-color: $warning
+					transform: scale(1.3)
+	.quotes
+		position: absolute
+		width: 100%
+		&::before, &::after
+			content: ',,'
+			position: absolute
+			top: 100px
+			font-size: 56px
+			color: $warning
+			font-family: 'Times New Roman', serif
+			font-weight: bold
+			line-height: 0
+			transform: rotate(180deg)
+			display: block
+		&::before
+			top: 140px
+			left: -60px
+		&::after
+			right: -60px
+			transform: rotate(0)
+
+.top
+	position: fixed
+	bottom: 40px
+	right: -100px
+	background-color: $warning
+	z-index: 12
+	border-radius: 2px
+	color: #fff
+	font-size: 26px
+	width: 40px
+	height: 40px
+	text-align: center
+	line-height: 40px
+	cursor: pointer
+	transition: all .3s ease
+	opacity: 1
+	&:hover
+		color: #fff
+		background-color: $warning
+		opacity: .8
+	&.active
+		right: 40px
+
+
+@import "media" // Always at the end
