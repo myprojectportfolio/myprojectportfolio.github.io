@@ -72,7 +72,7 @@ if ($(this).scrollTop() > 1){
   }
 });
 
-$('.reviews').owlCarousel({
+$('.s-review .reviews').owlCarousel({
   loop: true,
   smartSpeed: 700,
   nav: false,
