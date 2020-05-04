@@ -70,7 +70,7 @@ b, strong
 			width: 125px
 			height: auto
 	.main-slogan
-		color: $warning
+		color: $blue
 		text-transform: uppercase
 		font-weight: 600
 	
@@ -250,7 +250,7 @@ nav, .header-content, .s-about
 	h1
 		letter-spacing: 0.2em
 		line-height: 1.4em
-		font-size: 24px
+		font-size: 21px
 		color: #FFF
 		// color: $dark
 		font-weight: 600
@@ -261,7 +261,7 @@ nav, .header-content, .s-about
 		font-size: 28px
 		opacity: .6!important
 	ul.home-list
-		margin: 40px 0
+		margin: 35px 0
 		font-size: 16px
 		li
 			display: block
@@ -520,7 +520,7 @@ nav, .header-content, .s-about
 				font-weight: 600
 				color: $warning
 				border: 2px solid
-				width: 115px
+				width: 150px
 				padding: 5px 20px
 				border-radius: 10px
 	.h2
@@ -664,8 +664,9 @@ nav, .header-content, .s-about
 				display: block
 				background-color: #efefef
 				font-weight: 600
+				font-size: 16px
 				// color: #fff
-				padding: 16px 70px
+				padding: 16px 5px 16px 70px
 				margin: 0 0 13px 0
 				border-radius: 20px
 				position: relative
@@ -763,7 +764,7 @@ nav, .header-content, .s-about
 		background: $warning
 		margin: 5px 0 16px 0
 	.about-item
-		text-align: justify
+		// text-align: justify
 		p
 			font-size: 16px
 			line-height: 1.5
@@ -777,7 +778,7 @@ nav, .header-content, .s-about
 			display: block
 			height: 450px
 	ul.home-list
-		margin: 50px 0
+		margin: 25px 0
 		font-size: 16px
 		font-weight: 600
 		li
@@ -912,9 +913,135 @@ nav, .header-content, .s-about
 			margin: auto
 			max-width: 100%
 
+.content-wrap
+	.line-cat
+		font-size: 16px
+		margin-bottom: 18px
+		position: relative
+		strong
+			color: $dark
+			background-color: #fff
+			padding-right: 10px
+			// padding-left: 10px
+			position: relative
+			font-weight: 600
+			font-size: 28px
+			z-index: 1
+		&:after
+			content: ""
+			display: block
+			width: 100%
+			right: 0
+			top: 60%
+			height: 5px
+			background: $warning
+			position: absolute
+	.table
+		.title-table
+			font-size: 16px
+			font-weight: 600
+		.price-table
+			font-size: 16px
+			span
+				font-size: 20px
+				font-weight: 600
+				color: $warning
+	ul.sidebar-list
+		margin: 0
+		padding: 0
+		font-size: 16px
+		li
+			display: block
+			background-color: #5075d6
+			font-weight: 600
+			color: #fff
+			padding: 5px 10px 5px 70px
+			margin: 8px 0
+			border-radius: 10px
+			position: relative
+			text-transform: uppercase
+			width: 100%
+		.far,.fas
+			color: $blue
+			padding: 12px
+			font-size: 35px
+			position: absolute
+			top: 0
+			left: 0
+			border: 2px solid $warning
+			border-radius: 10px
+			background-color: #efefef
+	.sidebar-brend
+		border-radius: 10px
+		// box-shadow: 0px 0px 7px 0px rgba(255,117,20,1)
+		border: 2px solid #ff7514
+		h4
+			padding: 10px 15px
+			background-color: $warning
+			border-radius: 10px
+			color: #fff
+			font-weight: 600
+			// opacity: .9
+		table
+			td
+				padding: 5px 12px
+				a
+					color: $dark
+					opacity: .9
+					font-weight: 600
+					font-size: 18px
+					text-decoration: none
+					&:hover
+						color: $warning
+	.sidebar-tools
+		border-radius: 10px
+		border: 2px solid #ff7514
+		h4
+			padding: 10px 15px
+			background-color: $warning
+			border-radius: 10px
+			color: #fff
+			font-weight: 600
+		ul
+			list-style: none
+			padding: 0
+			margin: 0
+			li
+				padding: 5px 15px
+				a
+					color: $dark
+					opacity: .9
+					font-weight: 600
+					font-size: 18px
+					text-decoration: none
+					&:hover
+						color: $warning
+	.master-phone
+		border-radius: 10px
+		border: 2px solid #ff7514
+		text-align: center
+		h5
+			padding: 10px 0px
+			background-color: $warning
+			border-radius: 10px
+			color: #fff
+			font-weight: 60
+		.phone
+			
+			a
+				color: $blue
+				font-size: 28px
+				font-weight: 600
+				text-decoration: none
+				&:hover
+					color: $warning
+	.fas
+		padding-right: 8px
+		color: $blue					
+
 .s-content
-	h2
-		padding: 20px 0		
+	.h2
+		padding: 20px 0	
 	
 .s-realiz
 	h2
@@ -956,7 +1083,7 @@ nav, .header-content, .s-about
 		background: $warning
 		margin: 5px 0 16px 0
 	.bg-we
-		background: linear-gradient(0deg,#c9d2ff 2%,#10449d 82%)
+		background: linear-gradient(0deg,#6b82f1 2%,#3668bc 82%)
 		position: absolute
 		width: 100%
 		height: 100%
@@ -970,7 +1097,7 @@ nav, .header-content, .s-about
 	
 	.contacts-text
 		line-height: 10px
-		opacity: .8
+		opacity: .9
 		p
 			color: #fff
 		a
@@ -990,7 +1117,7 @@ nav, .header-content, .s-about
 			line-height: 18px
 	.contact-form
 		padding: 30px 20px
-		background: linear-gradient(0deg,#7a88ce 2%,#083480 82%)
+		background: linear-gradient(0deg,#5469d3 2%,#2c4f8d 82%)
 		.form-group
 			label
 				color: #fff
@@ -1008,7 +1135,7 @@ nav, .header-content, .s-about
 		font-weight: 400
 
 .bg-blue
-	background-color: #18545f	
+	background-color: $blue
 .s-galery
 	.owl-theme, .owl-dot, .owl-dots
 		outline: none
@@ -1017,10 +1144,15 @@ nav, .header-content, .s-about
 			width: 100%
 			height: 250px
 			background-size: cover
-.breadcrumb
-	margin-bottom: 0px
-	li a 
-		color: #28a745
+
+.section-breadcrumb
+	background: linear-gradient(0deg,#e0e4fe 2%,#bbd4ff 82%)
+	.breadcrumb
+		margin-bottom: 0px
+		padding-left: 0px
+		background: linear-gradient(0deg,#e0e4fe 2%,#bbd4ff 82%)
+		li a 
+			color: $warning
 
 .nav .current-active a
 	background-color: #28a745
