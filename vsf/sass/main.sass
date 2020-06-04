@@ -1,0 +1,829 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $dark
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+		
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.h1
+	text-transform: uppercase
+
+.abouts
+		.mnu-line
+			opacity: 1
+
+.bg-black
+	color: $black
+.line-cat
+		font-size: 16px
+		margin-bottom: 18px
+		position: relative
+
+		strong
+			color: $dark
+			background-color: #fff
+			padding-right: 10px
+			padding-left: 10px
+			position: relative
+			font-weight: 600
+			font-size: 28px
+			text-transform: uppercase
+			z-index: 1
+		&:after
+			content: ""
+			display: block
+			width: 100%
+			right: 0
+			top: 60%
+			height: 5px
+			background: #c82333
+			position: absolute
+
+.header_topline
+	padding: 8px 0
+	
+	.top_adress
+		padding-left: 10px
+		margin: 0
+		color: #fff
+		font-size: 14px
+		li
+			display: inline-block
+			margin-right: 20px
+			a
+				color: #fff
+				font-size: 14px
+				opacity: .8
+				&:hover
+					text-decoration: none
+					opacity: 1
+
+		.phone
+			color: #fff
+		.fa
+			margin-right: 5px
+			color: #fff
+			opacity: .6
+.social
+	margin: 0
+	padding: 0
+	text-align: center
+	li
+		display: block
+		padding-bottom: 20px
+	.fab, .fa
+		color: #fff
+		opacity: .6
+		font-size: 38px
+		&:hover
+			opacity: .9
+
+.mnu-line2
+	overflow: hidden
+	// background-color: #000
+	opacity: .8
+	padding: 10px 0
+	transition: all 0.2s ease
+	img
+		width: 150px
+		height: auto
+		padding-top: 5px
+	&.sticky
+		top: 0
+		position: fixed
+		width: 100%
+		height: 80px
+		padding: 4px 0
+		z-index: 2
+		border-bottom: 0px
+		background-color: $black
+		opacity: 1
+		box-shadow: 0 0 2px rgba(0, 0, 0, .8)
+		img
+			width: 120px
+			padding-top: 5px
+			height: auto
+		.main-menu
+				padding-top: -15px
+				
+.mnu-line
+	overflow: hidden
+	background-color: #000
+	opacity: .8
+	padding: 10px 0
+	transition: all 0.2s ease
+	img
+		width: 150px
+		height: auto
+		padding-top: 5px
+	&.sticky
+		top: 0
+		position: fixed
+		width: 100%
+		height: 80px
+		padding: 4px 0
+		z-index: 2
+		border-bottom: 0px
+		background-color: $black
+		opacity: 1
+		box-shadow: 0 0 2px rgba(0, 0, 0, .8)
+		img
+			width: 120px
+			padding-top: 5px
+			height: auto
+		.main-menu
+				padding-top: -15px
+
+.logo
+	display: block
+	opacity: 1
+	font-size: 20px
+	letter-spacing: 2px
+	color: $warning
+	font-weight: 600
+	padding-top: 5px
+	text-transform: uppercase
+	&:hover
+		text-decoration: none
+		color: $warning
+
+nav, .header-content
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+	li
+		display: inline-block
+.hidden
+	display: none
+
+
+// toggle menu
+
+.toggle-mnu 
+	display: block
+	width: 28px
+	height: 28px
+	margin-top: 14px
+
+	span:after, span:before 
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+
+	span:after
+		top: 18px
+
+	span 
+		position: relative
+		display: block
+
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: #fff
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+
+	&.on span 
+		background-color: transparent
+
+	&.on span:before 
+		transform: rotate(45deg) translate(-1px, 0px)
+
+	&.on span:after 
+		transform: rotate(-45deg) translate(6px, -7px) 
+.toggle-mnu
+	position: absolute
+	top: 0
+	right: 15px
+.hidden-mnu
+	background-color: $black
+	display: none
+	position: relative
+	top: 20px
+	li
+		display: block
+	> ul
+		> li
+			&.active
+				a
+					text-decoration: underline
+					color: #fff
+			> a
+				color: #fff !important
+				&:hover
+					color: #fff
+					background-color: $warning
+					text-decoration: none
+
+.main-menu
+	text-align: right
+	> ul
+		> li
+			padding: 22px 13px
+			&:hover
+				padding: 22px 13px
+			> a
+				// display: block
+				color: #fff
+				font-size: 18px
+				text-transform: uppercase
+				+mt(.4s)
+				&:hover
+					color: $warning
+					border-bottom: 3px solid $warning
+					text-decoration: none
+					
+				
+.main-mnu
+	text-align: center
+	> ul
+		> li
+			> a
+				display: block
+				padding: 8px 18px
+				color: #fff
+				font-size: 15px
+				text-transform: uppercase
+				+mt(.4s)
+				&:hover
+					color: $warning
+					text-decoration: none
+														
+.phone
+	text-align: right
+	.phone-wrap
+		padding-top: 5px
+		font-family: "RalewayExtraBold", sans-serif
+		font-size: 18px
+		.fa
+			font-size: 20px
+			position: relative
+			top: 2px
+			margin-right: 8px
+
+.header-content
+	display: block
+	padding-top: 6%
+	.logo_header
+		padding-bottom: 10px
+		img
+			color: #fff
+			width: 180px
+			height: 140px
+	h1
+		letter-spacing: 0.2em
+		line-height: 1.4em
+		color: #fff
+		font-weight: 600
+		text-transform: uppercase
+	h2
+		text-transform: uppercase
+		color: #fff
+		opacity: .6
+		font-size: 22px
+.main-head
+	position: relative
+	display: block
+	background-size: cover
+	min-height: 100vh
+	&:before
+		content: ''
+		width: 100%
+		height: 100%
+		background-color: $black
+		position: absolute
+		opacity: .6
+		z-index: -1
+.s-adv
+	h4
+		color: #fff
+		text-transform: uppercase
+		letter-spacing: 0.2em
+	.s-adv-item
+		font-size: 15px
+		line-height: 21px
+		h3
+			margin: 0
+			font-size: em(20px)
+			span
+				font-size: 20px
+				color: $warning
+			.fas
+				color: $warning
+				opacity: .8
+				margin-left: 10px	
+		p
+			margin-top: 8px
+			margin-bottom: 0
+			color: #fff
+.s-profile
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+	.h5
+		text-transform: uppercase
+		font-size: 18px
+		padding-top: 15px
+	.fa
+		font-size: 48px
+		color: $warning
+	.card
+		position: relative
+
+		.card-title
+			text-transform: uppercase
+			color: $warning
+			font-weight: 500
+		.card-0
+			overflow: hidden
+			display: block
+			width: 100%
+			height: 150px
+		&:hover
+			opacity: 1
+			img
+				transform: scale(1.2)
+				+mt(.4s)
+
+					
+.bar-main
+	.bar
+		background: $warning
+		height: 1px
+		margin: 0 auto 5px
+		width: 250px
+	.bar-big
+		width: 300px
+
+@mixin opacity ($opacity)
+	opacity: $opacity / 100
+	filter: alpha(opacity=$opacity)
+
+.preloader
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 100
+	background-color: #000
+	.pulse
+		position: relative
+		left: 50%
+		top: 50vh
+		margin: 
+			left: -100px
+			top: -100px
+		&::before, &::after
+			content: ''
+			border: 5px solid #fff
+			width: 200px
+			height: 200px
+			border-radius: 500px
+			position: absolute
+		&::before
+			animation: pulse-outer .8s ease-in infinite
+		&::after
+			animation: pulse-inner .8s linear infinite	
+@keyframes pulse-outer
+	0%
+		@include opacity(100)
+	50%
+		@include opacity(50)
+	100%
+		@include opacity(0)
+@keyframes pulse-inner
+	0%
+		@include opacity(0)
+		transform: scale(0)
+	100%
+		@include opacity(100)
+		transform: scale(1)
+
+
+.s-work
+	position: relative
+	display: block
+	background-size: cover
+	&:before
+		content: ''
+		width: 100%
+		height: 100%
+		background-color: $black
+		position: absolute
+		opacity: .8
+	.h1
+		color: #fff	
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+	.h5
+		text-transform: uppercase
+		font-size: 18px
+		padding-top: 15px
+	.fa
+		font-size: 48px
+		color: $warning
+	.card
+		position: relative
+		.port_item_cont
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 230px
+			text-transform: uppercase
+			letter-spacing: 1px
+			background-color: rgba(52,58,64,.9)
+			text-align: center
+			padding-top: 15%
+			opacity: 0
+			+mt(.4s)
+			&:hover
+				opacity: 1
+				padding-top: 22%
+		.card-body
+			a
+				color: $accent
+				font-size: 20px
+				text-transform: uppercase
+				&:hover
+					color: $warning
+					text-decoration: none	
+		.card-title
+			text-transform: uppercase
+			font-weight: 500
+		.card-0
+			overflow: hidden
+			display: block
+			width: 100%
+			height: 230px
+			&:hover img
+				transform: scale(1.2)
+				+mt(.4s)
+
+.s-works
+	position: relative
+	display: block
+	background-size: cover
+	.card-item-h
+		position: relative
+		overflow: hidden
+		display: block
+		width: 100%
+		height: 380px
+		
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+	.h5
+		text-transform: uppercase
+		font-size: 21px
+		padding-top: 15px
+		font-weight: 600
+	.fa
+		font-size: 48px
+		color: $warning
+	.card
+		position: relative
+		.port_item_cont
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 230px
+			text-transform: uppercase
+			letter-spacing: 1px
+			background-color: rgba(52,58,64,.9)
+			text-align: center
+			padding-top: 15%
+			opacity: 0
+			+mt(.4s)
+			&:hover
+				opacity: 1
+				padding-top: 22%
+		.card-body
+			a
+				color: $accent
+				font-size: 20px
+				text-transform: uppercase
+				&:hover
+					color: $warning
+					text-decoration: none		
+		.card-title
+			text-transform: uppercase
+			font-weight: 500
+		.card-0
+			overflow: hidden
+			display: block
+			width: 100%
+			height: 230px
+			&:hover img
+				transform: scale(1.2)
+				+mt(.4s)
+
+.s-blog
+	.intro
+		padding: 0 20px 20px 20px
+		a
+			text-decoration: none
+			.title
+				font-size: 21px
+				font-weight: 600
+				line-height: 1.3
+				color: $dark
+				margin: 10px 0
+				&:hover
+					color: $warning
+		.date
+			font-size: 14px
+    	line-height: 1.14
+    	color: #000
+			opacity: .5
+    	margin: 20px 0 12px 0
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+	.h5
+		text-transform: uppercase
+		font-size: 18px
+		padding-top: 15px
+	.fa
+		font-size: 48px
+		color: $warning
+	.card
+		position: relative
+		.card-img
+			height: 320px
+		.card-title
+			text-transform: uppercase
+			font-weight: 500
+		.card-0
+			overflow: hidden
+			display: block
+			width: 100%
+			height: 250px
+			&:hover img
+				transform: scale(1.2)
+				+mt(.4s)
+		.card-body
+			a
+				text-transform: uppercase
+				color: #000
+				font-weight: 600
+				text-decoration: none
+				line-height: 1.2
+				display: block
+				&:hover
+					color: $warning
+			p
+				color: #000
+				opacity: .7
+.s-contact-item
+	.contact-item
+		font-size: 18px
+		padding-top: 10px
+		.h4
+			font-weight: 600
+			color: $warning
+		.contacts-text
+			line-height: 20px
+			// opacity: .5
+			font-size: 18px
+			
+			a
+				color: #000
+			p
+				color: #000
+			.fa, .fab
+				color: $warning
+				opacity: .5
+				font-size: 18px
+				margin-right: 10px
+	.btn-warning
+		color: #fff!important
+		text-transform: uppercase
+.s-work-item
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+	h5
+		text-transform: uppercase
+		font-size: 24px
+		padding-top: 15px
+		color: #fff
+	.card
+		position: relative
+		.card-0
+			overflow: hidden
+			display: block
+			width: 100%
+			height: 200px
+			&:hover img
+				transform: scale(1.2)
+				+mt(.4s)
+		.port_item_cont
+			position: absolute
+			overflow: hidden
+			background-size: cover
+			top: 0
+			left: 0
+			width: 100%
+			height: 200px
+			text-transform: uppercase
+			letter-spacing: 1px
+			background-color: rgba(224, 168, 0, .6)
+			text-align: center
+			padding-top: 15%
+			opacity: 0
+			+mt(.4s)
+			&:hover
+				opacity: 1
+				padding-top: 20%
+		.card-title
+			text-transform: uppercase
+			font-weight: 600
+
+.s-about
+
+	.about-item
+		text-align: justify
+		p
+			font-size: 16px
+			line-height: 1.5
+	.figure
+		overflow: hidden
+		background-size: cover
+		width: 100%
+		height: 320px
+		
+		img
+			width: 100%
+			display: block
+			height: 320px
+
+.s-realiz
+	h4
+		color: #fff
+		text-transform: uppercase
+		letter-spacing: 0.2em
+	.fa-angle-right
+		font-size: 52px
+		color: $warning&:before
+			content: ''
+			width: 100%
+			height: 100%
+			background-color: #e2e6ea
+			position: absolute
+			opacity: .4
+		opacity: .5
+		position: relative
+		top: 10px
+
+	.realiz-item
+		.fas, .far
+			color: $warning
+			font-size: 52px
+		p
+			color: #fff
+			padding-top: 12px
+			margin-bottom: 0
+			
+.s-contact
+	background-color: #161717
+	.serv-cont
+		ul
+			list-style: none
+			padding: 0
+			margin: 0
+			li
+				a
+					color: #fff
+					opacity: .5
+					&:hover
+						text-decoration: none
+						color: $warning
+						opacity: 1
+	.logofoot
+		margin-top: 40px
+		opacity: .5
+		p
+			color: #fff
+			padding-top: 20px
+		img
+			width: 170px
+	h3
+		color: #fff
+		opacity: .8
+		text-transform: uppercase
+	.fa, .fab, .fas
+		color: #fff
+		opacity: .5
+		font-size: 18px
+	.contact-item
+		padding-bottom: 20px	
+	.contacts-text
+		line-height: 10px
+		opacity: 1
+		font-size: 18px
+		.fa, .fab, .fas
+			color: #fff
+			opacity: 1
+			font-size: 18px
+		a
+			color: #fff
+			&:hover
+				text-decoration: none
+				opacity: 1
+		p
+			color: #fff
+			
+	.fa, .fab, .fas
+		margin-right: 10px
+	.contact-form-head
+		color: #fff
+		h5
+			text-transform: uppercase
+		p
+			opacity: .6
+			font-size: 14px
+			line-height: 18px
+	.contact-form
+		padding: 30px 20px
+		background-color: darken($black, 5%)
+		.form-group
+			label
+				color: #fff
+				opacity: .5
+				font-size: 14px
+.main-foot
+	background-color: darken($black, 10%)
+	p
+		text-align: left
+		font-size: 21px
+		letter-spacing: 2px
+		color: #fff	
+		margin-bottom: 0
+		opacity: .6
+		font-weight: 400
+.s-galery
+	.owl-theme, .owl-dot, .owl-dots
+		outline: none
+	.partners
+		img
+			width: 100%
+			height: 250px
+			background-size: cover
+.breadcrumb
+	margin-bottom: 0px
+	li a 
+		color: $warning
+
+.nav .current-active a
+	background-color: $warning
+	color: #fff
+.nav a
+	border: 1px solid $warning 			
+	text-align: center
+	border-radius: 2px
+	color: #343a40
+	background-color: #f9f9f9
+
+@import "media" // Always at the end
