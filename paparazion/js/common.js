@@ -21,6 +21,10 @@ $(function() {
     $("#phone2").mask("+38(999) 999-9999");
   });
 
+  $(function(){
+    $("#phone3").mask("+38(999) 999-9999");
+  });
+
 	$(".s-adv").waypoint(function() {
 
     $({blurRadius: 5}).animate({blurRadius: 0}, {
