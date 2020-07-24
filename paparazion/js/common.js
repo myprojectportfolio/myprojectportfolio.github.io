@@ -6,12 +6,21 @@ $(function() {
     return false;
   });
 
-  $('.s-profile').parallax({
-    imageSrc: 'img/parallax-1.jpg',
-    naturalWidth: 1080,
-    naturalHeight: 520
-  });
-  $('.s-invest').parallax({imageSrc: 'img/pr15.jpg'});
+  $("#profile_grid").mixItUp({
+      load: {
+      filter:'.category-1'
+ 
+      }
+    });
+
+  // $('.s-profile').parallax({
+  //   imageSrc: 'img/parallax-1.jpg',
+  //   naturalWidth: 1080,
+  //   naturalHeight: 520
+  // });
+//   $('.s-invest').parallax({
+//     imageSrc: 'img/pr15.jpg'
+// });
 
   $(function(){
     $("#phone1").mask("+38(999) 999-9999");
