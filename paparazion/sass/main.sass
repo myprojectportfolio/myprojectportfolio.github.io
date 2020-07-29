@@ -40,9 +40,10 @@ body
 	&:hover
 		color: #fff!important
 		background-color: $fiolet!important
+		color: $dark!important
 		opacity: .8
 	&:focus
-		box-shadow: 0 0 0 0.2rem rgba(237, 169, 21,.5)
+		box-shadow: 0 0 0 0.2rem rgba(239, 200, 116,.5)
 
 .text-decorative
 	font-family: $about-font
@@ -112,8 +113,8 @@ b, strong
 .mnu-line
 	overflow: hidden
 	transition: all 0.2s ease
-	opacity: .8
-	z-index: 999
+	opacity: 1
+	background-color: $greendark
 		
 .animenu__toggle
 	display: none
@@ -172,6 +173,9 @@ b, strong
 	text-align: center
 	line-height: 1.2
 	// width: 1%
+
+.animenu__nav > li.active a
+	color: $fiolet
 	
 .animenu__nav > li > a
 	padding: 20px 15px
@@ -254,7 +258,7 @@ b, strong
 
 .header-content
 	display: flex
-	padding-top: 6%
+	padding-top: 7%
 	
 	h1
 		letter-spacing: 0.2em
@@ -262,6 +266,7 @@ b, strong
 		font-size: 36px
 		color: $dark
 		font-weight: 800
+		opacity: .9!important
 		text-transform: uppercase
 	h2
 		text-transform: uppercase
@@ -287,7 +292,7 @@ b, strong
 	z-index: 1
 	color: rgb(255, 255, 255)
 	// background-color: rgb(12, 12, 12)
-	min-height: 650px
+	height: 100vh
 	.bg-head
 		background-image: url(../img/slide-2.jpg)
 		// background: rgb(56,120,91)
@@ -371,6 +376,60 @@ b, strong
 // 	position: relative
 // 	background-size: cover
 
+.breadcrumbs-custom
+	position: relative
+	overflow: hidden
+	z-index: 1
+	// color: rgb(255, 255, 255)
+	height: 35vh
+	.bg-about
+		background-image: url(../img/bg-about.jpg)
+		background-size: cover
+		background-position: 85% 10%
+		width: 100%
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: -1
+	.bg-menu
+		background-image: url(../img/bg-menu.jpg)
+		background-size: cover
+		background-position: 85% 10%
+		width: 100%
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: -1
+	.bg-contact
+		background-image: url(../img/bg-contacts.jpg)
+		background-size: cover
+		background-position: 85% 70%
+		width: 100%
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: -1		
+	.breadcrumbs-content
+		text-align: center
+		display: flex
+		align-items: center
+		min-height: 35vh
+		.h1
+			text-transform: uppercase
+			font-family: $head-font
+			color: $greendark
+			font-size: 50px
+		.breadcrumb
+			background-color: transparent
+			li
+				a
+					color: $greendark
 .s-slide
 	padding: 50px 15px 50px
 	.h2
@@ -397,16 +456,18 @@ b, strong
 
 .s-profile
 	position: relative
+	overflow: hidden
+	z-index: 1
 	background-size: cover
-	background: transparent
-	///background-image: url(../img/main_pic.jpg)
+	background-position: center
+	background-image: url(../img/parallax-1.jpg)
 	&:before
 		content: ''
 		width: 100%
 		height: 100%
 		background-color: #d6d5d0
 		position: absolute
-		opacity: .5
+		opacity: .3
 		
 	.card
 		&:hover
@@ -455,6 +516,27 @@ b, strong
 		text-transform: uppercase
 		font-size: 18px
 		padding-top: 15px
+	.h4
+		font-size: 18px
+		font-style: italic	
+	.card
+		position: relative
+		.card-body
+			
+			.card-title
+				text-transform: uppercase
+				font-weight: 600
+		.card-0
+			overflow: hidden
+			display: block
+		&:hover
+			opacity: 1
+			img
+				transform: scale(1.2)
+				+mt(.4s)
+
+.s-menu
+	padding: 50px 15px 50px
 	.card
 		position: relative
 		.card-body
@@ -469,6 +551,36 @@ b, strong
 			img
 				transform: scale(1.2)
 				+mt(.4s)
+		figure.effect-chico .fa
+			opacity: 0
+			font-size: 48px
+			color: #fff
+			padding-top: 65px
+		figure.effect-chico:hover .fa
+				opacity: 1		
+		figure
+			position: relative
+			text-align: center
+			overflow: hidden
+			cursor: pointer
+			opacity: .98
+		img
+			width: 100%
+			height: 200px
+			position: relative
+			display: block
+			max-width: 100%
+		figcaption
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			display: block
+			&:hover
+				background-color: $green
+				opacity: .6
+				
 
 .s-price
 	padding: 50px 15px 50px	
@@ -549,15 +661,19 @@ b, strong
 
 .s-invest
 	position: relative
+	overflow: hidden
+	z-index: 1
 	background-size: cover
-	///background-image: url(../img/invest.jpg)
+	position: relative
+	background-position: center
+	background-image: url(../img/pr15.jpg)
 	&:before
 		content: ''
 		width: 100%
 		height: 100%
 		background-color: #d6d5d0
 		position: absolute
-		opacity: .5
+		opacity: .3
 	.h2
 		text-transform: uppercase
 		letter-spacing: 0.1em
@@ -576,6 +692,44 @@ b, strong
 
 .mfp-counter
 	display: none !important
+
+.s-menu-page
+	padding: 30px 15px 30px
+	.partner
+		figure.effect-chico .fa
+			opacity: 0
+			font-size: 48px
+			color: #fff
+			padding-top: 75px
+		figure.effect-chico:hover .fa
+				opacity: 1		
+		figure
+			position: relative
+			text-align: center
+			overflow: hidden
+			cursor: pointer
+			opacity: .98
+		img
+			width: 100%
+			height: 200px
+			position: relative
+			display: block
+			max-width: 100%
+		figcaption
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			display: block
+			&:hover
+				background-color: $fiolet
+				opacity: .8
+		.card-body
+			text-align: left
+			display: block
+			.card-title
+				font-weight: 600
 
 .s-menu
 	// background-color: #efefef
@@ -676,8 +830,25 @@ b, strong
 	.bar-big
 		width: 300px
 
+.s-about-work
+	padding: 20px 15px 50px
+	background-color: #f2f3f5
+	.h3
+		text-transform: uppercase
+		letter-spacing: 0.1em
+		font-weight: 600
+		font-size: 24px
+		font-family: $about-font
+	.main-actions_l1
+		padding: 10px
+		.fas
+			color: $green
+			font-size: 60px
+			padding: 15px 0
+
 .s-work
 	padding: 50px 15px 50px
+	background-color: #f2f3f5
 	.h2
 		text-transform: uppercase
 		letter-spacing: 0.1em
@@ -685,7 +856,7 @@ b, strong
 		font-size: 24px
 		color: $dark
 		font-family: $about-font	
-	.card
+	.cards
 		.fas
 			color: $green
 			font-size: 80px
@@ -737,40 +908,40 @@ b, strong
 	100%
 		@include opacity(100)
 		transform: scale(1)	
-.s-works
-	background-coalor: #F0F0F0
-	.h2
-		text-transform: uppercase
-		letter-spacing: 0.2em
-	.popup-gallery
-		.card
-			text-align: center
-			position: relative
-			background-size: cover
-			overflow: hidden
-			display: block
+// .s-works
+// 	background-coalor: #F0F0F0
+// 	.h2
+// 		text-transform: uppercase
+// 		letter-spacing: 0.2em
+// 	.popup-gallery
+// 		.card
+// 			text-align: center
+// 			position: relative
+// 			background-size: cover
+// 			overflow: hidden
+// 			display: block
 			
-			&:hover
-				img
-					transform: scale3d(20px)
-					animation: roll 3s infinite
-					+mt(.5s)
+// 			&:hover
+// 				img
+// 					transform: scale3d(20px)
+// 					animation: roll 3s infinite
+// 					+mt(.5s)
 			
-			.card-img-overlay
-				padding-top: 25%
-				background-color: rgba(40, 167, 69, .5)
-				text-align: center
-				opacity: 0
-				+mt(.5s)
-				transform: scale(1.2)
-				.fa
-					color: #fff
-					font-size: 30px
-				h5
-					color: #fff	
-				&:hover
-					opacity: 1
-					transform: scale(.95)
+// 			.card-img-overlay
+// 				padding-top: 25%
+// 				background-color: rgba(40, 167, 69, .5)
+// 				text-align: center
+// 				opacity: 0
+// 				+mt(.5s)
+// 				transform: scale(1.2)
+// 				.fa
+// 					color: #fff
+// 					font-size: 30px
+// 				h5
+// 					color: #fff	
+// 				&:hover
+// 					opacity: 1
+// 					transform: scale(.95)
 
 .s-infrastructura
 	padding: 50px 15px 50px
@@ -914,15 +1085,6 @@ b, strong
 		font-weight: 400
 		opacity: .8	
 
-.modal
-	.btn
-		font-size: 14px
-		background-color: $fiolet!important
-		border: 1px solid $fiolet!important
-		&:hover
-			opacity: .8
-		&:focus
-			box-shadow: 0 0 0 0.2rem rgba(86,44,113,.5)	
 
 .s-breadcrumb
 	.breadcrumb
@@ -1124,9 +1286,20 @@ b, strong
 		font-weight: 600
 		font-size: 24px
 		font-family: $about-font
+	.h3
+		text-transform: uppercase
+		letter-spacing: 0.1em
+		font-weight: 600
+		font-size: 24px
+		font-family: $about-font	
 	p
-		font-size: 18px	
-
+		font-size: 16px
+	
+.fotorama__wrap--css3 .fotorama__html, .fotorama__wrap--css3 .fotorama__stage .fotorama__img
+	width: 100%!important
+	left: 0px!important
+.fotorama__thumb-border
+	border-color: $greendark!important
 .s-video-galery
 	padding: 10px 15px 50px
 	.video_vantage
@@ -1377,15 +1550,135 @@ b, strong
 				&:hover
 					text-decoration: none
 					color: $green
+
+// .s-razion
+// 	position: relative
+// 	display: block
+// 	overflow: hidden
+// 	z-index: 1
+// 	color: rgb(255, 255, 255)
+// 	background-color: rgba(255, 255, 255, .5)
+// 	background-size: cover
+
+.s-razion
+	position: relative
+	display: block
+	padding: 50px 15px 50px
+	.section_header
+		display: flex
+		.ml
+			margin-left: 15px
+
+	.section_content
+		ul>li>a
+			color: $green
+			text-decoration: none
+		.controls
+			ul
+		
+				display: flex
+				list-style-type: none
+				margin-right: 5px
+				background-color: $green
+				padding: 0
+				margin-bottom: 0
+		
+				li
+					display: flex
+					align-items: center
+					justify-content: center
+					text-transform: uppercase
+					font-size: 16px
+					cursor: pointer
+					text-align: center
+					color: #fff
+					padding: 10px
+					border-right: 1px solid $greendark
+
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.1em
+		font-weight: 600
+		font-size: 24px
+		color: $dark
+		font-family: $about-font
+	
+		
+	.profile_item
+		display: none
+		padding-bottom: 0
+		padding-top: 25px
+		padding-left: 15px
+		padding-right: 15px
+		color: $dark
+		.project-data
+			position: relative
+			z-index: 1
+			display: block
+		ul
+			margin-top: 35px
+			padding: 0
+
+			li
+				list-style-type: none
+				line-height: 1
+				display: inline-block
+				vertical-align: top
+				margin-right: 40px
+				.ts-table-top
+					color: $dark
+					line-height: 1.3
+					span
+						font-weight: 300
+						color: #898989
+				.ts-table-bottom
+					font-weight: 600
+		.fas
+			color: $green
+			padding-right: 10px
+					
+		img
+			width: 100%
+		.port_item_cont
+			position: absolute
+			top: 20px
+			left: 20px
+			right: 20px
+			bottom: 20px
+			background-color: rgba(17,17,17,.33)
+			text-align: center
+			padding: 30px
+			opacity: 0
+			transition: all .5s
+			border: 1px solid #fff
+		&:hover .port_item_cont
+			opacity: 1
+			padding-top: 20%
+		h3
+			color: #fff
+			margin-bottom: 0
+			font-size: 18px
+			text-transform: uppercase
+			font-weight: 600
+			padding-bottom: 15px
+		.profile-text
+			.prof-item
+				font-style: italic
+				font-weight: 300
+				color: #898989
+				margin-bottom: 25px
+			p
+				font-size: 14px
+				margin: 0 0 1rem	
+										
+
+.s-razion li.active
+	background-color: $greendark
+
+
 .s-info
-	.btn
-		font-size: 14px
-		background-color: $fiolet!important
-		border: 1px solid $fiolet!important
-		&:hover
-			opacity: .8
-		&:focus
-			box-shadow: 0 0 0 0.2rem rgba(86,44,113,.5)
+	padding: 0px 15px 50px
+	
 	.line-cat
 		font-size: 16px
 		margin-bottom: 18px
@@ -1413,10 +1706,11 @@ b, strong
 		font-size: 20px
 		font-weight: 600
 		text-transform: uppercase
-		margin: 20px 0
-		color: $green
+		// margin: 20px 0
+		color: $greendark
+		font-family: $about-font
 	h4
-		color: $fiolet
+		color: $greendark
 		font-size: 14px
 		font-weight: 600
 		text-transform: uppercase
@@ -1426,7 +1720,7 @@ b, strong
 		font-size: 16px
 		padding-top: 8px
   .far
-  	color: $green$green
+  	color: $green
   	padding-right: 10px
   	opacity: .9
 	a
