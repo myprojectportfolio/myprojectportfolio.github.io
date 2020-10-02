@@ -8,19 +8,13 @@ $(function() {
 
   $(function(){
     $("#phone1").mask("+38(999) 999-9999");
+    $("#phone2").mask("+38(999) 999-9999");
+    $("#phone3").mask("+38(999) 999-9999");
+    $("#phone4").mask("+38(999) 999-9999");
+    $("#phone5").mask("+38(999) 999-9999");
    });
 
-  $(function(){
-    $("#phone2").mask("+38(999) 999-9999");
-  });
-
-  $(function(){
-    $("#phone3").mask("+38(999) 999-9999");
-  });
-
-  $(function(){
-    $("#phone4").mask("+38(999) 999-9999");
-  });
+  
 
   $(document).on('click', 'a.page-scroll', function(event) {
   var $anchor = $(this);

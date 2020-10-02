@@ -35,6 +35,53 @@ body
 b, strong
 	font-weight: bold
 
+.btn-warn
+		color: #fff
+		border: 2px solid $warning
+		background: $warning
+		text-transform: uppercase
+		position: relative
+		+mt(.5s)
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 0
+			height: 39px
+			background: rgba(169, 88, 3, 0.3)
+			+mt(.5s)
+		&:hover
+			// font-weight: 600 
+			&::before
+				width: 100%
+
+.btn-outline-warn
+		color: $warning
+		border: 2px solid $warning
+		background: #fff
+		text-transform: uppercase
+		position: relative
+		box-sizing: border-box
+		background-clip: text
+		+mt(.5s)
+		&::before
+			content: ''
+			position: absolute
+			z-index: -1
+			top: 0
+			left: 0
+			width: 0
+			height: 40px
+			background: $warning
+			background-size: 100% 200%
+			+mt(.5s)
+		&:hover
+			color: #fff
+			// font-weight: 600 
+			&::before
+				width: 100%
+
 .btn-red
 	color: #fff
 	background-color: $warning
@@ -177,14 +224,14 @@ nav, .header-content, .s-about
 .toggle-mnu
 	position: absolute
 	top: 0
-	right: 15px
+	right: 5px
 .hidden-mnu
 	display: none
 	position: relative
 	top: 20px
 	li
 		display: block
-
+		padding: 5px 0
 	> ul
 		> li
 			&.active
@@ -199,10 +246,14 @@ nav, .header-content, .s-about
 
 .main-menu
 	> ul
+		.active a
+			color: $warning
+			border-bottom: 3px solid $warning
+			text-decoration: none
 		> li
-			padding-right: 30px
+			padding-right: 25px
 			&:hover
-				padding-right: 30px
+				padding-right: 25px
 			> a
 				color: $dark
 				font-size: 16px
@@ -213,8 +264,7 @@ nav, .header-content, .s-about
 					color: $warning
 					border-bottom: 3px solid $warning
 					text-decoration: none
-					
-				
+	
 .main-mnu
 	text-align: center
 	> ul
@@ -571,43 +621,174 @@ nav, .header-content, .s-about
 					+mt(.4s)
 
 .s-blog
-	.h2
-		text-transform: uppercase
-		letter-spacing: 0.2em
-	.h5
-		text-transform: uppercase
-		font-size: 18px
-		padding-top: 15px
-	.fa
-		font-size: 48px
-		color: $warning
 	.card
-		position: relative
-		
-		.card-title
-			text-transform: uppercase
-			font-weight: 500
-		.card-0
-			overflow: hidden
-			display: block
-			width: 100%
-			height: 250px
-			&:hover img
+		&:hover
+			opacity: 1
+			img
 				transform: scale(1.2)
 				+mt(.4s)
+		figure.effect-chico .fa
+			opacity: 0
+			font-size: 48px
+			color: #fff
+			padding-top: 65px
+		figure.effect-chico:hover .fa
+				opacity: 1		
+		figure
+			position: relative
+			text-align: center
+			overflow: hidden
+			cursor: pointer
+			opacity: .98
+			margin: auto
+		img
+			width: 100%
+			position: relative
+			display: block
+			max-width: 100%
+		figcaption
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			display: block
+			&:hover
+				background-color: $warning
+				opacity: .6
 		.card-body
-			a
+			.date
+				font-size: 14px
+				opacity: .8
+				padding-bottom: 10px
+			.card-title
 				text-transform: uppercase
-				color: $warning
-				font-weight: 600
+				a
+					color: $dark
+					text-decoration: none
+					font-weight: 600
+					font-size: 16px
+					display: block
+					&:hover
+						color: $warning!important
+					
+	
+	.btn-outline-warn
+		color: $warning
+		border: 2px solid $warning
+		background: #fff
+		text-transform: uppercase
+		position: relative
+		box-sizing: border-box
+		background-clip: text
+		+mt(.5s)
+		&::before
+			content: ''
+			position: absolute
+			z-index: -1
+			top: 0
+			left: 0
+			width: 0
+			height: 36px
+			background-color: $warning
+			background-size: 100% 200%
+			+mt(.5s)
+		&:hover
+			color: #fff
+			// font-weight: 600 
+			&::before
+				width: 100%
+		
+		
+.s-blog-art
+	.line
+		width: 100px
+		height: 2px
+		background: $warning
+		margin: 5px 0 16px 0
+	.main-content
+		.h1
+			font-size: 28px
+			font-weight: 600
+			display: block
+		.date
+			display: block
+			padding: 10px 0
+			opacity: .8
+			// text-align: right
+		.far
+			color: $warning
+		p
+			font-size: 16px
+			opacity: 1
+
+	.widget_body_page 
+		div
+			font-size: 16px
+		.widget_body_menu 
+			list-style: none
+			font-size: 16px
+			padding: 0
+			margin: 0
+
+			li
+				padding: 15px 0 0 0
+				position: relative
+			li a
 				text-decoration: none
-				line-height: 1.2
+				color: $dark
+				opacity: .9
+				text-transform: uppercase
 				display: block
+				padding-left: 30px
+				line-height: 1.4
+				.fas
+					color: $warning
+					padding-right: 15px
 				&:hover
-					color: #000
-			p
-				color: #000
-				opacity: .5
+					text-decoration: none
+					color: $warning
+
+.s-info
+	.contact-info	
+		a
+			display: block
+			text-decoration: none
+			line-height: 1.4
+			color: $dark
+			opacity: 1
+			padding-bottom: 10px
+			+mt(.5s)
+			&:hover
+				color: $warning
+			.fa
+				color: $blue
+				padding-right: 10px
+				opacity: .9
+	h2
+		text-transform: uppercase
+		font-weight: 600
+		font-size: 24px
+	h3
+		font-size: 20px
+		font-weight: 600
+		text-transform: uppercase
+		// margin: 20px 0
+		color: #686868
+	h4
+		color: $warning
+		font-size: 14px
+		font-weight: 600
+		text-transform: uppercase
+		padding: 20px 0 0
+	p
+		font-size: 16px
+		padding-top: 8px
+  .far
+  	color: $blue
+  	padding-right: 10px
+  	opacity: .9
+
 
 .s-work-item
 	.h2
@@ -887,6 +1068,40 @@ nav, .header-content, .s-about
 			margin: auto
 			max-width: 100%
 
+.p-brends
+	position: relative
+	min-height: 550px
+	
+	.h2
+		text-transform: uppercase
+		letter-spacing: 0.2em
+		font-weight: 600
+		color: #fff
+		// padding-top: 130px
+	.line
+		width: 200px
+		height: 2px
+		background: $warning
+		margin: 5px 0 16px 0
+	.brend-item
+		width: 180px
+		height: 80px
+		border: 1px solid #efefef
+		border-radius: 2px
+		position: relative
+		margin: 0 0 20px 0
+		background-color: #fff
+		&:hover
+			border: 2px solid $warning
+		img
+			width: 120px
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			margin: auto
+			max-width: 100%
 
 .s-brend
 	background-image: url('../img/background_065.jpg')
@@ -974,14 +1189,34 @@ nav, .header-content, .s-about
 	.sidebar-brend
 		border-radius: 10px
 		// box-shadow: 0px 0px 7px 0px rgba(255,117,20,1)
-		border: 2px solid #ff7514
-		h4
+		// border: 2px solid #ff7514
+		.fas
+			padding-right: 8px
+			color: $blue
+		.h5
 			padding: 10px 15px
 			background-color: $warning
 			border-radius: 10px
 			color: #fff
 			font-weight: 600
 			// opacity: .9
+		ul
+			list-style: none
+			padding: 0
+			margin: 0
+			display: initial
+			li
+				padding: 5px 14px
+				display: inline-block
+				width: 48%
+				a
+					color: $dark
+					opacity: .9
+					font-weight: 600
+					font-size: 16px
+					text-decoration: none
+					&:hover
+						color: $warning	
 		table
 			td
 				padding: 5px 12px
@@ -989,14 +1224,17 @@ nav, .header-content, .s-about
 					color: $dark
 					opacity: .9
 					font-weight: 600
-					font-size: 18px
+					font-size: 16px
 					text-decoration: none
 					&:hover
 						color: $warning
 	.sidebar-tools
 		border-radius: 10px
-		border: 2px solid #ff7514
-		h4
+		// border: 2px solid #ff7514
+		.fas
+			padding-right: 8px
+			color: $blue
+		.h5
 			padding: 10px 15px
 			background-color: $warning
 			border-radius: 10px
@@ -1012,13 +1250,13 @@ nav, .header-content, .s-about
 					color: $dark
 					opacity: .9
 					font-weight: 600
-					font-size: 18px
+					font-size: 16px
 					text-decoration: none
 					&:hover
 						color: $warning
 	.master-phone
 		border-radius: 10px
-		border: 2px solid #ff7514
+		// border: 2px solid #ff7514
 		text-align: center
 		h5
 			padding: 10px 0px
@@ -1035,9 +1273,7 @@ nav, .header-content, .s-about
 				text-decoration: none
 				&:hover
 					color: $warning
-	.fas
-		padding-right: 8px
-		color: $blue					
+						
 
 .s-content
 	.h2
@@ -1133,7 +1369,17 @@ nav, .header-content, .s-about
 		margin-bottom: 0
 		opacity: .9
 		font-weight: 400
-
+	p
+		color: #fff
+		opacity: .8
+		letter-spacing: 1px
+		a
+			color: #fcb976
+			text-decoration: none
+			font-weight: 600
+			opacity: 1
+			&:hover
+				opacity: .8
 .bg-blue
 	background-color: $blue
 .s-galery
@@ -1248,6 +1494,139 @@ nav, .header-content, .s-about
 		&::after
 			right: -60px
 			transform: rotate(0)
+
+.pagination
+	.page-item.active .page-link
+		color: #fff
+		background-color: $warning!important
+		border-color: $warning!important
+	.page-link
+		color: $dark
+
+.s-sale
+	.card
+		figure.effect-chico
+			margin: 0
+			.fa
+				padding-top: 100px!important
+		.card-body
+			.p
+				font-size: 18px
+				color: $warning
+				font-weight: 600
+
+.catalog-article
+	.fotorama__thumb-border
+		border-color: $warning!important
+	.card	
+		.main_content_ops
+			padding: 12px
+			text-transform: uppercase
+			font-weight: 600
+			width: 180px
+			background-color: $warning
+			color: #fff
+
+		.card-ops
+			border-top: 1px solid #e9ecef
+			padding: 20px
+			font-size: 14px
+	.main_content_article
+		h1
+			font-size: 21px
+			font-weight: 600
+	.main_content_article_img
+		padding-bottom: 10px
+		position: relative
+		img
+			width: 100%
+			height: 400px
+	
+	.time_article
+		font-size: 16px
+		color: $dark
+		padding-top: 10px
+
+		span
+			color: $warning
+			font-weight: 600
+	.count_article
+		padding-top: 15px
+		padding-bottom: 15px 
+		span
+			color: $warning
+			font-weight: 600
+	.price_article
+		padding-bottom: 15px
+		span
+			color: $warning
+			font-weight: 600		
+	.widget_title_page
+		color: $dark
+		text-transform: uppercase
+		font-size: 18px
+		margin-top: 0
+		font-weight: 600
+		padding: 10px
+		background-color: #e9ecef
+	
+	.widget_body_page 
+		div
+			font-size: 16px
+		.widget_body_menu 
+			list-style: none
+			font-size: 14px
+			padding: 0
+			margin: 0
+
+			li
+				padding: 15px 0 0 0
+				position: relative
+			li a
+				text-decoration: none
+				color: $dark
+				opacity: .9
+				text-transform: uppercase
+				display: block
+				padding-left: 20px
+				line-height: 1.4
+				.fas
+					color: $warning
+					padding-right: 5px
+				&:hover
+					text-decoration: none
+					color: $warning
+
+.fotorama
+	max-width: 100%
+	display: block
+	padding-left: 100px
+	.fotorama.fotorama--fullscreen .zoomImg
+		visibility: hidden
+		.fotorama__html > div
+			height: 100%
+			text-align: center
+			img
+				max-height: 100%
+	.fotorama__fullscreen-icon
+		background: #000
+		opacity: 1 !important
+		transform: none !important		
+
+.fotorama__nav-wrap
+	transform: rotate(90deg)
+	transform-origin: 0 0
+	position: absolute
+	top: 0
+	left: 0
+	.fotorama__nav
+		text-align: left
+	.fotorama__img
+		transform: rotate(270deg)
+	.fotorama__html > div
+		width: 100%
+	.fotorama__html > div img
+		max-width: 100%
 
 .top
 	position: fixed
