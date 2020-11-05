@@ -266,16 +266,17 @@ b, strong
 	background-size: cover
 	height: 90vh
 	width: 100%
-	background-image: url(../img/altanka-13.jpg)
+	background-image: url(../img/ozero-2.jpg)
+	// background-image: url(../img/head.jpg)
 	background-position: center
 
 	&:before
 		content: ''
 		width: 100%
 		height: 100%
-		background-color: #000
+		background-color: $dark
 		position: absolute
-		opacity: .5
+		opacity: .6
 	.transh
 		clip-path: polygon(20% 0, 100% 0, 100% 100%, 4% 100%)
 	.carousel-control-next, .carousel-control-prev
@@ -283,17 +284,15 @@ b, strong
 		
 			
 	.header_center
+		margin-top: 15%
 		position: relative
 		height: 520px
-		display: block
-		text-align: center
+		display: inline-block
+		width: 70%
 	h1
-		position: absolute
-		top: 25%
 		line-height: 1.1em
 		color: #fff
 		font-weight: 700
-		width: 70%
 		z-index: 1
 		display: block
 		letter-spacing: 5px
@@ -303,7 +302,6 @@ b, strong
 		color: #fff
 		z-index: 1
 		padding-top: 20px
-		width: 70%
 		display: block
 		position: relative
 		font-size: 24px
@@ -726,13 +724,13 @@ b, strong
 		left: 50%
 		top: 50vh
 		margin: 
-			left: -40px
-			top: -40px
+			left: -80px
+			top: -80px
 		&::before, &::after
 			content: ''
 			border: 5px solid $warn
-			width: 80px
-			height: 80px
+			width: 160px
+			height: 160px
 			border-radius: 500px
 			position: absolute
 		&::before
@@ -1268,7 +1266,7 @@ b, strong
 			opacity: 0
 			font-size: 48px
 			color: #fff
-			padding-top: 65px
+			padding-top: 75px
 		figure.effect-chico:hover .fa
 				opacity: 1		
 		figure
@@ -1279,7 +1277,7 @@ b, strong
 			opacity: .98
 		img
 			width: 100%
-			height: 180px
+			// height: 180px
 			position: relative
 			display: block
 			max-width: 100%
