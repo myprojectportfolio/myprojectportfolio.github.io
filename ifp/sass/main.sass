@@ -11,7 +11,7 @@
 
 body
 	font-size: 16px
-	min-width: 526px
+	min-width: 320px
 	position: relative
 	line-height: 1.65
 	font-family: $default-font
@@ -160,7 +160,8 @@ b, strong
 			width: 30px
 			height: auto
 			margin-top: 55px
-			
+.bg-grey
+	background-color: #F5F8F2
 
 
 .logo
@@ -570,7 +571,7 @@ b, strong
 .s-news
 	margin: 40px 0
 	.my-display
-		font-size: 40px
+		font-size: 36px
 		font-weight: 600
 		padding-bottom: 20px
 	.news-all
@@ -604,7 +605,7 @@ b, strong
 			margin-bottom: 0
 		img
 			width: 100%
-			height: auto
+			height: 350px
 			position: relative
 			display: block
 			max-width: 100%
@@ -668,16 +669,16 @@ b, strong
 			&:hover
 				color: $red!important
 			.fa-icon-arch
-				background: url("../img/font-img-arch.PNG") no-repeat
+				background: url("../img/font-img-arch.png") no-repeat
 				width: 30px
 				height: 30px
 				position: absolute
-				left: 40px
+				left: 50px
 
 .s-maps
 	margin: 40px 0
 	.my-display
-		font-size: 40px
+		font-size: 36px
 		font-weight: 600
 		padding-bottom: 20px				
 
@@ -1264,11 +1265,19 @@ b, strong
 				a 
 					color: $red
 					text-decoration: none
-
+.pagination
+	.page-item.active .page-link
+		color: #fff
+		background-color: $red!important
+		border-color: $red!important
+	.page-link
+		color: #343434
+		&:hover
+			color: #343434
 .s-about
 	margin-bottom: 40px
 	.my-display
-		font-size: 40px
+		font-size: 36px
 		font-weight: 600
 		padding-bottom: 15px
 		padding-top: 15px
@@ -1287,7 +1296,14 @@ b, strong
 			color: $red
 			font-size: 36px	
 			padding-bottom: 15px	
-.s-blog
+.s-events
+	margin-bottom: 40px
+	.my-display
+		font-size: 36px
+		font-weight: 600
+		padding-bottom: 15px
+		padding-top: 15px
+
 	.line-cat
 		font-size: 16px
 		margin-bottom: 18px
@@ -1312,11 +1328,7 @@ b, strong
 			background: $red
 			position: absolute
 	.card
-		&:hover
-			opacity: 1
-			img
-				transform: scale(1.2)
-				+mt(.4s)
+		
 		figure.effect-chico .fa
 			opacity: 0
 			font-size: 48px
@@ -1330,18 +1342,19 @@ b, strong
 			overflow: hidden
 			cursor: pointer
 			opacity: .98
-		img
-			width: 100%
-			height: 180px
-			position: relative
-			display: block
-			max-width: 100%
+			margin: 0
+			img
+				width: 100%
+				// height: auto
+				position: relative
+				display: block
+				max-width: 100%
 		figcaption
 			position: absolute
 			top: 0
 			left: 0
 			width: 100%
-			height: 100%
+			height: 250px
 			display: block
 			&:hover
 				background-color: $red
@@ -1357,9 +1370,6 @@ b, strong
 		font-size: 16px
 		padding-top: 15px
 	
-	p
-		font-size: 14px
-		opacity: .9
 	.card
 		position: relative
 		.card-body
@@ -1367,24 +1377,97 @@ b, strong
 				font-size: 14px
 				color: $accent
 				font-weight: 500
+			.card-text
+				p
+					margin: 0px 10px
+					font-size: 16px
+					font-weight: 500
+				h5
+					margin: 20px 10px
 			.card-title
-				text-transform: uppercase
+				margin: 5px 5px
 				a
 					color: $red
 					text-decoration: none
-					font-weight: 600
-					font-size: 16px
+					font-weight: 700
+					font-size: 18px
 					display: block
 					&:hover
 						color: $red!important
-		.card-0
-			overflow: hidden
+		.card-events-group
+			.events-group
+				color: $dark!important
+				font-size: 18px!important
+				font-weight: 500
+				font-style: normal
+				position: relative
+				padding: 5px
+				display: inline-block
+
+		.сard-body-btn
 			display: block
-		&:hover
-			opacity: 1
-			img
-				transform: scale(1.2)
-				+mt(.4s)
+			margin-top: 50px
+			.btn-outline-desc
+				width: 100% 
+				color: $grey!important
+				border: 2px solid #EBEBEB!important
+				border-radius: 0px!important
+				font-size: 18px!important
+				padding: 5px 10px
+				font-weight: 500!important
+				&:hover
+					border: 2px solid $red!important
+					color: $red!important
+			.btn-outline-buy
+				width: 100% 
+				color: $grey!important
+				border: 2px solid #EBEBEB!important
+				border-radius: 0px!important
+				font-size: 18px!important
+				font-weight: 500!important
+				padding: 5px 20px
+				&:hover
+					border: 2px solid $red!important
+					color: $red!important
+			.btn-outline-date
+				width: 100% 
+				color: $grey!important
+				border-radius: 0px!important
+				font-size: 18px!important
+				padding: 5px 5px
+				text-align: left
+				font-weight: 600!important
+				&:hover
+					color: $red!important	
+			.btn-arch
+				width: 100% 
+				color: $grey!important
+				font-size: 18px!important
+				font-weight: 500!important
+				position: relative
+				padding: 5px 5px
+				text-align: left
+				&:hover
+					color: $red!important
+				img
+					position: relative
+					padding-right: 10px				
+					// .fa-icon-arch
+					// 	background: url("../img/font-img-arch.png") no-repeat
+					// 	width: 30px
+					// 	height: 30px
+					// 	position: absolute
+					// 	left: 0px			
+		// .card-0
+		// 	overflow: hidden
+		// 	display: block
+		// &:hover
+		// 	opacity: 1
+		// 	figure
+		// 		img
+		// 			transform: scale(1.2)
+		// 			+mt(.4s)
+
 .s-blog-art
 	.card-body
 		h1
